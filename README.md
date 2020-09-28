@@ -6,9 +6,19 @@ theme. This repo is meant to keep track of the changes I've made to the orignal 
 
 # Dependencies
 
-Install the system dependencies following
-the
-[Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
+After following the
+[Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/),
+execute the following to install the gems in the Gemfile:
+
+    $ cd /path/to/sergiogarciavergara.com
+    $ bundle install
+
+# Usage
+
+Execute the following to start hosting the website locally:
+
+    $ cd /path/to/sergiogarciavergara.com
+    $ bundle exec jekyll serve
 
 # Misc
 
