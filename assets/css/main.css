@@ -930,7 +930,7 @@ table tfoot td {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 240px;
+  width: 280px; /* used to be 240px */
   height: 100%;
   padding: 20px 10px;
   background-color: #ffffff;
@@ -973,8 +973,8 @@ table tfoot td {
   margin: 0 0 10px;
   position: relative;
   padding-bottom: 15px;
-  font-size: 16px;
-  text-transform: uppercase;
+  font-size: 21px; /* used to be 16px */
+  /* text-transform: uppercase; */
   color: #333030;
   font-weight: 700;
 }
@@ -1002,7 +1002,7 @@ table tfoot td {
 
 .content-box {
   padding: 20px;
-  padding-left: 260px;
+  padding-left: 300px; /* used to be 260px */
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
