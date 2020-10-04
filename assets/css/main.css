@@ -973,32 +973,34 @@ table tfoot td {
   margin: 0 0 10px;
   position: relative;
   padding-bottom: 15px;
-  font-size: 21px; /* used to be 16px */
-  /* text-transform: uppercase; */
+  font-size: 19px; /* used to be 16px */
+  text-transform: uppercase;
   color: #333030;
   font-weight: 700;
 }
 
-.about .author-name::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  bottom: 0;
-  display: block;
-  width: 7px;
-  height: 7px;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
-  background-color: #515151;
-}
+/* This is the dot below the author's name */
 
-.about p {
-  font-size: 16px;
-  margin: 0 0 10px;
-}
+/* .about .author-name::after { */
+/*   content: ""; */
+/*   position: absolute; */
+/*   left: 50%; */
+/*   -webkit-transform: translateX(-50%); */
+/*       -ms-transform: translateX(-50%); */
+/*           transform: translateX(-50%); */
+/*   bottom: 0; */
+/*   display: block; */
+/*   width: 7px; */
+/*   height: 7px; */
+/*   -webkit-border-radius: 100%; */
+/*           border-radius: 100%; */
+/*   background-color: #515151; */
+/* } */
+
+/* .about p { */
+/*   font-size: 16px; */
+/*   margin: 0 0 10px; */
+/* } */
 
 .content-box {
   padding: 20px;
@@ -1197,6 +1199,7 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
   padding: 20px;
+  font-size: 21px; /* This is the size of the text in the posts. */
 }
 
 .header-page {
