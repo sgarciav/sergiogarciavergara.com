@@ -20,11 +20,17 @@ Execute the following to start hosting the website locally:
     $ cd /path/to/sergiogarciavergara.com
     $ bundle exec jekyll serve
 
+## General Notes
+
+* When adding a new image, try to add one that is 1280px in width, and that it
+  has a transparent background. This will make the post more aesthetically
+  pleasing.
+
 # Misc
 
 ## License
 
-GNU General Public License v3.0
+GNU General Public License v3.0.
 
 ## Credits
 
