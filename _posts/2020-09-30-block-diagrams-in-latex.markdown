@@ -3,7 +3,7 @@ layout: post
 title: Block Diagrams in LaTeX
 date: 2020-09-30
 description: Use the TikZ library in LaTeX to draw block diagrams and flowcharts.
-img: control-system-diagram.png # Add image post (optional)
+img: # control-system-diagram.png # Add image post (optional)
 ---
 
 LaTeX is awesome and you can use it to draw block diagrams.

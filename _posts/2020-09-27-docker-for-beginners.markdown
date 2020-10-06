@@ -3,7 +3,7 @@ layout: post
 title: Docker for Beginners
 date: 2020-09-27
 description: Want to get started with Docker? Why not start here?
-img: docker-icon.png # Add image post (optional)
+img: # docker-icon.png # Add image post (optional)
 ---
 
 # Install
