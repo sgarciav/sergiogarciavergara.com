@@ -7,10 +7,15 @@ layout: default
   <header>
     <div class="about">
       <div class="cover-author-image">
-        <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
+        <a href="{{site.baseurl}}/">
+          <img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}">
+        </a>
       </div>
       <div class="author-name">{{site.author}}</div>
       <!-- <p>{{site.about-author}}</p> -->
+      <div class="flag-icon">
+        <img src="{{site.baseurl}}/assets/img/pr-flag.png"/>
+      </div>
     </div>
   </header> <!-- End Header -->
 
@@ -18,6 +23,7 @@ layout: default
   <div class="sidenav">
     <a href="pages/aboutme.html">About Me</a>
     <a href="pages/publications.html">Publications</a>
+    <a href="pages/patents.html">Patents</a>
   </div>
 
   <!-- Contact Me section -->

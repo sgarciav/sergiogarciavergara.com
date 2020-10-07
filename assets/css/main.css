@@ -951,16 +951,15 @@ table tfoot td {
 
 /* This is the text inside the sidenav section */
 .sidenav a {
-    padding-top: 0;
-    padding-left: 0;
-    padding-bottom: 16px; /* This is the separation between items in the sidenav */
+    padding-left: 12px;
+    padding-bottom: 26px; /* This is the space between items in the sidenav */
     text-decoration: none;
     font-size: 21px;
-    /* color: #818181; */
-    color: #000000;
+    color: #575757;
     display: block;
 }
 
+/* TODO: this needs to be underlined by a dope color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
@@ -984,9 +983,9 @@ table tfoot td {
     width: 100%;
     height: 100%;
     -webkit-border-radius: 50%;
-    border-radius: 50%;
+            border-radius: 50%;
     -webkit-transition: -webkit-transform 0.35s;
-    transition: -webkit-transform 0.35s;
+            transition: -webkit-transform 0.35s;
     -o-transition: transform 0.35s;
     transition: transform 0.35s;
     transition: transform 0.35s, -webkit-transform 0.35s;
@@ -995,39 +994,64 @@ table tfoot td {
 /* Hover effect for the entire about section not just image */
 .about:hover {
     -webkit-transform: scale3d(0.9, 0.9, 1);
-    transform: scale3d(0.9, 0.9, 1);
+            transform: scale3d(0.9, 0.9, 1);
 }
 
 .about .author-name {
     /* font-family: 'PT Serif', serif; */
-    /* font-family: Reckoner; */
     margin: 0 0 10px;
     position: relative;
-    /* padding-bottom: 15px; */
+    padding-top: 20px;
+    padding-bottom: 2px;
     font-size: 19px; /* used to be 16px */
     text-transform: uppercase;
-    color: rgb(50, 100, 100);
-    font-weight: 700;
+    color: black;
+    font-weight: 350;
 }
 
-/* -------------- */
+/* This is the PR flag below the author's name */
+.flag-icon {
+    width: 40px;
+    height: 100%;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    background-color: white;
+}
 
-/* This is the dot below the author's name */
+.flag-icon img {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 1%;
+            border-radius: 1%;
+}
 
+/* This is the LINE below the author's name */
 /* .about .author-name::after { */
-/*   content: ""; */
-/*   position: absolute; */
-/*   left: 50%; */
-/*   -webkit-transform: translateX(-50%); */
-/*       -ms-transform: translateX(-50%); */
-/*           transform: translateX(-50%); */
-/*   bottom: 0; */
-/*   display: block; */
-/*   width: 7px; */
-/*   height: 7px; */
-/*   -webkit-border-radius: 100%; */
-/*           border-radius: 100%; */
-/*   background-color: #515151; */
+    /* content: ""; */
+    /* display: block; */
+    /* height: 1.2px; */
+    /* width: 100%; */
+    /* position: absolute; */
+    /* top: 200%; */
+    /* left: 0; */
+    /* background-color: #515151; */
+/* } */
+
+/* This is the DOT below the author's name */
+/* .about .author-name::after { */
+/*     content: ""; */
+/*     position: absolute; */
+/*     left: 50%; */
+/*     -webkit-transform: translateX(-50%); */
+/*         -ms-transform: translateX(-50%); */
+/*             transform: translateX(-50%); */
+/*     bottom: 0; */
+/*     display: block; */
+/*     width: 7px; */
+/*     height: 7px; */
+/*     -webkit-border-radius: 100%; */
+/*             border-radius: 100%; */
+/*     background-color: #515151; */
 /* } */
 
 .about p {
@@ -1037,7 +1061,7 @@ table tfoot td {
 
 .content-box {
     padding: 20px;
-    padding-left: 300px; /* used to be 260px */
+    padding-left: 300px; /* space between sidebar and post list: used to be 260px */
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1066,6 +1090,7 @@ table tfoot td {
     text-align: center;
 }
 
+/* This is the left segment of the contact line */
 .contact .contact-title::before {
     content: "";
     display: block;
@@ -1073,14 +1098,15 @@ table tfoot td {
     width: -webkit-calc(50% - 48px);
     width: calc(50% - 48px);
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     position: absolute;
     top: 50%;
     left: 0;
     background-color: #515151;
 }
 
+/* This is the right segment of the contact line */
 .contact .contact-title::after {
     content: "";
     display: block;
