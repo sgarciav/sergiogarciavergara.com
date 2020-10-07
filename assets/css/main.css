@@ -960,7 +960,8 @@ table tfoot td {
 }
 
 .sidenav a:hover {
-    color: rgb(88, 178, 208);
+    /* color: rgb(88, 178, 208); */
+    color: rgb(204, 0, 1);
     font-weight: bold;
     font-size: 22px;
 }
