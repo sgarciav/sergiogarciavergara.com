@@ -954,7 +954,7 @@ table tfoot td {
     padding-left: 12px;
     padding-bottom: 26px; /* This is the space between items in the sidenav */
     text-decoration: none;
-    font-size: 21px;
+    font-size: 20px;
     color: #575757;
     display: block;
     font-family: Copperplate;
@@ -963,7 +963,6 @@ table tfoot td {
 .sidenav a:hover {
     /* color: rgb(88, 178, 208); */
     color: rgb(204, 0, 1);
-    font-weight: bold;
     font-size: 22px;
 }
 
