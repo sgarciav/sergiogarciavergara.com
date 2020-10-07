@@ -961,7 +961,9 @@ table tfoot td {
 
 /* TODO: this needs to be underlined by a dope color */
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: rgb(88, 178, 208);
+    font-weight: bold;
+    font-size: 22px;
 }
 
 .about {
