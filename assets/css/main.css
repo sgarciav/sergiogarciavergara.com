@@ -959,7 +959,6 @@ table tfoot td {
     display: block;
 }
 
-/* TODO: this needs to be underlined by a dope color */
 .sidenav a:hover {
     color: rgb(88, 178, 208);
     font-weight: bold;
@@ -979,6 +978,10 @@ table tfoot td {
     border-radius: 100%;
     overflow: hidden;
     background-color: #333030;
+}
+
+.about a {
+    text-decoration: none;
 }
 
 .about img {
