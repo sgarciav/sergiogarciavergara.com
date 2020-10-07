@@ -968,6 +968,7 @@ table tfoot td {
 .about {
     margin: 0 0 40px;
     text-align: center;
+    opacity: 0.75;
 }
 
 .about .cover-author-image {
@@ -998,8 +999,7 @@ table tfoot td {
 
 /* Hover effect for the entire about section not just image */
 .about:hover {
-    -webkit-transform: scale3d(0.9, 0.9, 1);
-            transform: scale3d(0.9, 0.9, 1);
+    opacity: 1;
 }
 
 .about .author-name {
