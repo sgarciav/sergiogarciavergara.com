@@ -936,6 +936,35 @@ table tfoot td {
   background-color: #ffffff;
 }
 
+/* This is the actual sidenav section */
+.sidenav {
+  height: 100%;
+  width: 280px; /* Has to be the same as the sidebar */
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding: 30px 0px;
+}
+
+/* This is the text inside the sidenav section */
+.sidenav a {
+ padding-top: 0;
+ padding-left: 0;
+ padding-bottom: 16px; /* This is the separation between items in the sidenav */
+ text-decoration: none;
+ font-size: 21px;
+ /* color: #818181; */
+ color: #000000;
+ display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
 .about {
   margin: 0 0 40px;
   text-align: center;
@@ -963,21 +992,25 @@ table tfoot td {
   transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
-.about img:hover {
+/* Hover effect for the entire about section not just image */
+.about:hover {
   -webkit-transform: scale3d(0.9, 0.9, 1);
           transform: scale3d(0.9, 0.9, 1);
 }
 
 .about .author-name {
-  font-family: 'PT Serif', serif;
+  /* font-family: 'PT Serif', serif; */
+  /* font-family: Reckoner; */
   margin: 0 0 10px;
   position: relative;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
   font-size: 19px; /* used to be 16px */
   text-transform: uppercase;
-  color: #333030;
+  color: rgb(50, 100, 100);
   font-weight: 700;
 }
+
+/* -------------- */
 
 /* This is the dot below the author's name */
 
@@ -997,10 +1030,10 @@ table tfoot td {
 /*   background-color: #515151; */
 /* } */
 
-/* .about p { */
-/*   font-size: 16px; */
-/*   margin: 0 0 10px; */
-/* } */
+.about p {
+  font-size: 16px;
+  margin: 0 0 10px;
+}
 
 .content-box {
   padding: 20px;
