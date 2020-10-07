@@ -957,6 +957,7 @@ table tfoot td {
     font-size: 21px;
     color: #575757;
     display: block;
+    font-family: Copperplate;
 }
 
 .sidenav a:hover {
@@ -1005,14 +1006,15 @@ table tfoot td {
 
 .about .author-name {
     /* font-family: 'PT Serif', serif; */
+    font-family: Copperplate;
     margin: 0 0 10px;
     position: relative;
     padding-top: 20px;
     padding-bottom: 2px;
-    font-size: 19px; /* used to be 16px */
+    font-size: 18px; /* used to be 16px */
     text-transform: uppercase;
     color: black;
-    font-weight: 350;
+    font-weight: 400;
 }
 
 /* This is the PR flag below the author's name */
