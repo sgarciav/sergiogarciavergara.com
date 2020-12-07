@@ -1066,6 +1066,7 @@ table tfoot td {
     margin: 0 0 10px;
 }
 
+/* This is the box on the main page where all the posts are listed */
 .content-box {
     padding: 20px;
     padding-left: 300px; /* space between sidebar and post list: used to be 260px */
