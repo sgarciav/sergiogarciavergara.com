@@ -772,8 +772,9 @@ html {
     line-height: 1.5;
 }
 
+/* Control the body text of posts */
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: Garamond, Arial, sans-serif;
     color: #515151;
     background-color: #fff; /* grayish blue alternative: #f3f5f6 */
     margin: 0;
@@ -781,8 +782,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.reference {
+    font-family: Courier;
+    font-size: 19px;
+}
+
+.reference li {
+    margin: 25px 0;
+}
+
 h1 {
     font-weight: 400;
+}
+
+h2 {
+    font-weight: 300;
+    font-family: Garamond;
 }
 
 img {
@@ -957,7 +972,7 @@ table tfoot td {
     font-size: 20px;
     color: #575757;
     display: block;
-    font-family: Copperplate;
+    font-family: Arial, Copperplate;
 }
 
 .sidenav a:hover {
