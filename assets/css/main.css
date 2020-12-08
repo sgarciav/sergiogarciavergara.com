@@ -42,7 +42,14 @@ section {
  */
 h1 {
     font-size: 2em;
+    font-weight: 400;
+    font-family: Garamond;
     margin: 0.67em 0;
+}
+
+h2 {
+    font-weight: 300;
+    font-family: Garamond;
 }
 
 /* Grouping content
@@ -789,15 +796,6 @@ body {
 
 .reference li {
     margin: 25px 0;
-}
-
-h1 {
-    font-weight: 400;
-}
-
-h2 {
-    font-weight: 300;
-    font-family: Garamond;
 }
 
 img {
