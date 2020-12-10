@@ -17,6 +17,6 @@ and avoid spending money on new ones.
 R.E. Torres-Muñiz, <strong>S.E. García-Vergara</strong>,
 B.A. Llorens-Bonilla, D. Sánchez-Cordero, and M.  Lizama, "Switch-Actuated
 Joystick for Power Wheelchairs", U.S. Patent 8 622 166 B1, January 7, 2014 (<a
-href="https://www.google.com/patents/US8622166">link</a>).
+href="https://www.google.com/patents/US8622166" target="_blank">link</a>).
 
 </div>
