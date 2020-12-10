@@ -141,5 +141,62 @@ href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5673223&casa_token=f7
 
 ## Refereed Conference Presentations <a id="headerlink" name="presentations" href="#presentations" title="Permalink to this headline"></a>
 
-1. One
-2. Two
+<div class="reference">
+<ol>
+
+<li>L. Clackum, F. Fayyaz, T. Gordon, K. Lansing, Y.P. Chen,
+<strong>S. García-Vergara</strong>, A.M. Howard, B. Weissman, and
+J. Hallman-Cooper, "Effect of Functional Strength Training to Improve Arm
+Function in Children with Cerebral Palsy: A Case Study," <i>Combined Sections
+Meeting, American Physical Therapy Association</i>, New Orleans, LA, February,
+2018.</li>
+
+<li>Y.P. Chen, <strong>S. García-Vergara</strong>, and A.M. Howard, "Evaluation
+of trials necessary to achieve per- formance stability in a reaching kinematics
+movement analysis game," <i>Combined Sections Meeting, American Physical Therapy
+Association</i>, New Orleans, LA, February, 2018.</li>
+
+<li>Y.P. Chen, <strong>S. García-Vergara</strong>, A.M. Howard, "Examining the
+Effect of Feedback from a Hu- manoid Robot on Reaching Kinematics in Children
+with Cerebral Palsy," (Poster presented at) <i>NEXT Conference, American
+Physical Therapy Association</i>, Boston, MA, June, 2017.</li>
+
+<li>L. Clackum, F. Fayyaz, T. Gordon, K. Lansing, Y.P. Chen,
+<strong>S. García-Vergara</strong>, and A.M. Howard, "Effect of Rhythmic
+Auditory Stimulation in Virtual Reality Games to Improve Arm Function in
+Children with Cerebral Palsy: A Case Study," (Poster presented at) <i>NEXT
+Conference, American Physical Therapy Association</i>, Boston, MA, June,
+2017.</li>
+
+<li>C. Beegle, A. Rollins, J. Tyra, Y.P. Chen,
+<strong>S. García-Vergara</strong>, and A.M. Howard, "Test-retest Reliability
+and Minimal Detectable Change in the Super Pop VR TM Game in Children with and
+without Cerebral Palsy," (Poster presented at) <i>Combined Sections Meeting,
+American Physical Therapy Association</i>, San Antonio, TX, February, 2017.</li>
+
+<li>E. Danish, S. Epling, S. Smelser, Y. Zhang, Y.P. Chen,
+<strong>S. García-Vergara</strong>, A.M. Howard, B.  Weissman, and
+J. Hallman-Cooper, "Virtual Reality Gaming System can be used in Home Based
+Treatment in Children with Cerebral Palsy: A Case Study," (Poster presented at)
+<i>NEXT Confer- ence, American Physical Therapy Association</i>, Nashville, TN,
+June, 2016.</li>
+
+<li>E. Bermudez, M. Layman, E. Shepard, Y.P. Chen,
+<strong>S. García-Vergara</strong>, and A.M. Howard, "Test- Retest Reliability
+and Minimal Detectable Change in the Super Pop VR<sup>TM</sup> game in Healthy
+Children," (Poster to be presented at) <i>Combined Sections Meeting, American
+Physical Therapy Association</i>, Anaheim, CA, February 2016.</li>
+
+<li>Y.P. Chen, <strong>S. García-Vergara</strong>, and A.M. Howard, "Test-Retest
+Reliability and Minimal De- tectable Change of Super Pop VR TM in Healthy
+Adults," (Poster presented at) <i>Combined Sections Meeting, American Physical
+Therapy Association</i>, Indiannapolis, IN, February, 2015.</li>
+
+<li>B. Denmark, A. Harrod, B. Steele, T. Weekley,
+<super>S. Garcíaa-Vergara</super>, A.M. Howard, and Y.P. Chen, "Effect of
+Virtual Reality Intervention on Upper-Extremity Function in a Child with
+Cerebral Palsy: A Case Study," (Poster presented at) <i>Physical Therapy
+Association of Georgia</i>, Atlanta, GA, September, 2014.</li>
+
+</ol>
+</div>
