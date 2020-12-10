@@ -14,7 +14,7 @@ the article.
 
 Happy reading!
 
-## Dissertation
+## Dissertation <a id="headerlink" name="dissertation" href="#dissertation" title="Permalink to this headline"></a>
 
 <div class="reference">
 <ol>
@@ -27,8 +27,7 @@ href="https://smartech.gatech.edu/bitstream/handle/1853/58230/GARCIA-DISSERTATIO
 </ol>
 </div>
 
-
-## Journal Publications and Book Chapters
+## Journal Publications and Book Chapters <a id="headerlink" name="journals" href="#journals" title="Permalink to this headline"></a>
 
 <div class="reference">
 <ol>
@@ -61,7 +60,7 @@ href="https://smartech.gatech.edu/bitstream/handle/1853/53810/Engaging%20Childre
 </ol>
 </div>
 
-## Refereed Conference Publications
+## Refereed Conference Publications <a id="headerlink" name="conference-publications" href="#conference-publications" title="Permalink to this headline"></a>
 
 <div class="reference">
 <ol>
@@ -140,7 +139,7 @@ href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5673223&casa_token=f7
 </ol>
 </div>
 
-## Professional Presentations
+## Refereed Conference Presentations <a id="headerlink" name="presentations" href="#presentations" title="Permalink to this headline"></a>
 
 1. One
 2. Two

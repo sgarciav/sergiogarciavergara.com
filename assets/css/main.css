@@ -52,6 +52,31 @@ h2 {
     font-family: Garamond;
 }
 
+/**
+ * Add a permalink to each headline.
+ * Link icon is not visible until user hovers over corresponding headline.
+ * Remove the underline of the visited link style.
+ * Note: Need to add inline-block because it breaks out of the inline/text styling of the parent anchor element and you can then style it independently.
+ * See: https://stackoverflow.com/questions/16610678/why-css-selectors-on-links-are-tricky-with-underline-with-hover/16611027#16611027?newreg=48728c8c0817450d9862034515cb2580
+ */
+#headerlink::before {
+    font-family: FontAwesome;
+    font-size: 18px;
+    content: "  \f0c1"; /* fa fa-link icon */
+    opacity: 0;
+    transition: opacity 0.1s linear;
+    display: inline-block;
+    text-decoration: none;
+}
+
+h1:hover #headerlink::before,
+h2:hover #headerlink::before,
+h3:hover #headerlink::before,
+h4:hover #headerlink::before {
+    opacity: 0.9;
+}
+
+
 /* Grouping content
    ========================================================================== */
 /**

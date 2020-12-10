@@ -6,7 +6,7 @@ description: List of approved patents.
 
 <!-- NOTE: Use html notation for the references. -->
 
-## Switch-Actuated Joystick for Power Wheelchairs
+## Switch-Actuated Joystick for Power Wheelchairs <a id="headerlink" name="joystick-wheelchair" href="#joystick-wheelchair" title="Permalink to this headline"></a>
 
 Developed a switch-actuated adapter for joystick controlled wheelchairs such
 that individuals with limited mobility can continue making use of their chairs
