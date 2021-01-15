@@ -2,7 +2,8 @@
 
 This is my personal website. I use [Jekyll](https://jekyllrb.com/) and
 the [flexible-jekyll](http://jekyllthemes.org/themes/flexible-jekyll/)
-theme. This repo is meant to keep track of the changes I've made to the orignal theme
+theme. This repo is meant to keep track of the changes I've made to the orignal
+theme.
 
 # Dependencies
 
@@ -22,9 +23,9 @@ Execute the following to start hosting the website locally:
 
 ## General Notes
 
-* When adding a new image, try to add one that is 1280px in width, and that it
-  has a transparent background. This will make the post more aesthetically
-  pleasing.
+* When adding a new image to posts, try to add one that is 1280px in width, and
+  make it such that it has a transparent background. This will make the post
+  more aesthetically pleasing.
 
 # Misc
 
