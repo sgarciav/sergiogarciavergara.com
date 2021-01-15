@@ -1,0 +1,225 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\geometry{
+  a4paper,         % or letterpaper
+  textwidth=16cm,  % llncs has 12.2cm
+  textheight=24cm, % llncs has 19.3cm
+  heightrounded,   % integer number of lines
+  hratio=1:1,      % horizontally centered
+  vratio=2:3,      % not vertically centered
+}
+
+\renewcommand\labelitemi{*}
+
+% Packages
+% ------------------
+\usepackage{tkz-euclide}
+\usepackage{tikz} % for drawing diagrams
+\usepackage{bm} % bold mode
+\usepackage{subfig}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{dsfont}
+\usepackage{forest}
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
+% \usepackage{graphicx} % for the \includegraphics command
+% \usepackage{titlesec} % allow for changing the spacing in sections
+
+
+% setup style of tikzlibrary elements
+% ------------------------------------
+\usetikzlibrary{arrows}
+\usetikzlibrary{quotes,angles}
+\usetikzlibrary{positioning}
+\usetikzlibrary{plotmarks}
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{block} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=black, fill=white]
+\tikzstyle{redblock} = [rectangle, thick, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=red, fill=white]
+\tikzstyle{wideblock} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=white]
+\tikzstyle{tallblock} = [rectangle, minimum width=1.9cm, minimum height=2cm, text centered, text width=1.9cm, draw=black, fill=white]
+\tikzstyle{inputblock} = [rectangle, minimum width=1.7cm, minimum height=5cm, text centered, text width=1.7cm, draw=black, fill=white]
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
+\tikzstyle{startstop_wide} = [rectangle, rounded corners, minimum width=6cm, minimum height=1cm, text centered, draw=black, fill=white]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
+\tikzstyle{process} = [rectangle, minimum width=4cm, minimum height=1cm, text centered, text width=4cm, draw=black, fill=white]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
+\tikzstyle{arrow} = [->,>=stealth] % can add "thick" to make it bold
+\tikzset{radiation/.style={{decorate,decoration={expanding waves,angle=90,segment length=4pt}}}}
+
+%% new commands
+% ------------------
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\norm}[1]{\lVert#1\rVert}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+\begin{document}
+
+% {\Huge Project Description}
+
+% Header of paper
+% Hint: \title{what ever}, \author{who care} and \date{when ever} could stand
+% before or after the \begin{document} command
+% BUT the \maketitle command MUST come AFTER the \begin{document} command!
+% ---------------------
+\title{TikZ Library Template}
+\author{
+  Sergio Garc\'{i}a-Vergara \\
+  RIF Robotics Corp \\
+}
+
+\maketitle
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+% % Abstract
+% % ---------------------
+% \begin{abstract}
+%   Maybe this would be good to have.
+
+% \begin{keywords}
+%   one $\cdot$ two
+% \end{keywords}
+
+% \end{abstract}
+
+
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+\section{System Diagram}
+% ---------------------------
+
+This diagram makes no sense as right now I'm using it as a template for real
+diagrams. I'll be sure to clean it up and link it to better explanations on how
+to create these diagrams.
+
+\vspace{1em}
+\noindent NOTES:
+\begin{itemize}
+  \item Here you would add notes
+\end{itemize}
+
+
+% diagram - short term
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
+
+  % We start by placing the blocks
+  \node (camera) [block] {Camera};
+  \node (block1) [block, right of=camera, xshift=0.8cm] {Block1};
+  \node (level1) [block, right of=block1, xshift=1.6cm] {Level1};
+  \node (redblock) [redblock, below of=level1, yshift=0.6cm] {Red Block};
+  \node (database) [redblock, below of=redblock, yshift=0.6cm] {Database};
+
+  % main box
+  \node (main_box) [rectangle, dashed, minimum width=6cm, minimum height=6.4cm,
+    text width=2.7cm, draw=black, fill=white, fill opacity=0.1, right of=block1,
+    xshift=1.8cm, yshift=-2cm] {};
+  \node (main_box_name) [above of=main_box, xshift=-1.4cm, yshift=0.8cm] {Main Box};
+
+  \node (gimbal) [block, below of=main_box, yshift=-2cm] {Gimbal};
+  \node (radio) [block, right of=main_box, xshift=2.5cm] {Radio};
+  \node (air) [right of=radio, xshift=-0.3cm] {};
+
+  % draw connections between nodes
+  \draw [arrow] (camera) -- node[anchor=north] {} (block1);
+  \draw [arrow] (block1) -- node[anchor=north] {Level 1} (level1);
+  \draw [arrow] (level1) -- node[anchor=east] {Level 2} (redblock);
+  \draw [arrow] (redblock) -- node[anchor=east] {Level 3} (database);
+  \draw [<->] (main_box) -- node[anchor=east] {serial commands} (gimbal);
+  \draw [radiation,decoration={angle=45}] (radio) -- (air);
+  \draw [<->] (main_box) -- node[anchor=north] {} (radio);
+  \draw [arrow] (main_box.0) -| ++(-1cm,0) |- node[anchor=south, xshift=0.4cm] {tracks} (level1.0);
+
+\end{tikzpicture}
+\end{center}
+ \caption{Short term system diagram.}
+\label{fig:short_term_system_diagram}
+\end{figure}
+
+\newpage
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+\section{file diagram}
+% ---------------------------
+
+% See https://tex.stackexchange.com/questions/5073/making-a-simple-directory-tree
+
+\begin{forest}
+  for tree={
+    font=\ttfamily,
+    grow'=0,
+    child anchor=west,
+    parent anchor=south,
+    anchor=west,
+    calign=first,
+    edge path={
+      \noexpand\path [draw, \forestoption{edge}]
+      (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
+    },
+    before typesetting nodes={
+      if n=1
+      {insert before={[,phantom]}}
+      {}
+    },
+    fit=band,
+    before computing xy={l=15pt},
+  }
+  [projects
+    [Main Proj
+      [Sub1
+        [filename]
+        [UAV17
+          [0017.parm]
+          [Pilots
+            [pilot1]
+            [pilot2]
+          ]
+        ]
+        [UAV43
+          [filename]
+          [Pilots
+            [...]
+          ]
+        ]
+      ]
+      [Sub2
+        [...]
+      ]
+    ]
+    [Secondary Project
+      [...]
+    ]
+  ]
+\end{forest}
+
+
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+\section{hello world}
+% ---------------------------
+
+
+% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+\newpage
+
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
