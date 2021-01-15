@@ -7,6 +7,21 @@ Gemfile.lock
 package-lock.json
 node_modules/
 
+# LaTeX files
+auto/
+build/
+*.pdf
+*.aux
+*.log
+*.synctex.gz
+*.bbl
+*.blg
+*.nav
+*.out
+*.toc
+*.vrb
+*.snm
+
 ### macOS ###
 *.DS_Store
 .AppleDouble
