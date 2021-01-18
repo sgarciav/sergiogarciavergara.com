@@ -22,7 +22,8 @@
 \usepackage{amsmath}
 \usepackage{color}
 \usepackage{dsfont}
-\usepackage{forest}
+\usepackage{hyperref}
+% \usepackage{forest}
 % \usepackage{algorithm}
 % \usepackage{algpseudocode}
 % \usepackage{graphicx} % for the \includegraphics command
@@ -36,6 +37,7 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{plotmarks}
 \usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{sumation} = [circle, minimum width=0.2cm, minimum height=0.5cm, text centered, text width=0.4cm, draw=black, fill=white]
 \tikzstyle{block} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=black, fill=white]
 \tikzstyle{redblock} = [rectangle, thick, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=red, fill=white]
 \tikzstyle{wideblock} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=white]
@@ -49,173 +51,131 @@
 \tikzstyle{arrow} = [->,>=stealth] % can add "thick" to make it bold
 \tikzset{radiation/.style={{decorate,decoration={expanding waves,angle=90,segment length=4pt}}}}
 
-%% new commands
+% new commands
 % ------------------
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\norm}[1]{\lVert#1\rVert}
-\newcommand{\abs}[1]{\left|#1\right|}
-\newcommand*\Let[2]{\State #1 $\gets$ #2}
-
 \definecolor{light-gray}{gray}{0.95}
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
 
+
 \begin{document}
 
-% {\Huge Project Description}
+% {\Huge Project Description} % optional
 
 % Header of paper
-% Hint: \title{what ever}, \author{who care} and \date{when ever} could stand
-% before or after the \begin{document} command
-% BUT the \maketitle command MUST come AFTER the \begin{document} command!
+% NOTE: The \maketitle command MUST come AFTER the \begin{document} command!
 % ---------------------
-\title{TikZ Library Template}
+\title{TikZ Playground Document}
 \author{
   Sergio Garc\'{i}a-Vergara \\
-  RIF Robotics Corp \\
 }
 
 \maketitle
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-
 % % Abstract
 % % ---------------------
 % \begin{abstract}
-%   Maybe this would be good to have.
-
-% \begin{keywords}
-%   one $\cdot$ two
-% \end{keywords}
+%   Use this document as a reference for the post in
 
 % \end{abstract}
 
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-\section{System Diagram}
+\section{Block Diagrams}
 % ---------------------------
 
-This diagram makes no sense as right now I'm using it as a template for real
-diagrams. I'll be sure to clean it up and link it to better explanations on how
-to create these diagrams.
+\subsection{Simple Feedback Diagram}
 
-\vspace{1em}
-\noindent NOTES:
-\begin{itemize}
-  \item Here you would add notes
-\end{itemize}
+Consider the transfer function for a noise-free physical linear system
+(\ref{eq:linear_system_trans_fun}):
 
+\begin{equation}\label{eq:linear_system_trans_fun}
+Y(s) = \frac{C(s)}{R(s)} = \frac{KG(s)}{1 + KG(s)H(s)}
+\end{equation}
 
-% diagram - short term
+\noindent
+where $C(s)$ and $R(s)$ are the output and input of the system,
+respectively. It's corresponding block diagram is represented by Figure
+\ref{fig:liner_system_diagram}. Let's use this simple block diagram to explain
+how to draw blocks positioned relative to each other, and how to connect them.
+
 \begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
 
   % We start by placing the blocks
-  \node (camera) [block] {Camera};
-  \node (block1) [block, right of=camera, xshift=0.8cm] {Block1};
-  \node (level1) [block, right of=block1, xshift=1.6cm] {Level1};
-  \node (redblock) [redblock, below of=level1, yshift=0.6cm] {Red Block};
-  \node (database) [redblock, below of=redblock, yshift=0.6cm] {Database};
+  \node (input) [circle] {R(s)};
 
-  % main box
-  \node (main_box) [rectangle, dashed, minimum width=6cm, minimum height=6.4cm,
-    text width=2.7cm, draw=black, fill=white, fill opacity=0.1, right of=block1,
-    xshift=1.8cm, yshift=-2cm] {};
-  \node (main_box_name) [above of=main_box, xshift=-1.4cm, yshift=0.8cm] {Main Box};
+  \node (sum) [sumation, right of=input, xshift=-0.4cm] {};
+  \node (plus_sign) [above of=sum, xshift=-0.6cm, yshift=-2.4cm] {+};
+  \node (minus_sign) [below of=sum, xshift=-0.4cm, yshift=2.1cm] {-};
 
-  \node (gimbal) [block, below of=main_box, yshift=-2cm] {Gimbal};
-  \node (radio) [block, right of=main_box, xshift=2.5cm] {Radio};
-  \node (air) [right of=radio, xshift=-0.3cm] {};
+  \node (kgs) [block, right of=sum, xshift=0.45cm] {KG(s)};
+  \node (hs) [block, below of=kgs, yshift=0.7cm] {H(s)};
 
-  % draw connections between nodes
-  \draw [arrow] (camera) -- node[anchor=north] {} (block1);
-  \draw [arrow] (block1) -- node[anchor=north] {Level 1} (level1);
-  \draw [arrow] (level1) -- node[anchor=east] {Level 2} (redblock);
-  \draw [arrow] (redblock) -- node[anchor=east] {Level 3} (database);
-  \draw [<->] (main_box) -- node[anchor=east] {serial commands} (gimbal);
-  \draw [radiation,decoration={angle=45}] (radio) -- (air);
-  \draw [<->] (main_box) -- node[anchor=north] {} (radio);
-  \draw [arrow] (main_box.0) -| ++(-1cm,0) |- node[anchor=south, xshift=0.4cm] {tracks} (level1.0);
+  \node (output) [circle, right of=kgs, xshift=1.2cm] {C(s)};
+
+  % Draw the connections between blocks
+  \draw [arrow] (input) -- node[anchor=north] {} (sum);
+  \draw [arrow] (sum) -- node[anchor=north] {} (kgs);
+  \draw [arrow] (kgs) -- node[anchor=north] {} (output);
+  \draw [arrow] (kgs.0) -| ++(1cm,0cm) |- node[anchor=north] {} (hs.0);
+  \draw [arrow] (hs.180) -| node[anchor=north] {} (sum.270);
+  % \draw [<->] (main_box) -- node[anchor=east] {serial commands} (gimbal);
+  % \draw [radiation,decoration={angle=45}] (radio) -- (air);
+  % \draw [<->] (main_box) -- node[anchor=north] {} (radio);
+  % \draw [arrow] (main_box.0) -| ++(-1cm,0) |- node[anchor=south, xshift=0.4cm] {tracks} (level1.0);
 
 \end{tikzpicture}
 \end{center}
- \caption{Short term system diagram.}
-\label{fig:short_term_system_diagram}
+ \caption{Block diagram of a noise-free linear system.}
+\label{fig:liner_system_diagram}
+\end{figure}
+
+
+
+\subsection{More Complicated version}
+
+\newpage
+
+%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+\section{Flowchart}
+% ---------------------------
+
+Include examples of flowcharts.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
+
+  \node (main_box) [rectangle, dashed, minimum width=6cm, minimum height=6.4cm,
+    text width=2.7cm, draw=black, fill=white, fill opacity=0.1,
+    xshift=1.8cm, yshift=-2cm] {};
+
+\end{tikzpicture}
+\end{center}
+ \caption{Flowchart example.}
+\label{fig:flowchart}
 \end{figure}
 
 \newpage
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-
-\section{file diagram}
+\section{Plots}
 % ---------------------------
 
-% See https://tex.stackexchange.com/questions/5073/making-a-simple-directory-tree
-
-\begin{forest}
-  for tree={
-    font=\ttfamily,
-    grow'=0,
-    child anchor=west,
-    parent anchor=south,
-    anchor=west,
-    calign=first,
-    edge path={
-      \noexpand\path [draw, \forestoption{edge}]
-      (!u.south west) +(7.5pt,0) |- node[fill,inner sep=1.25pt] {} (.child anchor)\forestoption{edge label};
-    },
-    before typesetting nodes={
-      if n=1
-      {insert before={[,phantom]}}
-      {}
-    },
-    fit=band,
-    before computing xy={l=15pt},
-  }
-  [projects
-    [Main Proj
-      [Sub1
-        [filename]
-        [UAV17
-          [0017.parm]
-          [Pilots
-            [pilot1]
-            [pilot2]
-          ]
-        ]
-        [UAV43
-          [filename]
-          [Pilots
-            [...]
-          ]
-        ]
-      ]
-      [Sub2
-        [...]
-      ]
-    ]
-    [Secondary Project
-      [...]
-    ]
-  ]
-\end{forest}
+Include examples of plots.
 
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-\section{hello world}
-% ---------------------------
-
-
-% @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
-\newpage
-
-\bibliographystyle{ieeetr}
-\bibliography{references}
+% \newpage
+% \bibliographystyle{ieeetr}
+% \bibliography{references}
 
 \end{document}
 
