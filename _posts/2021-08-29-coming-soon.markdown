@@ -1,17 +1,16 @@
 ---
 layout: post
-title: Docker for Beginners
-date: 2020-09-27
-description: Want to get started with Docker? Why not start here?
+title: Coming Soon
+date: 2021-08-29
+description: Posts coming soon...
 img: # docker-icon.png # Add image post (optional)
 ---
 
-# Install
+My personal website is live! First post will be coming soon. Stay tuned while I
+add the missing feauresto the website. In the meantime, read on Jekyll below and
+see how easy it is to create your first static webpage.
 
-Follow [these instructions](https://docs.docker.com/engine/install/) to get
-Docker for Ubuntu.
-
-# Temporary
+### Info on Jekyll
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most
 out of Jekyll. File all bugs/feature requests
