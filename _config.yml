@@ -25,10 +25,10 @@ social-twitter:
 social-location: Atlanta, GA, USA
 
 # Disqus
-discus-identifier: # mr-brown (default) # add your discus identifier
+discus-identifier: sgarciav # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: Google Analytics
 
 # Build Settings
 markdown: kramdown
