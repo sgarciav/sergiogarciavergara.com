@@ -49,31 +49,31 @@ To start using the TikZ libraries, start by including the relevant packages in
 your tex file. These commands will be needed regardless of the libraries you
 use.
 
-```
+{% highlight latex %}
 \usepackage{tkz-euclide}
 \usepackage{tikz}
-```
+{% endhighlight %}
 
 Use the `\usetikzlibrary{}` command to include the specific library you want to
 use. Our sample file calls the following libraries for drawing block diagrams
 and flowcharts:
 
-```
+{% highlight latex %}
 \usetikzlibrary{arrows}
 \usetikzlibrary{quotes,angles}
 \usetikzlibrary{positioning}
 \usetikzlibrary{plotmarks}
 \usetikzlibrary{shapes.geometric, arrows}
-```
+{% endhighlight %}
 
 You can then add any drawing by adding the following text to your tecx file. The
 following sections describe how to draw block diagrams and flowcharts.
 
-```
+{% highlight latex %}
 \begin{tikzpicture}
 ... code ...
 \end{tikzpicture}
-```
+{% endhighlight %}
 
 ## Define Styles <a id="headerlink" name="tikz-define-styles" href="#tikz-define-styles" title="Permalink to this headline"></a>
 
@@ -83,9 +83,9 @@ blocks such that you can just reference them by type in your overall drawing.
 
 For example ....
 
-```
+{% highlight latex %}
 \tikzstyle{block} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=black, fill=white]
-```
+{% endhighlight %}
 
 # Block Diagrams <a id="headerlink" name="tikz-block-diagrams" href="#tikz-block-diagrams" title="Permalink to this headline"></a>
 
