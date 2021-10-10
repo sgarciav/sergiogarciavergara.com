@@ -12,19 +12,18 @@ knowledge of writing tex documents and compiling them into PDFs. If you don't
 have a working environment for compiling tex documents, you can
 use [Overleaf](https://www.overleaf.com/) in your browser to practice.
 
-I provide a sample tex file that you can download here for you to play with. You
-can use it within your environment or copy the text into Overleaf. You should be
-able to compile it out of the box. This post will reference this sample file
-throughout the examples.
-
 The intention of this post is to provide a high-level introduction of the **TikZ
-package** and explain the basics to get you started with simple drawinga. It is
+package** and explain the basics to get you started with simple drawings. It is
 not meant to be a comprehensive guide for its full use. For more details on how
-to use the TikZ package, you can refer to:
+to use the TikZ package, you can refer to the links at the bottom of this post.
 
-* [A Very Minimal Introduction to TikZ](https://cremeronline.com/LaTeX/minimaltikz.pdf)
-* [Overleaf tutorials](https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing)
-* [YouTube series](https://www.youtube.com/watch?v=0yFKxz_Az2g)
+## Download this File
+
+I provide a sample tex file that you can use as a starting point (<a
+href="../assets/docs/tikzplayground.tex" download="tikzplayground.tex">click
+here to download</a> the `tikzplayground.tex` file). You can use it within your
+environment or copy the text into Overleaf. You should be able to compile it out
+of the box. This post will reference this sample file throughout the examples.
 
 # TikZ Package <a id="headerlink" name="tikz-package" href="#tikz-package" title="Permalink to this headline"></a>
 
@@ -99,3 +98,9 @@ the next sections, this post will walk you through drawing this same block
 diagram so you can start drawing your own.
 
 # Flowcharts <a id="headerlink" name="tikz-flowcharts" href="#tikz-flowcharts" title="Permalink to this headline"></a>
+
+# References <a id="headerlink" name="tikz-references" href="#tikz-references" title="Permalink to this headline"></a>
+
+* [A Very Minimal Introduction to TikZ](https://cremeronline.com/LaTeX/minimaltikz.pdf)
+* [Overleaf tutorials](https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_1)%E2%80%94Basic_Drawing)
+* [YouTube series](https://www.youtube.com/watch?v=0yFKxz_Az2g)
