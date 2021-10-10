@@ -469,7 +469,8 @@ template {
 }
 
 .highlight {
-    background-color: #faf9f9;
+    /* background-color: #faf9f9; this is the original */
+    background-color: #e6e6e6;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 0;
@@ -858,10 +859,12 @@ pre code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-    overflow: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-all;
+    /* overflow: auto; */
+    overflow: scroll;
+    /* white-space: pre-wrap; */
+    white-space: pre;
+    /* word-wrap: break-word; */
+    /* word-break: break-all; */
 }
 
 table {
