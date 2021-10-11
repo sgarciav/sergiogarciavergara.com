@@ -17,17 +17,8 @@
 \usepackage{tkz-euclide}
 \usepackage{tikz} % for drawing diagrams
 \usepackage{bm} % bold mode
-\usepackage{subfig}
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{color}
-\usepackage{dsfont}
+%% \usepackage{color}
 \usepackage{hyperref}
-% \usepackage{forest}
-% \usepackage{algorithm}
-% \usepackage{algpseudocode}
-% \usepackage{graphicx} % for the \includegraphics command
-% \usepackage{titlesec} % allow for changing the spacing in sections
 
 
 % setup style of tikzlibrary elements
@@ -44,7 +35,6 @@
 \tikzstyle{tallblock} = [rectangle, minimum width=1.9cm, minimum height=2cm, text centered, text width=1.9cm, draw=black, fill=white]
 \tikzstyle{inputblock} = [rectangle, minimum width=1.7cm, minimum height=5cm, text centered, text width=1.7cm, draw=black, fill=white]
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
-\tikzstyle{startstop_wide} = [rectangle, rounded corners, minimum width=6cm, minimum height=1cm, text centered, draw=black, fill=white]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
 \tikzstyle{process} = [rectangle, minimum width=4cm, minimum height=1cm, text centered, text width=4cm, draw=black, fill=white]
 \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
@@ -64,21 +54,26 @@
 % Header of paper
 % NOTE: The \maketitle command MUST come AFTER the \begin{document} command!
 % ---------------------
-\title{TikZ Playground Document}
+\title{TikZ Playground}
 \author{
-  Sergio Garc\'{i}a-Vergara \\
+  Author: Sergio Garc\'{i}a-Vergara \\
+  \small{https://www.sergiogarciavergara.com}
 }
 
 \maketitle
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-% % Abstract
-% % ---------------------
-% \begin{abstract}
-%   Use this document as a reference for the post in
+% Abstract
+% ---------------------
+\begin{abstract}
+  This sample tex file is intended to be used together with the tutorials on the
+  TikZ package described in Sergio's website
+  (\href{https://www.sergiogarciavergara.com/block-diagrams-in-latex/}{sergiogarciavergara.com}). The
+  tutorials describe step-by-step how to construct the diagrams and flowcharts
+  shown in this document.
 
-% \end{abstract}
+\end{abstract}
 
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -98,8 +93,7 @@ Y(s) = \frac{C(s)}{R(s)} = \frac{KG(s)}{1 + KG(s)H(s)}
 \noindent
 where $C(s)$ and $R(s)$ are the output and input of the system,
 respectively. It's corresponding block diagram is represented by Figure
-\ref{fig:liner_system_diagram}. Let's use this simple block diagram to explain
-how to draw blocks positioned relative to each other, and how to connect them.
+\ref{fig:liner_system_diagram}.
 
 \begin{figure}[h]
 \begin{center}
@@ -111,10 +105,8 @@ how to draw blocks positioned relative to each other, and how to connect them.
   \node (sum) [sumation, right of=input, xshift=-0.4cm] {};
   \node (plus_sign) [above of=sum, xshift=-0.6cm, yshift=-2.4cm] {+};
   \node (minus_sign) [below of=sum, xshift=-0.4cm, yshift=2.1cm] {-};
-
   \node (kgs) [block, right of=sum, xshift=0.45cm] {KG(s)};
   \node (hs) [block, below of=kgs, yshift=0.7cm] {H(s)};
-
   \node (output) [circle, right of=kgs, xshift=1.2cm] {C(s)};
 
   % Draw the connections between blocks
@@ -123,9 +115,6 @@ how to draw blocks positioned relative to each other, and how to connect them.
   \draw [arrow] (kgs) -- node[anchor=north] {} (output);
   \draw [arrow] (kgs.0) -| ++(1cm,0cm) |- node[anchor=north] {} (hs.0);
   \draw [arrow] (hs.180) -| node[anchor=north] {} (sum.270);
-  % \draw [<->] (main_box) -- node[anchor=east] {serial commands} (gimbal);
-  % \draw [radiation,decoration={angle=45}] (radio) -- (air);
-  % \draw [<->] (main_box) -- node[anchor=north] {} (radio);
   % \draw [arrow] (main_box.0) -| ++(-1cm,0) |- node[anchor=south, xshift=0.4cm] {tracks} (level1.0);
 
 \end{tikzpicture}
@@ -135,8 +124,7 @@ how to draw blocks positioned relative to each other, and how to connect them.
 \end{figure}
 
 
-
-\subsection{More Complicated version}
+\subsection{Complicated Block Diagram}
 
 \newpage
 
