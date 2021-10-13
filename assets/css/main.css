@@ -469,7 +469,7 @@ template {
 }
 
 .highlight {
-    /* background-color: #faf9f9; this is the original */
+    /* background-color: #faf9f9; */ /* this is the original */
     background-color: #e6e6e6;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -930,6 +930,7 @@ table tfoot td {
 }
 
 .post, .article-page {
+    max-width: 900px; /* define the width of the post pages */
     background-color: #fff;
 }
 
