@@ -930,7 +930,7 @@ table tfoot td {
 }
 
 .post, .article-page {
-    max-width: 900px; /* define the width of the post pages */
+    max-width: 925px; /* define the width of the post pages */
     background-color: #fff;
 }
 
