@@ -469,18 +469,19 @@ template {
 }
 
 .highlight {
-    background-color: #faf9f9;
+    /* background-color: #faf9f9; */ /* this is the original */
+    background-color: #e6e6e6;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 0;
 }
 
 .highlighter-rouge {
-    color: #ce887b;
-    font-weight: 400;
-    border: 1px solid #607D8B;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
+    color: #ce887f;
+    font-weight: 505;
+    /* border: 1px solid #607D8B; */
+    /* -webkit-border-radius: 3px; */
+    /* border-radius: 3px; */
     padding: 0.1rem 0.5rem;
 }
 
@@ -858,10 +859,12 @@ pre code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
-    overflow: auto;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    word-break: break-all;
+    /* overflow: auto; */
+    overflow: scroll;
+    /* white-space: pre-wrap; */
+    white-space: pre;
+    /* word-wrap: break-word; */
+    /* word-break: break-all; */
 }
 
 table {
@@ -927,6 +930,7 @@ table tfoot td {
 }
 
 .post, .article-page {
+    max-width: 925px; /* define the width of the post pages */
     background-color: #fff;
 }
 
