@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "pass: Unix Password Manager"
-date: 2021-10-18
+date: 2021-10-19
 description: How to setup PASS to keep your passwords safe.
 img: passlock.jpg # (optional)
 fig-caption: www.freepik.com # (optional)
@@ -228,9 +228,13 @@ available GPG IDs available in your machine.
 One of the beautiful things about `pass` is that you can use it mobily! I use
 the Android app
 (called
-[Password Store](https://play.google.com/store/apps/details?id=dev.msfjarvis.aps&hl=en_US&gl=US)).
+[Password Store](https://play.google.com/store/apps/details?id=dev.msfjarvis.aps&hl=en_US&gl=US)). There
+are other compatible clients in
+the [official website](https://www.passwordstore.org/).
 
-You'll need to also download and install
+To use `pass` from your Android phone, you need to first download and install
 the
 [OpenKeychain](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain&hl=en_US&gl=US) app
-to hold your ssh key.
+to hold your ssh key. This will allow the Password Store app to decrypt your
+`pass` entries. Setting up the OpenKeychain app is a breeze. Feel free to drop
+whatever questions you may have in the comments.
