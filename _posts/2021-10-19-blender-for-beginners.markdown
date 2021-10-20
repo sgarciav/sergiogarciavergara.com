@@ -3,7 +3,7 @@ layout: post
 title: Blender for Beginners
 date: 2021-10-19
 description: Initial steps for learning Blender
-img: blender-logo.png # (optional)
+img: blender-post/blender-logo.png # (optional)
 fig-caption: www.blender.org # (optional)
 ---
 
