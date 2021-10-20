@@ -3,7 +3,7 @@ layout: post
 title: "pass: Unix Password Manager"
 date: 2021-10-19
 description: How to setup PASS to keep your passwords safe.
-img: passlock.jpg # (optional)
+img: pass-post/passlock.jpg # (optional)
 fig-caption: www.freepik.com # (optional)
 ---
 
