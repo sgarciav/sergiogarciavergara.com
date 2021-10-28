@@ -49,6 +49,7 @@ interface:
 **Keyboard Interactions**:
 
 * `Ctrl + Space`: Make a panel fullscreen. Press again to exit fullscreen view.
+* `Shift + A`: Open the "Add" menu to add new objects.
 * `Shift + Space`: Open the tools panel at your cursor location which contains:
   select box, move, rotate, and scale. (You can also press `t` on the keyboard.)
 * `Shift + Right-click`: Click at the location where you want the 3D cursor to
@@ -57,9 +58,9 @@ interface:
 
 **Pie Menus**:
 
-* `Shift + s`: Select "Cursor to World Origin" to reset the position of the 3D
+* `Shift + S`: Select "Cursor to World Origin" to reset the position of the 3D
   cursor to the origin of the map.
-* `z`: Choose how to view your world (e.g., wireframe vs original).
+* `Z`: Choose how to view your world (e.g., wireframe vs original).
 
 **Mouse Interactions**:
 
