@@ -10,21 +10,21 @@ fig-caption: www.blender.org # (optional)
 # About <a id="headerlink" name="blender-about" href="#blender-about" title="Permalink to this headline"></a>
 ------------------
 
-<!-- TODO: write about how this is for animation only -->
+`Blender` is a powerful open-source software tool for creating animations. It's
+one of the animation tools used by Pixar. This post is not intended to serve as
+a tutorial for learning how to create animations
+(the [official website](https://www.blender.org/) is an excellent resource for
+that). I'm writing this post to keep track of what I learn as I go. I want to
+create a reference that summarizes the main concepts such that I can refer to it
+whenever I forget something. Hopefully it can serve as a reference guide for
+others as well.
 
-`Blender` is a powerful tool for creating animations.
+As you read through this post, keep in mind that `Blender` offers a wild variety
+of features and can be used for so many purposes. There is no better way to
+learn how to use this software than by playing with it.
 
-I'm writing this post as I learn how to interact with
-`Blender`. The [official website](https://www.blender.org/) is an excellent
-resource. The intention of this post is to keep track of what I learn as I go so
-that 1) I can easily recall what I've learned, and 2) I can refer to the
-material as I practice using the software. Hopefully it'll serve as a learning
-base for others.
-
-As you read through, keep in mind that `Blender` offers a wild variety of
-features and can be used for SO many purposes. This post is *not* a turotial
-
-I used the references listed in the [References](#blender-referneces) section.
+Refer to the [References](#blender-referneces) section for the links/tutorials I
+followed while writing this post.
 
 # Installation <a id="headerlink" name="blender-installation" href="#blender-installation" title="Permalink to this headline"></a>
 ------------------
@@ -38,10 +38,8 @@ $ cd /path/to/blender-xxx
 $ ./blender
 ```
 
-# Interacting with Blender <a id="headerlink" name="blender-interactions" href="#blender-interactions" title="Permalink to this headline"></a>
+# Hotkey Cheatsheet <a id="headerlink" name="blender-cheatsheet" href="#blender-cheatsheet" title="Permalink to this headline"></a>
 ------------------
-
-## Hotkey Cheatsheet <a id="headerlink" name="blender-hotkeys" href="#blender-hotkeys" title="Permalink to this headline"></a>
 
 <!-- TODO: Consider making this cheatsheet into a downloadable PDF so others can -->
 <!-- reference. -->
@@ -84,39 +82,25 @@ interface:
 
 * `Right click on panel edges`: split scren to add another panel / join panels.
 
-## Main Workspaces <a id="headerlink" name="blender-workspaces" href="#blender-workspaces" title="Permalink to this headline"></a>
+<!-- ## Main Workspaces <a id="headerlink" name="blender-workspaces" href="#blender-workspaces" title="Permalink to this headline"></a> -->
 
-This section describes in general what you can do with some of the
-workspaces. The
-[Interface Overview video](https://www.youtube.com/watch?v=8XyIYRW_2xk&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=3) explains
-how to navigate the different panels and tabs.
+<!-- This section describes in general what you can do with some of the -->
+<!-- workspaces. The -->
+<!-- [Interface Overview video](https://www.youtube.com/watch?v=8XyIYRW_2xk&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=3) explains -->
+<!-- how to navigate the different panels and tabs. -->
 
-This is a screenshot of the available workspaces:
+<!-- This is a screenshot of the available workspaces: -->
 
-<img src="/assets/img/blender-post/workspaces.png" alt="Blender workspace ribbon screenshot.">
+<!-- <img src="/assets/img/blender-post/workspaces.png" alt="Blender workspace ribbon screenshot."> -->
 
-**Layout**
+<!-- <\!-- TODO: Explain how to insert a color image pallet to color your objects -\-> -->
 
-Main workspace where you can modify your objects and your scene.
+<!-- **Layout**: Main workspace where you can modify your objects and your scene. -->
+<!-- **UV Editing**: -->
+<!-- **Sculpting**: -->
 
-**UV Editing**
-
-**Sculpting**
-
-# Animating <a id="headerlink" name="blender-animating" href="#blender-animating" title="Permalink to this headline"></a>
+# Basic Concepts <a id="headerlink" name="blender--basic-concepts" href="#blender-basic-concepts" title="Permalink to this headline"></a>
 ------------------
-
-The first thing you'll want to do before you start animating is make sure you
-apply all transformations to all of your objects. Read more
-details
-[here](https://docs.blender.org/manual/en/latest/scene_layout/object/editing/apply.html),
-but essentially what you're doing is reseting the values of the objects'
-location, rotation, and scale.
-
-Follow these steps to apply all transforms to an object:
-1. While in "Object Mode", select an object.
-2. Click `Ctrl + A`.
-3. Select "All Transforms".
 
 ## Parenting <a id="headerlink" name="blender-parenting" href="#blender-parenting" title="Permalink to this headline"></a>
 
@@ -127,56 +111,183 @@ transformations of its parent object's. Remember, the *last* object you select
 will be the parent. There is a list of videos/turorials in
 the [References](#blender-references) section.
 
-#bb bg## Object Constraints <a id="headerlink" name="blender-obj-constraints" href="#blender-obj-constraints" title="Permalink to this headline"></a>
+To parent an object to another:
+1. `Left-click` on the child object
+2. `Shift + Left-click` on the parent object
+3. `Ctrl + P` and select the appropriate parenting option from the menu
+(screenshot below)
 
-<!-- TODO: study how to parent with limits -->
+<img src="/assets/img/blender-post/parenting.png" alt="Parenting menu.">
 
 ## Armatures <a id="headerlink" name="blender-armatures" href="#blender-armatures" title="Permalink to this headline"></a>
 
-You'll want to use armatures when animating "bodies" (e.g., characters and
-robotic manipulators). Basically, armatures allow you to define relationships
-between the body's different joints. For example, while animating a robotic
+An armature is a rig of bones parented one to another. You'll want to use
+armatures when animating "bodies" (e.g., characters and robotic
+manipulators). Basically, armatures allow you to define relationships between
+the body's different joints (bones). For example, while animating a robotic
 manipulator, you'll want for the robot's end-effector to move accordingly as you
 move the base around. Armatures also allow you to set constraints on how each
 bone can move. For example, you can restrict a bone to rotate around the x-axis,
 and you can restrict another bone to translate in the yz-plane. There is a list
 of videos/turorials in the [References](#blender-references) section.
 
-Each bone in an armature has three parts: head (base of the bone), body, and
-tail (narrower end of the bone). The pivot point of a bone is the head. An
-armature is a rig of bones parented one to another. Make sure you
-understand [parenting](#blender-parenting) first before you start playing with
-armatures.
+Make sure you understand [parenting](#blender-parenting) before you start
+playing with armatures.
+
+## Modes <a id="headerlink" name="blender-modes" href="#blender-modes" title="Permalink to this headline"></a>
+
+It's important to understand the different between the three main modes of
+operation: Object Mode, Pose Mode, and Edit Mode. You'll be accomplishing
+different tasks in each mode. Trying to implement a task in the wrong mode can
+easily mess up your scene so be patient and practice. Refer to the
+provided [cheatsheet](#blender-cheatsheet) to easily switch between modes.
+
+### Object Mode <a id="headerlink" name="blender-obj-mode" href="#blender-obj-mode" title="Permalink to this headline"></a>
+
+### Pose Mode <a id="headerlink" name="blender-pose-mode" href="#blender-pose-mode" title="Permalink to this headline"></a>
+
+### Edit Mode <a id="headerlink" name="blender-edit-mode" href="#blender-edit-mode" title="Permalink to this headline"></a>
 
 ## Keyframes <a id="headerlink" name="blender-keyframes" href="#blender-keyframes" title="Permalink to this headline"></a>
 
-Keyframes are what mark specific positions and orientations for your animations.
+Keyframes are what mark specific positions and orientations for your
+animations. Essentially, you're telling `Blender` the specific location and
+orientation of your scene at specific points in time. `Blender` them takes care
+of interpolating between the keyframes to generate a smooth animation.
 
+
+<!-- This is true for animating bones and armatures -->
 record location and orientation while in "Pose Mode"
 add keyframes in pose mode
+
+## Pose Library <a id="headerlink" name="blender-pose-library" href="#blender-pose-library" title="Permalink to this headline"></a>
+
+Perhaps you've found out by now that it can be tedious to define
+
+Enter the `pose libraries`. They are exactly what they sound like.
+
+https://www.youtube.com/watch?v=j08-Hzf33yQ
+
+## Object Constraints <a id="headerlink" name="blender-obj-constraints" href="#blender-obj-constraints" title="Permalink to this headline"></a>
+
+<!-- TODO: study how to parent with limits -->
+
+# Animation Sequences <a id="headerlink" name="blender-animation-seq" href="#blender-animation-seq" title="Permalink to this headline"></a>
+------------------
+
+This section describes some specific animation sequences that I've learned from
+following several tutorials. I summarize the steps for each animation here to
+remind myself of the steps so I don't have to look through several videos again
+if and when I forget. All the links are in the [References](#blender-references)
+section.
+
+<!-- TODO: is this true? -->
+Moreover, before any animation takes place, you should first apply all
+transformations to all of your objects. Read more
+details
+[here](https://docs.blender.org/manual/en/latest/scene_layout/object/editing/apply.html),
+but essentially what you're doing is reseting the values of the objects'
+location, rotation, and scale.
+
+Follow these steps to apply all transforms to an object:
+1. While in "Object Mode", select an object.
+2. Click `Ctrl + A`.
+3. Select "All Transforms".
+
+## Pick and Drop <a id="headerlink" name="blender-pick-drop" href="#blender-pick-drop" title="Permalink to this headline"></a>
+
+Picking up an object in one location and dropping it down in a different
+location is a very useful animation sequence. After setting up the armature for
+your two objects, follow the following sequence of actions:
+
+1. Select the start point in the keyframe timeline.
 
 # References <a id="headerlink" name="blender-references" href="#blender-references" title="Permalink to this headline"></a>
 ------------------
 
-**General**:
+## General
 
-* [Blender 2.9 Reference Manual](https://docs.blender.org/manual/en/latest/)
-* [Blender Tutorials](https://www.blender.org/support/tutorials/)
-* [Blender 2.80 Fundamentals YouTube Series](https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6)
+<div class="ref-links">
+<ul>
 
-**Animating**:
+<li><a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender
+2.9 Reference Manual</a></li>
 
-* [Keyframes for beginners](https://www.youtube.com/watch?v=WB8dK3iX_Uw)
-* Armatures:
-  * [Blender 2.8 Fundamentals](https://www.youtube.com/watch?v=cZ3o5tjO51s)
-  * [Creating an armature for your character](https://www.youtube.com/watch?v=uK7TTDn1rZ8)
-* [Pickup and Drop Object](https://www.youtube.com/watch?v=XdhGscPHIk0)
-* [Parenting](https://www.youtube.com/watch?v=GS452KMVWKA) <a id="headerlink" name="blender-ref-parenting" href="#blender-ref-parenting" title="Permalink to this headline"></a>
+<li><a href="https://www.blender.org/support/tutorials/" target="_blank">Blender
+Tutorials</a></li>
 
-**Interactions between Objects**:
+<li><a
+href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6"
+target="_blank">Blender 2.80 Fundamentals YouTube Series</a></li>
 
-* [All constraints explained](https://www.youtube.com/watch?v=81SiXoAWXuU)
+</ul>
+</div>
 
-**Coloring**:
+## Animating
 
-* [How to delete all unused material from a Blender file](https://www.youtube.com/watch?v=bIob1Mgblm0&t=48s)
+<div class="ref-links">
+<ul>
+
+<li><strong>Keyframes</strong>:
+  <ul>
+
+    <li><a href="https://www.youtube.com/watch?v=SZJswvw9wEs"
+target="_blank">Blender 2.80 Fundamentals</a></li>
+
+    <li><a href="https://www.youtube.com/watch?v=WB8dK3iX_Uw"
+target="_blank">Keyframes for begineers</a></li>
+
+  </ul>
+</li>
+
+<li><strong>Armatures</strong>:
+  <ul>
+
+    <li><a href="https://www.youtube.com/watch?v=cZ3o5tjO51s"
+target="_blank">Blender 2.80 Fundamentals</a></li>
+
+    <li><a href="https://www.youtube.com/watch?v=uK7TTDn1rZ8"
+target="_blank">Creating an armature for your character</a></li>
+
+  </ul>
+</li>
+
+<li><a href="https://www.youtube.com/watch?v=IAiTYaiZmY0"
+target="_blank">Setting up keyframes for the armature's bones</a></li>
+
+<li><a href="https://www.youtube.com/watch?v=jXCq8CncEeA" target="_blank">Pick
+up and Drop Objects</a> (Child of constraint example)</li>
+
+<li><a href="https://www.youtube.com/watch?v=GS452KMVWKA"
+target="_blank">Parenting: Blender 2.8 Fundamentals</a></li>
+
+</ul>
+</div>
+
+## Interactions between Objects
+
+<div class="ref-links">
+<ul>
+
+<li><a href="https://www.youtube.com/watch?v=81SiXoAWXuU" target="_blank">All
+constraints explained</a></li>
+
+<li><a href="https://www.youtube.com/watch?v=j08-Hzf33yQ"
+target="_blank">Creating a pose library</a></li>
+
+</ul>
+</div>
+
+## Drawing and Coloring
+
+<div class="ref-links">
+<ul>
+
+<li><a href="https://www.youtube.com/watch?v=bIob1Mgblm0&t=48s"
+target="_blank">How to delete all unused material from a Blender file</a></li>
+
+<li><a href="https://www.youtube.com/watch?v=oZAddnGxjNU" target="_blank">Change
+object origin</a></li>
+
+</ul>
+</div>

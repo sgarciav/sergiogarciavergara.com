@@ -815,6 +815,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Publication references */
 .reference {
     font-family: Courier;
     font-size: 19px;
@@ -822,6 +823,16 @@ body {
 
 .reference li {
     margin: 25px 0;
+}
+
+/* Reference links for posts */
+.ref-links {
+    font-family: Courier;
+    font-size: 22px;
+}
+
+.ref-links li {
+    margin: 10px 0;
 }
 
 img {
