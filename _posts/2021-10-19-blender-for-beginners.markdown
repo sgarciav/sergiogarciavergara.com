@@ -51,6 +51,12 @@ $ ./blender
 The following is a list of hotkeys to facilitate interactions with `Blender's`
 interface:
 
+| Operation | Command |
+|-----------|:---------:|
+|    sss       | eeeeee  |
+|           |         |
+|           |         |
+
 **Keyboard**:
 
 * `TAB`: Toggle in and out of "Edit Mode".
@@ -218,7 +224,15 @@ Tutorials</a></li>
 
 <li><a
 href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6"
-target="_blank">Blender 2.80 Fundamentals YouTube Series</a></li>
+target="_blank">Blender 2.80 Fundamentals YouTube Series</a>
+  <ul>
+
+  <li><a
+href="https://www.youtube.com/watch?v=RDbrOpnIY7Q&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=22"
+target="_blank">Three point lighting</a></li>
+
+  </ul>
+</li>
 
 </ul>
 </div>
@@ -227,6 +241,9 @@ target="_blank">Blender 2.80 Fundamentals YouTube Series</a></li>
 
 <div class="ref-links">
 <ul>
+
+<li><a href="https://www.youtube.com/watch?v=GS452KMVWKA"
+target="_blank">Parenting: Blender 2.8 Fundamentals</a></li>
 
 <li><strong>Keyframes</strong>:
   <ul>
@@ -258,8 +275,11 @@ target="_blank">Setting up keyframes for the armature's bones</a></li>
 <li><a href="https://www.youtube.com/watch?v=jXCq8CncEeA" target="_blank">Pick
 up and Drop Objects</a> (Child of constraint example)</li>
 
-<li><a href="https://www.youtube.com/watch?v=GS452KMVWKA"
-target="_blank">Parenting: Blender 2.8 Fundamentals</a></li>
+<li><a href="https://www.youtube.com/watch?v=znsb96lcwaY"
+target="_blank">Multiple cameras and rig paths</a></li>
+
+<li><a href="https://www.youtube.com/watch?v=tzSesvjEEds"
+target="_blank">Object visibility on/off animation</a></li>
 
 </ul>
 </div>

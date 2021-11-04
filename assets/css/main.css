@@ -880,8 +880,8 @@ pre code {
 
 table {
     border: 1px solid #aaa;
-    background-color: #eee;
-    width: 100%;
+    background-color: white; /* original: #eee */
+    width: 90%; /* original: 100% */
     text-align: left;
     border-collapse: collapse;
 }
@@ -892,27 +892,31 @@ table td, table.blueTable th {
 }
 
 table tbody td {
-    font-size: 13px;
+    font-size: 20px; /* original: 13px */
 }
 
-table tr:nth-child(even) {
-    background: #adbecc;
-}
+/* uncomment to switch color every other row */
+/* table tr:nth-child(even) { */
+/*     background: #adbecc; */
+/* } */
 
 table thead {
-    background: #a9c4d1;
-    background: -webkit-gradient(linear, left top, left bottom, from(#bed3dc), color-stop(66%, #b1cad5), to(#A9C4D1));
-    background: -webkit-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
-    background: -o-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
-    background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%);
+    /* background: #a9c4d1; */
+    /* background: -webkit-gradient(linear, left top, left bottom, from(#bed3dc), color-stop(66%, #b1cad5), to(#A9C4D1)); */
+    background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(66%, #92c2cc), to(#92c2cc));
+    /* background: -webkit-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%); */
+    /* background: -o-linear-gradient(top, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%); */
+    /* background: linear-gradient(to bottom, #bed3dc 0%, #b1cad5 66%, #A9C4D1 100%); */
     border-bottom: 1px solid #8c8c8c;
 }
 
+/* table header */
 table thead th {
-    font-size: 14px;
+    font-size: 21px; /* original: 14px */
     font-weight: bold;
-    color: #fff;
+    color: black; /* original: #fff */
     border-left: 1px solid #d0e4f5;
+    text-align: center;
 }
 
 table thead th:first-child {
