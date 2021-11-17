@@ -26,6 +26,21 @@ learn how to use this software than by playing with it.
 Refer to the [References](#blender-referneces) section for the links/tutorials I
 followed while writing this post.
 
+## Index <a id="headerlink" name="blender-index" href="#blender-index" title="Permalink to this headline"></a>
+
+Thsi post is organized as follows:
+
+* [Installation](#blender-installation)
+* [Hotkey Cheatsheet](#blender-cheatsheet)
+* [Basic Concepts](#blender-basic-concepts)
+  * [Parenting](#blender-parenting)
+  * [Armatures](#blender-armatures)
+  * [Modes](#blender-modes)
+  * [Pose Library](#blender-pose-library)
+  * [Object Constraints](#blender-obj-constraints)
+* [Animation Sequences](#blender-animation-seq)
+* [References](#blender-references)
+
 # Installation <a id="headerlink" name="blender-installation" href="#blender-installation" title="Permalink to this headline"></a>
 ------------------
 
@@ -105,7 +120,7 @@ interface:
 <!-- **UV Editing**: -->
 <!-- **Sculpting**: -->
 
-# Basic Concepts <a id="headerlink" name="blender--basic-concepts" href="#blender-basic-concepts" title="Permalink to this headline"></a>
+# Basic Concepts <a id="headerlink" name="blender-basic-concepts" href="#blender-basic-concepts" title="Permalink to this headline"></a>
 ------------------
 
 ## Parenting <a id="headerlink" name="blender-parenting" href="#blender-parenting" title="Permalink to this headline"></a>
@@ -188,25 +203,46 @@ if and when I forget. All the links are in the [References](#blender-references)
 section.
 
 <!-- TODO: is this true? -->
-Moreover, before any animation takes place, you should first apply all
-transformations to all of your objects. Read more
-details
-[here](https://docs.blender.org/manual/en/latest/scene_layout/object/editing/apply.html),
-but essentially what you're doing is reseting the values of the objects'
-location, rotation, and scale.
+<!-- Moreover, before any animation takes place, you should first apply all -->
+<!-- transformations to all of your objects. Read more -->
+<!-- details -->
+<!-- [here](https://docs.blender.org/manual/en/latest/scene_layout/object/editing/apply.html), -->
+<!-- but essentially what you're doing is reseting the values of the objects' -->
+<!-- location, rotation, and scale. -->
 
-Follow these steps to apply all transforms to an object:
-1. While in "Object Mode", select an object.
-2. Click `Ctrl + A`.
-3. Select "All Transforms".
+<!-- Follow these steps to apply all transforms to an object: -->
+<!-- 1. While in "Object Mode", select an object. -->
+<!-- 2. Click `Ctrl + A`. -->
+<!-- 3. Select "All Transforms". -->
 
 ## Pick and Drop <a id="headerlink" name="blender-pick-drop" href="#blender-pick-drop" title="Permalink to this headline"></a>
 
-Picking up an object in one location and dropping it down in a different
-location is a very useful animation sequence. After setting up the armature for
-your two objects, follow the following sequence of actions:
+<!-- TODO: add a GIF of some pick up animation you do -->
+
+Picking up an object in one location and dropping it in a different location is
+a very useful animation
+sequence. [This video](https://www.youtube.com/watch?v=jXCq8CncEeA) is a great
+tutorial. It explains how to use the "Child Of" constraint to achieve this
+sequence. As a reference, the following are the main steps summarized:
 
 1. Select the start point in the keyframe timeline.
+2. Key in the keyframe
+
+These steps
+
+You can accomplish the same behavior with objects instead of having to setup the
+armature for the object that will be picked up.
+
+1.
+
+## Switch between different camera POVs <a id="headerlink" name="blender-multple-cameras" href="#blender-multple-cameras" title="Permalink to this headline"></a>
+
+Instead of keyframing the camera at different locations to get different points
+of view throughout the animation, you can setup multiple cameras and switch
+between them. [This video](https://www.youtube.com/watch?v=znsb96lcwaY) is a
+great tutorial. As a reference, the following ate the main steps summarized:
+
+1.
 
 # References <a id="headerlink" name="blender-references" href="#blender-references" title="Permalink to this headline"></a>
 ------------------
