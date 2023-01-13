@@ -2,7 +2,7 @@
 layout: post
 title: About Me
 description: A little about me.
-img: Cayey.jpeg
+img: main-page/Cayey.jpeg
 fig-caption: Cayey, PR
 ---
 
