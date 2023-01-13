@@ -24,8 +24,7 @@ reference that summarizes the main concepts such that I can refer to it whenever
 I forget something. Hopefully it can serve as a reference guide for others as
 well.
 
-<!-- As you read through this post, keep in mind that `Blender` offers a wild variety -->
-<!-- of features and can be used for so many purposes. There is no better way to -->
+<!-- There is no better way to -->
 <!-- learn how to use this software than by playing with it. -->
 
 Refer to the [References](#pytorch-referneces) section for the links/tutorials I
@@ -39,6 +38,11 @@ Some general commands to help with determining the setup of your Linux system:
 
 * glibc version: `$ ldd --version`
 * CUDA version: `$ nvidia-smi`
+* check if CUDA is available/installed:
+
+        $ python
+        $ import torch
+        $ torch.cuda.is_available()
 
 ## Index <a id="headerlink" name="pytorch-index" href="#pytorch-index" title="Permalink to this headline"></a>
 
@@ -62,8 +66,7 @@ the [PyTorch official website](https://pytorch.org/get-started/locally/).
 The [NVIDIA Container Toolkit](https://github.com/NVIDIA/nvidia-docker) allows
 users to build and run GPU accelerated Docker containers. Although you will
 **not** have to install the CUDA Toolkit on your host system, you will need to
-install the Nvidia driver. The instructions for installing the Nvidia driver can
-be found in
+install the Nvidia drivers. The instructions can be found in
 the
 [Nvidia docs](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker). Namely,
 execute the following:
@@ -97,6 +100,9 @@ execute the following:
 
 <div class="ref-links">
 <ul>
+
+<li><a href="https://discuss.pytorch.org/" target="_blank">PyTorch
+Forums</a></li>
 
 <li><a
 href="https://alvissalim.com/2020/05/16/running-pytorch-in-docker-container/"
