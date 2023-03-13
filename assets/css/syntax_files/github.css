@@ -1,13 +1,15 @@
 .highlight {
-  background-color: #f6f8fa;
+  background-color: #f6f8fa; /* note: only for the code blocks */
   color: #24292e;
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: 500;
   font-size: 18px;
   line-height: 1.45;
   padding: 16px;
   overflow: auto;
   border-radius: 3px;
 }
+
 .highlight pre {
   margin: 0;
   padding: 0;

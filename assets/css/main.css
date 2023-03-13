@@ -469,7 +469,7 @@ template {
 }
 
 .highlight {
-    /* background-color: #faf9f9; */ /* this is the original */
+    /* background-color: #faf9f9; this is the original */
     background-color: #e6e6e6;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -478,8 +478,8 @@ template {
 
 /* NOTE: This is the highlight for the quotes in the middle of text */
 .highlighter-rouge {
-    color: #e6e6e6; /* color of the text */
-    background-color: #122b3b;
+    color: orange; /* color of the text */
+    font-weight: 600;
     border-radius: 3px;
     padding: 0.1rem 0.5rem;
 }
