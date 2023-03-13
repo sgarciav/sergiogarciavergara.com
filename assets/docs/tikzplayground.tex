@@ -14,12 +14,11 @@
 
 % Packages
 % ------------------
-\usepackage{tkz-euclide}
+% \usepackage{tkz-euclide}
 \usepackage{tikz} % for drawing diagrams
 \usepackage{bm} % bold mode
 %% \usepackage{color}
 \usepackage{hyperref}
-
 
 % setup style of tikzlibrary elements
 % ------------------------------------
@@ -28,12 +27,16 @@
 \usetikzlibrary{positioning}
 \usetikzlibrary{plotmarks}
 \usetikzlibrary{shapes.geometric, arrows}
-\tikzstyle{sumation} = [circle, minimum width=0.2cm, minimum height=0.5cm, text centered, text width=0.4cm, draw=black, fill=white]
+
+% setup style of tikzlibrary elements
+% ------------------------------------
 \tikzstyle{block} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=black, fill=white]
 \tikzstyle{redblock} = [rectangle, thick, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=red, fill=white]
 \tikzstyle{wideblock} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=white]
 \tikzstyle{tallblock} = [rectangle, minimum width=1.9cm, minimum height=2cm, text centered, text width=1.9cm, draw=black, fill=white]
 \tikzstyle{inputblock} = [rectangle, minimum width=1.7cm, minimum height=5cm, text centered, text width=1.7cm, draw=black, fill=white]
+\tikzstyle{sumation} = [circle, minimum width=0.2cm, minimum height=0.5cm, text centered, text width=0.4cm, draw=black, fill=white]
+
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
 \tikzstyle{process} = [rectangle, minimum width=4cm, minimum height=1cm, text centered, text width=4cm, draw=black, fill=white]
@@ -67,6 +70,7 @@
 % Abstract
 % ---------------------
 \begin{abstract}
+
   This sample tex file is intended to be used together with the tutorials on the
   TikZ package described in Sergio's website
   (\href{https://www.sergiogarciavergara.com/block-diagrams-in-latex/}{https://www.sergiogarciavergara.com/block-diagrams-in-latex/}). The
