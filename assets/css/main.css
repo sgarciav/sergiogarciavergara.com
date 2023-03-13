@@ -469,19 +469,18 @@ template {
 }
 
 .highlight {
-    /* background-color: #faf9f9; */ /* this is the original */
+    /* background-color: #faf9f9; this is the original */
     background-color: #e6e6e6;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 0;
 }
 
+/* NOTE: This is the highlight for the quotes in the middle of text */
 .highlighter-rouge {
-    color: #ce887f;
-    font-weight: 505;
-    /* border: 1px solid #607D8B; */
-    /* -webkit-border-radius: 3px; */
-    /* border-radius: 3px; */
+    color: orange; /* color of the text */
+    font-weight: 600;
+    border-radius: 3px;
     padding: 0.1rem 0.5rem;
 }
 
