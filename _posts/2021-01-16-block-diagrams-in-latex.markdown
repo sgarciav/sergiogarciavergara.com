@@ -49,27 +49,27 @@ flowcharts.
 To start using the TikZ libraries, first include the relevant packages in your
 tex file.
 
-{% highlight latex %}
+``` latex
 \usepackage{tkz-euclide}
 \usepackage{tikz}
-{% endhighlight %}
+```
 
 Use the `\usetikzlibrary{}` command to include the specific library you want to
 use. Our sample file calls the following libraries for drawing block diagrams
 and flowcharts:
 
-{% highlight latex %}
+``` latex
 \usetikzlibrary{arrows}
 \usetikzlibrary{quotes,angles}
 \usetikzlibrary{positioning}
 \usetikzlibrary{plotmarks}
 \usetikzlibrary{shapes.geometric, arrows}
-{% endhighlight %}
+```
 
 You can then start constructing your diagram as a figure by including the
 following to your tex file:
 
-{% highlight latex %}
+``` latex
 \begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
@@ -77,7 +77,7 @@ following to your tex file:
 \end{tikzpicture}
 \end{center}
 \end{figure}
-{% endhighlight %}
+```
 
 The following sections describe the code you need to add within the `... code
 ...` section to draw block diagrams and flowcharts.
@@ -93,16 +93,16 @@ For example, the following defines a rectangular block that can later be
 referenced in the code by "block". Specifically, it defines the shape, its
 dimensions, the position of the text, and the color and fill of the box:
 
-{% highlight latex %}
+``` latex
 \tikzstyle{block} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=black, fill=white]
-{% endhighlight %}
+```
 
 Similarly, the following defines a circular block that can be referenced in the
 code by "sumation":
 
-{% highlight latex %}
+``` latex
 \tikzstyle{sumation} = [circle, minimum width=0.2cm, minimum height=0.5cm, text centered, text width=0.4cm, draw=black, fill=white]
-{% endhighlight %}
+```
 
 There are more building block examples in the
 provided [tikzplayground.tex](#tikz-download) file.
