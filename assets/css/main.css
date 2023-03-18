@@ -838,6 +838,12 @@ img + em {
     font-size: 14px;
 }
 
+#video-container {
+    display: flex;
+    justify-content: center;
+}
+
+
 blockquote {
     border-left: 5px solid #000;
     padding-left: 1.1rem;
