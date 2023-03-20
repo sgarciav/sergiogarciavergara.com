@@ -1053,7 +1053,7 @@ table td {
     left: 0;
     background-color: #ffffff;
     overflow-x: hidden;
-    padding: 30px 0px;
+    padding: 30px -10px;
 }
 
 /* This is the text inside the sidenav section */
