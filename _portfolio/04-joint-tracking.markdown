@@ -16,16 +16,19 @@ to joint tracking and analysis.
 
 As a PhD student at [Georgia Tech](https://www.gatech.edu/) and a member of
 the [HumAnS Lab](https://humanslab.ece.gatech.edu/), I developed an adaptable
-in-home VR game to be used as part of the physical therapy intervention
-protocols of children who have cerebral palsy.
+in-home VR game (main interface pictured in the banner of this post) to be used
+as part of the physical therapy intervention protocols of children who have
+cerebral palsy.
 
 Under the supervision of my PhD
 advisor, [Dr. Ayanna Howard](https://www.linkedin.com/in/ayanna-howard/), I
 developed kinematic baseline for assessing upper-body motor skills
 ([published article](https://ieeexplore.ieee.org/iel7/6919203/6926219/06926369.pdf?casa_token=mTObTmsnJjkAAAAA:gTqZCQ2aDENlc4glqKJslz29B_bahKgRaJoq5CNXgrRI_WH6lsAwt-nMky42JpQXDGVQ5V1Nsw)). This
 baseline, together with the capabilities of the Kinect camera from Microsoft to
-keep track of the user's upper-body 3D joint coordinates, allowed for teh
-development of
+track the user's upper-body 3D joint coordinates, allowed for the development of
+the game that is being valiated in several clinical trials (read more in
+this
+[published journal article](https://www.sciencedirect.com/science/article/abs/pii/S0894113018302679?casa_token=5n8vn_dy31gAAAAA:TMFymFH-z9F8BVhi1ExJu-qv1RfPYZjbnJd5Livebve_4VZ-isiHbx3sZElEnpQAIh2G_VReGqg)).
 
 The following video generally describes the functionality of the *Super Pop
 VR<sup>TM</sup>* game:
