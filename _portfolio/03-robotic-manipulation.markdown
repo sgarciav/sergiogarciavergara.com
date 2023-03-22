@@ -68,7 +68,7 @@ allowfullscreen></iframe>
 
 </div>
 
-## URSIm + Docker <a id="headerlink" name="manipulation-ur-sim" href="#manipulation-ur-sim" title="Permalink to this headline"></a>
+## URSim + Docker <a id="headerlink" name="manipulation-ur-sim" href="#manipulation-ur-sim" title="Permalink to this headline"></a>
 
 As always, it's important to test and debug sofwtare in simulation as much as
 possible before trying it out on a physical system. Luckily, Universal Robots
