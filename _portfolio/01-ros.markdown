@@ -73,6 +73,26 @@ and acquired while working on the projects described in this post:
     </td>
   </tr>
   <tr>
+    <td class="skills">C++</td>
+    <td>
+      <div class="rating">
+        <div class="line">
+          <div class="tick expert">Expert</div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="skills">Python</td>
+    <td>
+      <div class="rating">
+        <div class="line">
+          <div class="tick expert">Expert</div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
     <td class="skills">Docker</td>
     <td>
       <div class="rating">
