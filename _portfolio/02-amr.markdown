@@ -11,9 +11,9 @@ environment without human oversight. AMRs leverage a variety of sensors for safe
 and accurate navigation.
 
 I've worked on a wide variety of projects focused on designing, implementing,
-and field testing aerial and ground AMRs. The following sections describe some
-of the projects I've worked on. The last section summarizes
-the [technical skills](amr-skills) I've implemented and acquired while working
+and field testing aerial and ground AMRs. I describe in this post some of the
+projects I've worked on. The last section summarizes
+the [technical skills](#amr-skills) I've implemented and acquired while working
 on these projects.
 
 [**ROS and ROS 2**](https://www.ros.org/) were the base architecture for all the
@@ -202,6 +202,16 @@ and acquired while working on the projects described in this post:
     </td>
   </tr>
   <tr>
+    <td class="skills">Docker</td>
+    <td>
+      <div class="rating">
+        <div class="line">
+          <div class="tick proficient">Proficient</div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
     <td class="skills">Path Planning</td>
     <td>
       <div class="rating">
@@ -217,6 +227,16 @@ and acquired while working on the projects described in this post:
       <div class="rating">
         <div class="line">
           <div class="tick proficient">Proficient</div>
+        </div>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td class="skills">Gazebo Simulations/Development</td>
+    <td>
+      <div class="rating">
+        <div class="line">
+          <div class="tick competent">Competent</div>
         </div>
       </div>
     </td>
