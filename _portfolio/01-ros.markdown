@@ -8,10 +8,24 @@ fig-caption: WWW.ROS.ORG
 
 The [Robot Operating System (ROS)](https://www.ros.org/) is a powerful software
 architecture used by roboticists all over the world. I have applied my extensive
-experience with ROS and ROS 2 in a wide variety of projects (e.g., AMRs and
-robotic manipulators). I talk about my knowledge of ROS and ROS 2 applied to
-specific robotics projects in other posts. This post describes my work done for
-simplifyig software development for me and my teammates.
+experience with ROS and ROS 2 in a wide variety of projects
+(e.g., [AMRs](https://www.sergiogarciavergara.com/portfolio/02-amr/)
+and
+[robotic manipulators](https://www.sergiogarciavergara.com/portfolio/03-robotic-manipulation/)). I
+talk about my knowledge of ROS and ROS 2 applied to specific robotics projects
+in other posts. This post describes my work done for simplifyig software
+development for me and my teammates.
+
+# ROS in Docker <a id="headerlink" name="ros-docker" href="#ros-docker" title="Permalink to this headline"></a>
+------------------
+
+[Docker](https://www.docker.com/) is a powerful tool for containarizing
+environments. I like to create nice and predictable environments for running my
+ROS and ROS 2 projects without the need of setting up virtual machines.
+
+Feel free to contact me if you're interested in setting up a similar environment
+for your project:
+email me: [sergiodotgarcia@gmail.com](mailto:sergiodotgarcia@gmail.com)
 
 # ROS 1 <> ROS 2 Bridge <a id="headerlink" name="ros-bridge" href="#ros-bridge" title="Permalink to this headline"></a>
 ------------------
@@ -44,16 +58,6 @@ I have put together a working example
 on
 [my personal Github page](https://github.com/sgarciav/ros2_playground/tree/master/husarnet) to
 demonstrate the feasibility of using Husarnet in your ROS 2 project.
-
-# ROS in Docker <a id="headerlink" name="ros-docker" href="#ros-docker" title="Permalink to this headline"></a>
-------------------
-
-[Docker](https://www.docker.com/) is a powerful tool for containarizing
-environments. Personally, I like to create nice environments for running my ROS
-and ROS 2 projects without the need of setting up virtual machines.
-
-At the time of writing this post, I am cleaning up my environment such that
-other developers can easily leverage my solution.
 
 # Technical Skills <a id="headerlink" name="ros-skills" href="#ros-skills" title="Permalink to this headline"></a>
 ------------------

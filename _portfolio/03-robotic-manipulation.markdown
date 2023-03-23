@@ -15,7 +15,7 @@ in this library saves developers a considerable amount of time.
 
 I describe in this post the projects I've worked on where I've implemented
 solutions from the MoveIt framework to control robotic manipulators. The last
-section summarizes the [technical skills](#manipulation-skills) I've implemented
+section summarizes the [technical skills](#manipulation-skills) I've improved on
 and acquired while working on these projects.
 
 # Universal Robots <a id="headerlink" name="manipulation-ur" href="#manipulation-ur" title="Permalink to this headline"></a>
@@ -100,7 +100,7 @@ allowfullscreen></iframe>
 # Technical Skills <a id="headerlink" name="manipulation-skills" href="#manipulation-skills" title="Permalink to this headline"></a>
 ------------------
 
-The following summarizes my proficiency in the technical skills I implemented
+The following summarizes my proficiency in the technical skills I improved on
 and acquired while working on the projects described in this post:
 
 <table>

@@ -13,14 +13,12 @@ and accurate navigation.
 I've worked on a wide variety of projects focused on designing, implementing,
 and field testing aerial and ground AMRs. I describe in this post some of the
 projects I've worked on. The last section summarizes
-the [technical skills](#amr-skills) I've implemented and acquired while working
+the [technical skills](#amr-skills) I've improved on and acquired while working
 on these projects.
 
 [**ROS and ROS 2**](https://www.ros.org/) were the base architecture for all the
-projects described in this post. I provide more details about my ROS skills in
-this post.
-
-<!-- TODO: link the ROS post once it's published -->
+projects described in this post. I provide more details about my ROS skills
+in [this post](https://www.sergiogarciavergara.com/portfolio/01-ros/).
 
 # Aerial Vehicles <a id="headerlink" name="amr-aerial" href="#amr-aerial" title="Permalink to this headline"></a>
 ------------------
@@ -157,7 +155,7 @@ features to keep track of while operating in open fields.
 # Technical Skills <a id="headerlink" name="amr-skills" href="#amr-skills" title="Permalink to this headline"></a>
 ------------------
 
-The following summarizes my proficiency in the technical skills I implemented
+The following summarizes my proficiency in the technical skills I improved on
 and acquired while working on the projects described in this post:
 
 <table>
@@ -232,7 +230,7 @@ and acquired while working on the projects described in this post:
     </td>
   </tr>
   <tr>
-    <td class="skills">Gazebo Simulations/Development</td>
+    <td class="skills">Gazebo Simulations</td>
     <td>
       <div class="rating">
         <div class="line">
