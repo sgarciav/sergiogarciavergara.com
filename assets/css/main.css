@@ -1059,9 +1059,9 @@ table td {
 /* This is the text inside the sidenav section */
 .sidenav a {
     padding-left: 12px;
-    padding-bottom: 26px; /* This is the space between items in the sidenav */
+    padding-bottom: 24px; /* This is the space between items in the sidenav */
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
     color: #575757;
     display: block;
     font-family: Garamond, Copperplate;
