@@ -17,10 +17,8 @@ the [technical skills](#amr-skills) I've implemented and acquired while working
 on these projects.
 
 [**ROS and ROS 2**](https://www.ros.org/) were the base architecture for all the
-projects described in this post. I provide more details about my ROS skills in
-this post.
-
-<!-- TODO: link the ROS post once it's published -->
+projects described in this post. I provide more details about my ROS skills
+in [this post](https://www.sergiogarciavergara.com/portfolio/01-ros/).
 
 # Aerial Vehicles <a id="headerlink" name="amr-aerial" href="#amr-aerial" title="Permalink to this headline"></a>
 ------------------
@@ -232,7 +230,7 @@ and acquired while working on the projects described in this post:
     </td>
   </tr>
   <tr>
-    <td class="skills">Gazebo Simulations/Development</td>
+    <td class="skills">Gazebo Simulations</td>
     <td>
       <div class="rating">
         <div class="line">
