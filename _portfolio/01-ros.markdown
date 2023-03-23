@@ -8,10 +8,13 @@ fig-caption: WWW.ROS.ORG
 
 The [Robot Operating System (ROS)](https://www.ros.org/) is a powerful software
 architecture used by roboticists all over the world. I have applied my extensive
-experience with ROS and ROS 2 in a wide variety of projects (e.g., AMRs and
-robotic manipulators). I talk about my knowledge of ROS and ROS 2 applied to
-specific robotics projects in other posts. This post describes my work done for
-simplifyig software development for me and my teammates.
+experience with ROS and ROS 2 in a wide variety of projects
+(e.g., [AMRs](https://www.sergiogarciavergara.com/portfolio/02-amr/)
+and
+[robotic manipulators](https://www.sergiogarciavergara.com/portfolio/03-robotic-manipulation/)). I
+talk about my knowledge of ROS and ROS 2 applied to specific robotics projects
+in other posts. This post describes my work done for simplifyig software
+development for me and my teammates.
 
 # ROS 1 <> ROS 2 Bridge <a id="headerlink" name="ros-bridge" href="#ros-bridge" title="Permalink to this headline"></a>
 ------------------
