@@ -9,7 +9,7 @@ fig-caption: Super Pop VR<sup>TM</sup> main GUI.
 I have worked on several projects related to tracking and analyzing people's
 upper-body joints using differnet sensors and leveraging different methods. This
 section describes the work I completed for each project and
-the [technical skills](#joint-tracking-skills) I acquired and improved upon
+the [technical skills](#joint-tracking-skills) I acquired and improved on
 related to joint tracking and analysis.
 
 # Super Pop VR<sup>TM</sup> <a id="headerlink" name="joint-tracking-superpop" href="#joint-tracking-superpop" title="Permalink to this headline"></a>
@@ -91,7 +91,7 @@ allowfullscreen></iframe>
 # Technical Skills <a id="headerlink" name="joint-tracking-skills" href="#joint-tracking-skills" title="Permalink to this headline"></a>
 ------------------
 
-The following summarizes my proficiency in the technical skills I implemented
+The following summarizes my proficiency in the technical skills I improved on
 and acquired while working on the projects described in this post:
 
 <table>
