@@ -20,6 +20,9 @@ on these projects.
 projects described in this post. I provide more details about my ROS skills
 in [this post](https://www.sergiogarciavergara.com/portfolio/01-ros/).
 
+Feel free to contact me if I can provide value to your projects:
+[Consulting Services](https://www.sergiogarciavergara.com/pages/consulting/)
+
 # Aerial Vehicles <a id="headerlink" name="amr-aerial" href="#amr-aerial" title="Permalink to this headline"></a>
 ------------------
 
