@@ -56,8 +56,9 @@ environment for running PyTorch. It faciliates the training and testing
 processes.
 
 Feel free to contact me if you're interested in setting up a similar environment
-for your project:
-email me: [sergiodotgarcia@gmail.com](mailto:sergiodotgarcia@gmail.com)
+for your
+project:
+[Consulting Services](https://www.sergiogarciavergara.com/pages/consulting/)
 
 # Hobby Projects <a id="headerlink" name="obj-detection-hobby" href="#obj-detection-hobby" title="Permalink to this headline"></a>
 ------------------
@@ -86,9 +87,10 @@ object repeteadly, the scripts implement several classic computer vision
 methodologies to extract the outlines of the objects of interest and generate a
 good-enough starting point such that you're just fixing the initial estimates.
 
-Feel free to contact me if you're interested in leveraging these scripts for
-your projects:
-email me: [sergiodotgarcia@gmail.com](mailto:sergiodotgarcia@gmail.com)
+Feel free to contact me if you're interested in setting up a similar environment
+for your
+project:
+[Consulting Services](https://www.sergiogarciavergara.com/pages/consulting/)
 
 ### FiftyOne <a id="headerlink" name="obj-detection-fiftyone" href="#obj-detection-fiftyone" title="Permalink to this headline"></a>
 

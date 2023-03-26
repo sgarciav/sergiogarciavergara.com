@@ -16,16 +16,18 @@ talk about my knowledge of ROS and ROS 2 applied to specific robotics projects
 in other posts. This post describes my work done for simplifyig software
 development for me and my teammates.
 
+Feel free to contact me if I can provide value to your projects:
+[Consulting Services](https://www.sergiogarciavergara.com/pages/consulting/)
+
 # ROS in Docker <a id="headerlink" name="ros-docker" href="#ros-docker" title="Permalink to this headline"></a>
 ------------------
+
+<img src="/assets/img/ros-portfolio/ros-plus-docker.png" alt="Docker + ROS
+logos">
 
 [Docker](https://www.docker.com/) is a powerful tool for containarizing
 environments. I like to create nice and predictable environments for running my
 ROS and ROS 2 projects without the need of setting up virtual machines.
-
-Feel free to contact me if you're interested in setting up a similar environment
-for your project:
-email me: [sergiodotgarcia@gmail.com](mailto:sergiodotgarcia@gmail.com)
 
 # ROS 1 <> ROS 2 Bridge <a id="headerlink" name="ros-bridge" href="#ros-bridge" title="Permalink to this headline"></a>
 ------------------
