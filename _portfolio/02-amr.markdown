@@ -126,7 +126,7 @@ the dynamic contraints of the vehicle.
 
 As part of our startup, [RIF Robotics](https://www.rifrobotics.com/), we provide
 open source solutions for roboticists and hobbyists such that they don't need to
-start from scrtach. Check out our Github page and explore our public
+start from scratch. Check out our Github page and explore our public
 repos. The [dingo_setup](https://github.com/RIF-Robotics/dingo_setup) repo
 provides the framework for running the ROS 2 nav-stack inside a Docker
 container. The instructions in the main README should be enough, but feel free
@@ -143,7 +143,7 @@ on the right of this post's banner), is one of the platforms I've developed
 for. You
 can
 [read here](https://www.rifrobotics.com/blog/clearpath-parnetbot-program-winners) about
-how, at RFI Robotics, we one a Dingo platform as part of the ClearPath Robotics
+how, at RFI Robotics, we won a Dingo platform as part of the ClearPath Robotics
 PartnerBot Grant Program.
 
 # Autonomous Lawnmowers <a id="headerlink" name="amr-lawnmower" href="#amr-lawnmower" title="Permalink to this headline"></a>
