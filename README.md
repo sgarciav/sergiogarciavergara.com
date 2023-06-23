@@ -14,6 +14,12 @@ execute the following to install the gems in the Gemfile:
     $ cd /path/to/sergiogarciavergara.com
     $ bundle install
 
+**Note**: You can always execute the following to update the gems in your
+system:
+
+    sudo apt install jekyll bundler
+    gem update --system
+
 # Usage
 
 Execute the following to start hosting the website locally:
