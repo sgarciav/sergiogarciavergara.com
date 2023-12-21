@@ -1054,6 +1054,12 @@ table td {
     border-radius: 5px; /* Border radius */
 }
 
+/* Highlighting current header in the TOC */
+#table-of-contents ul li.current-header a {
+  color: #000; /* Highlighted color */
+  font-weight: bold; /* Style for highlighted header */
+}
+
 /* This is the actual sidenav section */
 .sidenav {
     height: 100%;
