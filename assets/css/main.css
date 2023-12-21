@@ -1043,6 +1043,17 @@ table td {
     background-color: #ffffff;
 }
 
+#table-of-contents {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    width: 250px; /* Adjust as needed */
+    background-color: #f9f9f9; /* Background color */
+    border: 1px solid #ddd; /* Border color */
+    padding: 10px; /* Padding */
+    border-radius: 5px; /* Border radius */
+}
+
 /* This is the actual sidenav section */
 .sidenav {
     height: 100%;

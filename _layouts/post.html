@@ -14,6 +14,7 @@ layout: main
     </div> <!-- End Page Cover Image -->
     {% else %}
     {% endif %}
+    <div id="table-of-contents"></div>
     <div class="wrap-content">
       <header class="header-page">
         <h1 class="page-title">{{page.title}}</h1>
@@ -36,3 +37,26 @@ layout: main
     </div> <!-- End Wrap Content -->
   </div> <!-- End Page Content -->
 </article> <!-- End Article Page -->
+
+<!-- Auto-generate the table of contents -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var tocContainer = document.getElementById('table-of-contents');
+    var headers = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+
+    if (tocContainer && headers.length > 0) {
+      var toc = '<ul>';
+
+      headers.forEach(function(header) {
+        var level = parseInt(header.tagName.charAt(1));
+        var anchor = header.textContent.replace(/\s+/g, '-').toLowerCase();
+        header.setAttribute('id', anchor);
+
+        toc += '<li><a href="#' + anchor + '">' + header.textContent + '</a></li>';
+      });
+
+      toc += '</ul>';
+      tocContainer.innerHTML = toc;
+    }
+  });
+</script>
