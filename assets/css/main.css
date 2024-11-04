@@ -469,19 +469,18 @@ template {
 }
 
 .highlight {
-    /* background-color: #faf9f9; */ /* this is the original */
+    /* background-color: #faf9f9; this is the original */
     background-color: #e6e6e6;
     -webkit-border-radius: 3px;
     border-radius: 3px;
     margin: 0;
 }
 
+/* NOTE: This is the highlight for the quotes in the middle of text */
 .highlighter-rouge {
-    color: #ce887f;
-    font-weight: 505;
-    /* border: 1px solid #607D8B; */
-    /* -webkit-border-radius: 3px; */
-    /* border-radius: 3px; */
+    color: orange; /* color of the text */
+    font-weight: 600;
+    border-radius: 3px;
     padding: 0.1rem 0.5rem;
 }
 
@@ -850,6 +849,12 @@ img + em {
     font-size: 14px;
 }
 
+#video-container {
+    display: flex;
+    justify-content: center;
+}
+
+
 blockquote {
     border-left: 5px solid #000;
     padding-left: 1.1rem;
@@ -857,6 +862,58 @@ blockquote {
     font-style: italic;
     color: #ada8a8;
 }
+
+/* Control of the skills bars */
+.skills {
+    font-weight: bold;
+}
+
+.rating {
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  background-color: #ddd;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 100%;
+  background-color: #333;
+}
+
+.tick {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 2px;
+  background-color: #333;
+  width: 25%;
+  font-size: 16px;
+  padding-top: 10px;
+}
+
+.novice {
+    left: 0%;
+}
+
+.competent {
+    left: 25%;
+}
+
+.proficient {
+    left: 50%;
+}
+
+.expert {
+    left: 75%;
+}
+
+/* ---------------------- */
 
 pre {
     padding: 1rem 2rem;
@@ -878,6 +935,23 @@ pre code {
     /* word-break: break-all; */
 }
 
+/* tables */
+/* TODO: review these settings for a regular table. Maybe have chatgpt */
+/* generate a better looking one */
+
+/* table { */
+/*     border: 1px solid #aaa; */
+/*     background-color: #eee; */
+/*     width: 100%; */
+/*     text-align: left; */
+/*     border-collapse: collapse; */
+/* } */
+
+/* table td, table.blueTable th { */
+/*     border: 1px solid #aaa; */
+/*     padding: 3px 2px; */
+/* } */
+
 table {
     border: 1px solid #aaa;
     background-color: white; /* original: #eee */
@@ -886,9 +960,8 @@ table {
     border-collapse: collapse;
 }
 
-table td, table.blueTable th {
-    border: 1px solid #aaa;
-    padding: 3px 2px;
+table td {
+    padding: 0.5em 10px;
 }
 
 table tbody td {
@@ -919,25 +992,25 @@ table thead th {
     text-align: center;
 }
 
-table thead th:first-child {
-    border-left: none;
-}
+/* table thead th:first-child { */
+/*     border-left: none; */
+/* } */
 
-table tfoot {
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
-    background: #d0e4f5;
-    background: -webkit-gradient(linear, left top, left bottom, from(#dcebf7), color-stop(66%, #d4e6f6), to(#D0E4F5));
-    background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    background: -o-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
-    border-top: 2px solid #444;
-}
+/* table tfoot { */
+/*     font-size: 14px; */
+/*     font-weight: bold; */
+/*     color: #fff; */
+/*     background: #d0e4f5; */
+/*     background: -webkit-gradient(linear, left top, left bottom, from(#dcebf7), color-stop(66%, #d4e6f6), to(#D0E4F5)); */
+/*     background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%); */
+/*     background: -o-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%); */
+/*     background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%); */
+/*     border-top: 2px solid #444; */
+/* } */
 
-table tfoot td {
-    font-size: 14px;
-}
+/* table tfoot td { */
+/*     font-size: 14px; */
+/* } */
 
 .wrapper {
     max-width: 1250px;
@@ -1003,15 +1076,15 @@ table tfoot td {
     left: 0;
     background-color: #ffffff;
     overflow-x: hidden;
-    padding: 30px 0px;
+    padding: 30px -10px;
 }
 
 /* This is the text inside the sidenav section */
 .sidenav a {
     padding-left: 12px;
-    padding-bottom: 26px; /* This is the space between items in the sidenav */
+    padding-bottom: 24px; /* This is the space between items in the sidenav */
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
     color: #575757;
     display: block;
     font-family: Garamond, Copperplate;

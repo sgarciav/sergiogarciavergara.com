@@ -55,7 +55,7 @@ you would from your machine (more details [here](#pass-android-client)).
 corresponding email for the account, username, potential security questions,
 etc. This is an example of what a raw entry looks like (not a real entry):
 
-```
+``` bash
 gywGY76^5;)knde8
 memberID: 63546348
 email: name.last@mail.com
@@ -72,7 +72,7 @@ other systems, refer to the [official website](https://www.passwordstore.org/).
 
 Execute:
 
-``` shell
+``` bash
 $ sudo apt install pass
 ```
 
@@ -80,7 +80,7 @@ $ sudo apt install pass
 
 Execute:
 
-``` shell
+``` bash
 $ gpg --full-generate-key
 ```
 
@@ -94,7 +94,7 @@ phrase you chose, you'll need it to initialize your password store.
 Execute the following to initialize the password store, where `GPG UID` is the
 **uid** stored from above:
 
-``` shell
+``` bash
 $ pass init [GPG UID]
 ```
 
@@ -106,13 +106,13 @@ of your passwords will be stored.
 Start by creating a new (local) git repository under the `~/.password-store`
 directory by executing:
 
-``` shell
+``` bash
 $ pass git init
 ```
 
 If you'd like to pair this repo with an existing one, execute the following:
 
-``` shell
+``` bash
 $ pass git remote add origin [GIT URL]
 $ cd ~/.password-store
 $ git fetch -p
@@ -125,7 +125,7 @@ Keep in mind that everytime you execute a `pass` command, it will create a new
 is being pointed at at the moment. You can then execute the following to push
 the commits to the server:
 
-``` shell
+``` bash
 $ pass git push
 ```
 
@@ -143,7 +143,7 @@ provide a file structure for your password store (you can nest as many
 directories as you wish), and `FILENAME` is the filename that `pass` will use to
 store the password:
 
-``` shell
+``` bash
 $ pass generate [OPTIONAL DIR]/[FILENAME] 20
 ```
 
@@ -151,20 +151,20 @@ Some websites don't allow the use of symbols or special characters in the
 passwords. Execute the following to generate a 20 character password in FILENAME
 that will *not* contain special characters:
 
-``` shell
+``` bash
 $ pass generate --no-symbols [OPTIONAL DIR]/[FILENAME] 20
 ```
 
 To insert a password, execute the following:
 
-``` shell
+``` bash
 $ pass insert [OPTIONAL DIR]/[FILENAME]
 ```
 
 You can also edit an existing entry by generating a new password from the
 command line:
 
-``` shell
+``` bash
 $ pass generate --in-place [OPTIONAL DIR]/[FILENAME] 30
 ```
 
@@ -172,7 +172,7 @@ When editing an entry via the command line, keep in mind that only the first row
 of the entry will be updated. Execute the following to edit any other
 information in the entry:
 
-``` shell
+``` bash
 $ pass edit [OPTIONAL DIR]/[FILENAME]
 ```
 
@@ -184,7 +184,7 @@ information will be maintained together in the same ecrypted file.
 
 Execute the following to display the password for the provided FILENAME:
 
-``` shell
+``` bash
 $ pass [OPTIONAL DIR]/[FILENAME]
 ```
 
@@ -198,29 +198,23 @@ available GPG IDs available in your machine.
 1. Export the GPG key pair that was generated on the original machine to the
    `public.key` and `private.key` files by executing:
 
-    ``` shell
-    $ gpg --export [GPG ID] > public.key
-    $ gpg --export-secret-key [GPG ID] > private.key
-    ```
+        $ gpg --export [GPG ID] > public.key
+        $ gpg --export-secret-key [GPG ID] > private.key
 
 2. Copy the key pair files to the secondary machine(s) you wish to use.
 
 3. Import the pair in the new machine(s) by executing:
 
-    ``` shell
-    $ cd /path/to/*.key
-    $ gpg --import public.key
-    $ gpg --import private.key
-    ```
+        $ cd /path/to/*.key
+        $ gpg --import public.key
+        $ gpg --import private.key
 
 4. Set the trust permissions on the new key pair by executing:
 
-    ``` shell
-    $ gpg --edit-key [GPG ID]
-    $ gpg> trust
-    $ "follow the prompts"
-    $ gpg> quit
-    ```
+        $ gpg --edit-key [GPG ID]
+        $ gpg> trust
+        $ "follow the prompts"
+        $ gpg> quit
 
 # Android Client <a id="headerlink" name="pass-android-client" href="#pass-android-client" title="Permalink to this headline"></a>
 ------------------
@@ -235,6 +229,10 @@ the [official website](https://www.passwordstore.org/).
 To use `pass` from your Android phone, you need to first download and install
 the
 [OpenKeychain](https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain&hl=en_US&gl=US) app
-to hold your ssh key. This will allow the Password Store app to decrypt your
-`pass` entries. Setting up the OpenKeychain app is a breeze. Feel free to drop
-whatever questions you may have in the comments.
+to hold your gpg key. This will allow the Password Store app to decrypt your
+`pass`
+entries. Follow
+[these steps](https://medium.com/@johnnymatthews/import-a-gpg-key-onto-your-phone-7dbadf16fefa) to
+export your gpg key from your computer to your phone.
+
+Feel free to drop whatever questions you may have in the comments.

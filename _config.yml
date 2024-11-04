@@ -14,7 +14,7 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Sergio Garc&iacute;a Vergara
-author-img: sergio-garcia-head.jpg
+author-img: sergio-garcia-bw.png
 about-author:
 social-github: sgarciav
 social-linkedin: sergio-garcia-vergara
@@ -40,6 +40,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jemoji
+
+# Collections
+collections:
+  portfolio:
+    output: true
 
 paginate: 8
 paginate_path: "/page/:num"
