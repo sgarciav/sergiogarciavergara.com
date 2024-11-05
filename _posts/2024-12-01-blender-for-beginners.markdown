@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Reference Guide to Blender 2.9
-date: 2021-10-19
-description: Reference guide for interacting with Blender 2.9
+title: Reference Guide to Blender 4.3
+date: 2024-11-01
+description: Reference guide for interacting with Blender 4.3
 img: blender-post/blender-logo.png # (optional)
 fig-caption: www.blender.org # (optional)
 ---
@@ -12,19 +12,19 @@ fig-caption: www.blender.org # (optional)
 
 `Blender` is a powerful open-source software tool for creating animations. It's
 one of the animation tools used by Pixar. This post is not intended to serve as
-a tutorial for learning how to create animations
-(the [official website](https://www.blender.org/) is an excellent resource for
-that). I'm writing this post to keep track of what I learn as I go. I want to
-create a reference that summarizes the main concepts such that I can refer to it
+a tutorial for learning how to create animations (the [official
+website](https://www.blender.org/) is an excellent resource for that). I'm
+writing this post to keep track of what I learn as I go. I want to create a
+reference that summarizes the main concepts such that I can refer to it
 whenever I forget something. Hopefully it can serve as a reference guide for
 others as well.
 
-As you read through this post, keep in mind that `Blender` offers a wild variety
-of features and can be used for so many purposes. There is no better way to
-learn how to use this software than by playing with it.
+As you read through this post, keep in mind that `Blender` offers a wild
+variety of features and can be used for so many purposes. There is no better
+way to learn how to use this software than by playing with it.
 
-Refer to the [References](#blender-referneces) section for the links/tutorials I
-followed while writing this post.
+Refer to the [References](#blender-referneces) section for the links/tutorials
+I followed while writing this post.
 
 ## Index <a id="headerlink" name="blender-index" href="#blender-index" title="Permalink to this headline"></a>
 
@@ -63,14 +63,14 @@ $ ./blender
 <!-- keyboard or combinations bla bla but by their functions. -->
 <!-- See: https://www.tablesgenerator.com/markdown_tables -->
 
-The following is a list of hotkeys to facilitate interactions with `Blender's`
-interface:
+<!-- The following is a list of hotkeys to facilitate interactions with `Blender's` -->
+<!-- interface: -->
 
-| Operation | Command |
-|-----------|:---------:|
-|    sss       | eeeeee  |
-|           |         |
-|           |         |
+<!-- | Operation | Command | -->
+<!-- |-----------|:---------:| -->
+<!-- |    sss       | eeeeee  | -->
+<!-- |           |         | -->
+<!-- |           |         | -->
 
 **Keyboard**:
 
@@ -81,11 +81,12 @@ interface:
   * `S`: Scale
 * `H`: Hide a selected object while in "Object Mode".
 * `Z`: Choose how to view your world (e.g., wireframe vs original).
-* `Keypad 0`: Camera moder: view the scene from the camera's perspective.
+* `Keypad 0`: Camera mode: view the scene from the camera's perspective.
 
 **Keyboard Combinations**:
 
 * `Shift + A`: Open the "Add" menu to add new objects.
+* `Shift + D`: Duplicate object.
 * `Shift + Space`: Open the tools panel at your cursor location which contains:
   select box, move, rotate, and scale. (You can also press `T` on the keyboard.)
 * `Shift + Right-click`: Click at the location where you want the 3D cursor to
@@ -252,26 +253,30 @@ great tutorial. As a reference, the following ate the main steps summarized:
 <div class="ref-links">
 <ul>
 
-<li><a href="https://docs.blender.org/manual/en/latest/" target="_blank">Blender
-2.9 Reference Manual</a></li>
+<li><a href="https://docs.blender.org/manual/en/latest/"
+target="_blank">Blender Reference Manual</a></li>
 
-<li><a href="https://www.blender.org/support/tutorials/" target="_blank">Blender
-Tutorials</a></li>
+<li><a href="https://www.blender.org/support/tutorials/"
+target="_blank">Blender Tutorials</a></li>
 
-<li><a
-href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6"
-target="_blank">Blender 2.80 Fundamentals YouTube Series</a>
-  <ul>
+<li><a href="https://www.youtube.com/watch?v=B0J27sf9N1Y"
+target="_blank">Blender Tutorials for Complete Beginners - Part 1</a></li>
 
-  <li><a
-href="https://www.youtube.com/watch?v=RDbrOpnIY7Q&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=22"
-target="_blank">Three point lighting</a></li>
+<!-- <li><a -->
+<!-- href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6" -->
+<!-- target="_blank">Blender 2.80 Fundamentals YouTube Series</a> -->
 
-  </ul>
-</li>
+<!-- <ul> -->
 
-</ul>
-</div>
+<!-- <li><a -->
+<!-- href="https://www.youtube.com/watch?v=RDbrOpnIY7Q&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=22" -->
+<!-- target="_blank">Three point lighting</a></li> -->
+
+<!-- </ul> -->
+<!-- </li> -->
+
+</ul> <!-- End General list -->
+</div> <!-- End class -->
 
 ## Animating
 
