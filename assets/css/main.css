@@ -1018,6 +1018,37 @@ table td {
     clear: both;
 }
 
+/* - - - - - - - - - - Table of Contents - - - - - - - - - - */
+
+.toc-container {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 200px;
+}
+
+.toc-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc-item {
+    margin-left: 0;
+}
+
+.toc-item.toc-level-1 { margin-left: 20px; }
+.toc-item.toc-level-2 { margin-left: 40px; }
+/* Add more levels as needed */
+
+.toc-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.toc-item a.active {
+    font-weight: bold;
+}
+
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .sidebar {
     display: -webkit-box;
@@ -1041,23 +1072,6 @@ table td {
     height: 100%;
     padding: 20px 10px;
     background-color: #ffffff;
-}
-
-#table-of-contents {
-    position: fixed;
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
-    width: 250px; /* Adjust as needed */
-    background-color: #f9f9f9; /* Background color */
-    border: 1px solid #ddd; /* Border color */
-    padding: 10px; /* Padding */
-    border-radius: 5px; /* Border radius */
-}
-
-/* Highlighting current header in the TOC */
-#table-of-contents ul li.current-header a {
-  color: #000; /* Highlighted color */
-  font-weight: bold; /* Style for highlighted header */
 }
 
 /* This is the actual sidenav section */

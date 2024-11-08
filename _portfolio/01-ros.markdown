@@ -1,6 +1,7 @@
 ---
 layout: portfolio-post
 title: ROS & ROS 2
+toc: true
 description: Robot Operating System
 img: ros-portfolio/ros_logo.png
 fig-caption: WWW.ROS.ORG

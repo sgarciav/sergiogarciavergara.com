@@ -1,6 +1,6 @@
 <head>
-	<meta charset="utf-8">
-	<title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
@@ -65,25 +65,27 @@
   <meta name="twitter:image:src" content="{{ site.url }}{{ site.baseurl }}/assets/img/main-page/{{ site.author-img }}">
   {% endif %}
 
-	<meta name="description" content="{{ page.description }}">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta property="og:image" content="">
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#263959">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#263959">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
-	<!-- Font Awesome -->
-	<link rel="stylesheet" href="{{ "/assets/fonts/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
-	<!-- Styles -->
-	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <meta name="description" content="{{ page.description }}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:image" content="">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#263959">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#263959">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|Lato:300,400,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{{ "/assets/fonts/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
   <!-- Syntax Highlight Style -->
   <!-- See: https://mcpride.github.io/posts/development/2018/03/06/syntax-highlighting-with-jekyll/ -->
   <link rel="stylesheet" href="/assets/css/syntax_files/github.css" />
   <!-- Script for auto-generating the table of contents -->
-  <script src="/assets/js/toc-script.js"></script>
+  {% if page.toc %}
+  <script src="{{site.baseurl}}/assets/js/toc-script.js"></script>
+  {% endif %}
 </head>

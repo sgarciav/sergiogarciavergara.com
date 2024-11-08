@@ -1,6 +1,7 @@
 ---
 layout: portfolio-post
 title: Robotic Manipulation
+toc: true
 description: Projects related to robotic manipulation
 img: robotic-manipulation-portfolio/ur-robots.png
 fig-caption: BLOG.ROBOTIQ.COM

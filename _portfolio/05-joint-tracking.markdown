@@ -1,6 +1,7 @@
 ---
 layout: portfolio-post
 title: Upper-body Joint Tracking and Analysis
+toc: true
 description: Summarizing my skills in motion capture and joint tracking.
 img: joint-tracking-portfolio/main-gui.png
 fig-caption: Super Pop VR<sup>TM</sup> main GUI.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Consulting Services
+toc: false
 description: Describe my situation and what I offer.
 <!-- img: main-page/Cayey.jpeg -->
 <!-- fig-caption: Cayey, PR -->
