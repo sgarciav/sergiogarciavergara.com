@@ -26,20 +26,20 @@ way to learn how to use this software than by playing with it.
 Refer to the [References](#blender-referneces) section for the links/tutorials
 I followed while writing this post.
 
-## Index <a id="headerlink" name="blender-index" href="#blender-index" title="Permalink to this headline"></a>
+<!-- ## Index <a id="headerlink" name="blender-index" href="#blender-index" title="Permalink to this headline"></a> -->
 
-Thsi post is organized as follows:
+<!-- This post is organized as follows: -->
 
-* [Installation](#blender-installation)
-* [Hotkey Cheatsheet](#blender-cheatsheet)
-* [Basic Concepts](#blender-basic-concepts)
-  * [Parenting](#blender-parenting)
-  * [Armatures](#blender-armatures)
-  * [Modes](#blender-modes)
-  * [Pose Library](#blender-pose-library)
-  * [Object Constraints](#blender-obj-constraints)
-* [Animation Sequences](#blender-animation-seq)
-* [References](#blender-references)
+<!-- * [Installation](#blender-installation) -->
+<!-- * [Hotkey Cheatsheet](#blender-cheatsheet) -->
+<!-- * [Basic Concepts](#blender-basic-concepts) -->
+<!--   * [Parenting](#blender-parenting) -->
+<!--   * [Armatures](#blender-armatures) -->
+<!--   * [Modes](#blender-modes) -->
+<!--   * [Pose Library](#blender-pose-library) -->
+<!--   * [Object Constraints](#blender-obj-constraints) -->
+<!-- * [Animation Sequences](#blender-animation-seq) -->
+<!-- * [References](#blender-references) -->
 
 # Installation <a id="headerlink" name="blender-installation" href="#blender-installation" title="Permalink to this headline"></a>
 ------------------
@@ -79,6 +79,7 @@ $ ./blender
   * `G`: Grab
   * `R`: Rotate
   * `S`: Scale
+  * (Right-click to cancel move/rotation. Left-click to confirm.)
 * `H`: Hide a selected object while in "Object Mode".
 * `Z`: Choose how to view your world (e.g., wireframe vs original).
 * `Keypad 0`: Camera mode: view the scene from the camera's perspective.
@@ -89,9 +90,9 @@ $ ./blender
 * `Shift + D`: Duplicate object.
 * `Shift + Space`: Open the tools panel at your cursor location which contains:
   select box, move, rotate, and scale. (You can also press `T` on the keyboard.)
-* `Shift + Right-click`: Click at the location where you want the 3D cursor to
-  appear, which marks the spawning point of a new object and can be used as a
-  reference for pivoting.
+* `Shift + Right-click`: Click at the location where you want the **3D cursor**
+  to appear, which marks the spawning point of a new object and can be used as
+  a reference for pivoting.
 * `Shift + S`: Select "Cursor to World Origin" to reset the position of the 3D
   cursor to the origin of the map.
 * `Ctrl + TAB`: Toggle in and out of "Pose Mode". A bone in an armature needs to
@@ -99,27 +100,37 @@ $ ./blender
 * `Ctrl + Space`: Make a panel fullscreen. Press again to exit fullscreen view.
 * `Ctrl + P`: Parent an object to another after selecting them. Remember, the
   *last* object you select will be the parent.
+* `Alt + P`: Open the menu to un-parent two objects. You'll need to click on
+  the child first, and then Alt + P.
 
 **Mouse Interactions**:
 
-* `Right click on panel edges`: split scren to add another panel / join panels.
+* `Right click on panel edges`: Split screen to add another panel / join panels.
+* `Middle-button`: Press and hold to rotate scene.
+* `Shift + Middle-button`: Press and hold to move/pan scene.
 
-<!-- ## Main Workspaces <a id="headerlink" name="blender-workspaces" href="#blender-workspaces" title="Permalink to this headline"></a> -->
+# Main Workspaces <a id="headerlink" name="blender-workspaces" href="#blender-workspaces" title="Permalink to this headline"></a>
+------------------
 
-<!-- This section describes in general what you can do with some of the -->
-<!-- workspaces. The -->
-<!-- [Interface Overview video](https://www.youtube.com/watch?v=8XyIYRW_2xk&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=3) explains -->
-<!-- how to navigate the different panels and tabs. -->
+This section describes in general what you can do with some of the
+workspaces. The [Interface Overview
+video](https://www.youtube.com/watch?v=8XyIYRW_2xk&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=3)
+explains how to navigate the different panels and tabs.
 
-<!-- This is a screenshot of the available workspaces: -->
+This is a screenshot of the available workspaces:
 
-<!-- <img src="/assets/img/blender-post/workspaces.png" alt="Blender workspace ribbon screenshot."> -->
+<img src="/assets/img/blender-post/workspaces.png" alt="Blender workspace ribbon screenshot.">
 
-<!-- <\!-- TODO: Explain how to insert a color image pallet to color your objects -\-> -->
+* **Layout**: Main workspace where you can modify your objects and your scene.
+* **UV Editing**:
+* **Sculpting**:
 
-<!-- **Layout**: Main workspace where you can modify your objects and your scene. -->
-<!-- **UV Editing**: -->
-<!-- **Sculpting**: -->
+Always keep in mind that, at the very bottom of each window, there is a display
+showcasing what each click can do for that current view.
+
+## Colors and Pallets <a id="headerlink" name="blender-color-pallet" href="#blender-color-pallet" title="Permalink to this headline"></a>
+
+<!-- TODO: Explain how to insert a color image pallet to color your objects -->
 
 # Basic Concepts <a id="headerlink" name="blender-basic-concepts" href="#blender-basic-concepts" title="Permalink to this headline"></a>
 ------------------
@@ -140,6 +151,12 @@ To parent an object to another:
 (screenshot below)
 
 <img src="/assets/img/blender-post/parenting.png" alt="Parenting menu.">
+
+When looking at the "Outline" section on the top-right of the screen
+(screenshot below), the children objects will appear listed under the parent
+object.
+
+<img src="/assets/img/blender-post/outliner.png" alt="Parenting menu.">
 
 ## Armatures <a id="headerlink" name="blender-armatures" href="#blender-armatures" title="Permalink to this headline"></a>
 
@@ -241,7 +258,7 @@ armature for the object that will be picked up.
 Instead of keyframing the camera at different locations to get different points
 of view throughout the animation, you can setup multiple cameras and switch
 between them. [This video](https://www.youtube.com/watch?v=znsb96lcwaY) is a
-great tutorial. As a reference, the following ate the main steps summarized:
+great tutorial. As a reference, the following are the main steps summarized:
 
 1.
 
@@ -259,8 +276,9 @@ target="_blank">Blender Reference Manual</a></li>
 <li><a href="https://www.blender.org/support/tutorials/"
 target="_blank">Blender Tutorials</a></li>
 
-<li><a href="https://www.youtube.com/watch?v=B0J27sf9N1Y"
-target="_blank">Blender Tutorials for Complete Beginners - Part 1</a></li>
+<li><a
+href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z"
+target="_blank">Blender 4.0 Beginner Donut Tutorial</a></li>
 
 <!-- <li><a -->
 <!-- href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6" -->
