@@ -1049,6 +1049,16 @@ table td {
     font-weight: bold;
 }
 
+.toc-dropdown {
+    margin: 20px 0;
+}
+
+#toc-menu {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .sidebar {
     display: -webkit-box;
@@ -1572,6 +1582,9 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .toc-container {
+        display: none;
+    }
     .post {
         width: 48%;
         max-width: 100%;
