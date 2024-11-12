@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Reference Guide to Blender 4.3
+toc: true
 date: 2024-11-01
 description: Reference guide for interacting with Blender 4.3
 img: blender-post/blender-logo.png # (optional)
