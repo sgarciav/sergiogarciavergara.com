@@ -1041,6 +1041,52 @@ table thead th {
     clear: both;
 }
 
+/* - - - - - - - - - - Table of Contents - - - - - - - - - - */
+
+.toc-container {
+    border-left: 2px solid #ccc; /* Vertical line divider */
+    padding-left: 20px;
+    position: fixed;
+    top: 75px;
+    right: 50px;
+}
+
+.toc-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc-item {
+    margin-left: 0;
+}
+
+.toc-item.toc-level-1 { margin-left: 20px; }
+.toc-item.toc-level-2 { margin-left: 30px; }
+.toc-item.toc-level-3 { margin-left: 40px; }
+/* Add more levels as needed */
+
+.toc-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.toc-item a.active {
+    font-weight: bold;
+    /* color: rgb(88, 178, 208); */
+    color: rgb(204, 0, 1);
+    font-size: 18px;
+}
+
+.toc-dropdown {
+    margin: 20px 0;
+}
+
+#toc-menu {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 .sidebar {
     display: -webkit-box;
@@ -1087,7 +1133,7 @@ table thead th {
     font-size: 18px;
     color: #575757;
     display: block;
-    font-family: Garamond, Copperplate;
+    /* font-family: Garamond, Copperplate; */
 }
 
 .sidenav a:hover {
@@ -1564,6 +1610,9 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+    .toc-container {
+        display: none;
+    }
     .post {
         width: 48%;
         max-width: 100%;

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Patents
+toc: false
 description: List of approved patents.
 ---
 

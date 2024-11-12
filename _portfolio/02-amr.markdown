@@ -1,6 +1,7 @@
 ---
 layout: portfolio-post
 title: Autonomous Mobile Robots (AMRs)
+toc: true
 description: Projects related to AMRs.
 img: amr-portfolio/amrs.png
 fig-caption: WWW.DJI.COM & WWW.CLEARPATHROBOTICS.COM

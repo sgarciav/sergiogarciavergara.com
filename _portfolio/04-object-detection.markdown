@@ -1,6 +1,7 @@
 ---
 layout: portfolio-post
 title: Object Detection
+toc: true
 description: Projects related to object detection.
 img: object-detection-portfolio/surgical-instrument-detection.png
 fig-caption: RIF ROBOTICS MODEL

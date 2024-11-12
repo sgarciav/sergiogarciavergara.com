@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Publications and Presentations
+toc: true
 description: List of published journal and conference articles.
 ---
 

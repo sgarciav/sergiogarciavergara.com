@@ -29,6 +29,14 @@ layout: default
     <a href="{{site.baseurl}}/pages/consulting">Consulting Services</a>
   </div>
 
+  <!-- Dynamic TOC dropdown -->
+  <div class="toc-dropdown">
+    <select id="toc-menu" onchange="navigateToSection(event)">
+      <option value="">On this page</option>
+      <!-- JavaScript will dynamically populate options here -->
+    </select>
+  </div>
+
   <!-- Contact Me section -->
   <footer>
     <section class="contact">
