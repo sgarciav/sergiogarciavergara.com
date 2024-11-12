@@ -1021,10 +1021,11 @@ table td {
 /* - - - - - - - - - - Table of Contents - - - - - - - - - - */
 
 .toc-container {
+    border-left: 2px solid #ccc; /* Vertical line divider */
+    padding-left: 20px;
     position: fixed;
-    right: 20px;
-    top: 100px;
-    width: 200px;
+    top: 75px;
+    right: 50px;
 }
 
 .toc-list {
@@ -1037,7 +1038,8 @@ table td {
 }
 
 .toc-item.toc-level-1 { margin-left: 20px; }
-.toc-item.toc-level-2 { margin-left: 40px; }
+.toc-item.toc-level-2 { margin-left: 30px; }
+.toc-item.toc-level-3 { margin-left: 40px; }
 /* Add more levels as needed */
 
 .toc-item a {
@@ -1047,6 +1049,9 @@ table td {
 
 .toc-item a.active {
     font-weight: bold;
+    /* color: rgb(88, 178, 208); */
+    color: rgb(204, 0, 1);
+    font-size: 18px;
 }
 
 .toc-dropdown {
@@ -1105,7 +1110,7 @@ table td {
     font-size: 18px;
     color: #575757;
     display: block;
-    font-family: Garamond, Copperplate;
+    /* font-family: Garamond, Copperplate; */
 }
 
 .sidenav a:hover {
