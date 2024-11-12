@@ -18,7 +18,6 @@ layout: main
     <div class="wrap-content">
       <header class="header-page">
         <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%b %d, %Y'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
       {{content | markdownify}}
       <div class="page-footer">
@@ -37,3 +36,6 @@ layout: main
     </div> <!-- End Wrap Content -->
   </div> <!-- End Page Content -->
 </article> <!-- End Article Page -->
+
+<!-- This is the layout for the portfolio post. The only different this layout and -->
+<!-- the regular post layout, is that this one does NOT display the date. -->
