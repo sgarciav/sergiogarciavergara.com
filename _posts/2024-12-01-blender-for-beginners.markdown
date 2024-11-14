@@ -27,21 +27,6 @@ way to learn how to use this software than by playing with it.
 Refer to the [References](#blender-referneces) section for the links/tutorials
 I followed while writing this post.
 
-<!-- ## Index <a id="headerlink" name="blender-index" href="#blender-index" title="Permalink to this headline"></a> -->
-
-<!-- This post is organized as follows: -->
-
-<!-- * [Installation](#blender-installation) -->
-<!-- * [Hotkey Cheatsheet](#blender-cheatsheet) -->
-<!-- * [Basic Concepts](#blender-basic-concepts) -->
-<!--   * [Parenting](#blender-parenting) -->
-<!--   * [Armatures](#blender-armatures) -->
-<!--   * [Modes](#blender-modes) -->
-<!--   * [Pose Library](#blender-pose-library) -->
-<!--   * [Object Constraints](#blender-obj-constraints) -->
-<!-- * [Animation Sequences](#blender-animation-seq) -->
-<!-- * [References](#blender-references) -->
-
 # Installation <a id="headerlink" name="blender-installation" href="#blender-installation" title="Permalink to this headline"></a>
 ------------------
 
@@ -81,6 +66,7 @@ $ ./blender
   * `R`: Rotate
   * `S`: Scale
   * (Right-click to cancel move/rotation. Left-click to confirm.)
+* `E`: In Edit Mode, extrude a bone from an existing bone.
 * `H`: Hide a selected object while in "Object Mode".
 * `Z`: Choose how to view your world (e.g., wireframe vs original).
 * `Keypad 0`: Camera mode: view the scene from the camera's perspective.
@@ -102,7 +88,7 @@ $ ./blender
 * `Ctrl + P`: Parent an object to another after selecting them. Remember, the
   *last* object you select will be the parent.
 * `Alt + P`: Open the menu to un-parent two objects. You'll need to click on
-  the child first, and then Alt + P.
+  the child first, and then `Alt + P`.
 
 **Mouse Interactions**:
 
@@ -110,31 +96,52 @@ $ ./blender
 * `Middle-button`: Press and hold to rotate scene.
 * `Shift + Middle-button`: Press and hold to move/pan scene.
 
-# Main Workspaces <a id="headerlink" name="blender-workspaces" href="#blender-workspaces" title="Permalink to this headline"></a>
+# Where to Begin? <a id="headerlink" name="blender-workspaces" href="#blender-begin" title="Permalink to this headline"></a>
 ------------------
 
-This section describes in general what you can do with some of the
-workspaces. The [Interface Overview
-video](https://www.youtube.com/watch?v=8XyIYRW_2xk&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=3)
-explains how to navigate the different panels and tabs.
+I recommend that complete beginners start by watching the [Interface Overview
+video](https://www.youtube.com/watch?v=8XyIYRW_2xk&list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6&index=3). It
+explains how to navigate the different panels and tabs. Open `Blender` and
+click away while watching the video.
 
-This is a screenshot of the available workspaces:
+<!-- This is a screenshot of the available workspaces: -->
 
-<img src="/assets/img/blender-post/workspaces.png" alt="Blender workspace ribbon screenshot.">
+<!-- <img src="/assets/img/blender-post/workspaces.png" alt="Blender workspace ribbon screenshot."> -->
 
-* **Layout**: Main workspace where you can modify your objects and your scene.
-* **UV Editing**:
-* **Sculpting**:
-
-Always keep in mind that, at the very bottom of each window, there is a display
-showcasing what each click can do for that current view.
-
-## Colors and Pallets <a id="headerlink" name="blender-color-pallet" href="#blender-color-pallet" title="Permalink to this headline"></a>
-
-<!-- TODO: Explain how to insert a color image pallet to color your objects -->
+**TIP**: Always keep in mind that, at the very bottom of each window, there is
+a display showcasing what each click can do for that current view.
 
 # Basic Concepts <a id="headerlink" name="blender-basic-concepts" href="#blender-basic-concepts" title="Permalink to this headline"></a>
 ------------------
+
+## Modes of Operation <a id="headerlink" name="blender-modes" href="#blender-modes" title="Permalink to this headline"></a>
+
+It's important to understand the different between the three main modes of
+operation: `Object Mode`, `Edit Mode`, and `Pose Mode`. You'll be accomplishing
+different tasks in each mode. Trying to implement a task in the wrong mode can
+easily mess up your scene so be patient and practice. Refer to the provided
+[Cheatsheet](#blender-cheatsheet) to easily switch between modes.
+
+**Object Mode**:
+
+In this mode you can manipulate the scene (i.e., the position and pose of
+objects and armatures).
+
+**Edit Mode**:
+
+This mode belongs to a specific object. This means that, you first need to
+select the object you want to edit, and then enter in Edit Mode. You'll only be
+able to edit the selected object. To edit a different object, you'll need to go
+back to Object Mode, select the new object, and then re-enter Edit Mode. In
+this mode you can actually modify the geometry of the select object. For
+example, you can select a corner of a cube, press `G`, and modify its shape as
+desired.
+
+**Pose Mode**:
+
+This is where we'll be doing most of our animations. You'll need to understand
+[Parenting](#blender-parenting) and [Armatures](#blender-armatures) in order to
+map a skeleton to an armature and define the desired poses for that skeleton.
 
 ## Parenting <a id="headerlink" name="blender-parenting" href="#blender-parenting" title="Permalink to this headline"></a>
 
@@ -151,13 +158,13 @@ To parent an object to another:
 3. `Ctrl + P` and select the appropriate parenting option from the menu
 (screenshot below)
 
-<img src="/assets/img/blender-post/parenting.png" alt="Parenting menu.">
+<img src="/assets/img/blender-post/parenting.png" class="center" alt="Parenting menu.">
 
 When looking at the "Outline" section on the top-right of the screen
 (screenshot below), the children objects will appear listed under the parent
 object.
 
-<img src="/assets/img/blender-post/outliner.png" alt="Parenting menu.">
+<img src="/assets/img/blender-post/outliner.png" class="center" alt="Outliner menu.">
 
 ## Armatures <a id="headerlink" name="blender-armatures" href="#blender-armatures" title="Permalink to this headline"></a>
 
@@ -165,34 +172,68 @@ An armature is a rig of bones parented one to another. You'll want to use
 armatures when animating "bodies" (e.g., characters and robotic
 manipulators). Basically, armatures allow you to define relationships between
 the body's different joints (bones). For example, while animating a robotic
-manipulator, you'll want for the robot's end-effector to move accordingly as you
-move the base around. Armatures also allow you to set constraints on how each
-bone can move. For example, you can restrict a bone to rotate around the x-axis,
-and you can restrict another bone to translate in the yz-plane. There is a list
-of videos/turorials in the [References](#blender-references) section.
+manipulator, you'll want for the robot's end-effector to move accordingly as
+you move the base around. Armatures also allow you to set constraints on how
+each bone can move. For example, you can restrict a bone to rotate around the
+x-axis, and you can restrict another bone to translate in the yz-plane. There
+is a list of videos/turorials in the [References](#blender-references) section.
 
-Make sure you understand [parenting](#blender-parenting) before you start
-playing with armatures.
+**NOTE**: Make sure you understand [Parenting](#blender-parenting) before you
+start playing with armatures.
 
-## Modes <a id="headerlink" name="blender-modes" href="#blender-modes" title="Permalink to this headline"></a>
+To add an Armature, use shortcut `Shit + A` and select Armature. An example of
+a "bone" and its parts is shown in the screenshot below.
 
-It's important to understand the different between the three main modes of
-operation: Object Mode, Pose Mode, and Edit Mode. You'll be accomplishing
-different tasks in each mode. Trying to implement a task in the wrong mode can
-easily mess up your scene so be patient and practice. Refer to the
-provided [cheatsheet](#blender-cheatsheet) to easily switch between modes.
+<img src="/assets/img/blender-post/bone-example.png" width="50%" class="center" alt="Armature example.">
 
-### Object Mode <a id="headerlink" name="blender-obj-mode" href="#blender-obj-mode" title="Permalink to this headline"></a>
+Your project can have multiple armatures, and each armature will have multiple
+bones. Follow these steps to add a single bone to an existing armature (note
+that the new bone will be added to the location of the **3D cursor**):
 
-### Pose Mode <a id="headerlink" name="blender-pose-mode" href="#blender-pose-mode" title="Permalink to this headline"></a>
+1. Select the armature.
+2. Enter Edit Mode.
+3. Click `Shift + A` or click on the "Add" button of the menu on the top-left
+   corner of the screen.
 
-### Edit Mode <a id="headerlink" name="blender-edit-mode" href="#blender-edit-mode" title="Permalink to this headline"></a>
+<!-- <img src="/assets/img/blender-post/edit-mode-add-bone.png" width="50%" class="center" alt="Menu for adding a bone to an existing armature."> -->
+
+In Object Mode, you can move, scale, and rotate a complete Armature. You **can
+not** modify individual bones. This can only be done in Edit Mode.
+
+The following are things you can do with bones and armatures in their
+corresponding modes (in parenthesis):
+
+**Parenting** (Edit): You can follow the same steps for Parenting as described
+in the previous section. When parenting in Edit Mode you can choose between: 1)
+connected, and 2) keep offset. The former will connnect the head of the child
+bone to the tail of the parent bone (because connected boned **must** share a
+head and a tail). The latter will maintain the child's pose.
+
+**Subdiving** (Edit): You can select an existing bone and subdivide it into
+multiple to take its place. Right click on the target bone, and select
+"Subdivide". The selected bone will automatically turn into two. You can then
+choose how many bones the original will be subdivided into via the pop-up menu
+at the bottom left of your screen.
+
+**Extruding** (Edit): You can create a new bone by extriding it from an
+existing one. You can press `E` to extrude (see
+[Cheatsheet](#blender-cheatsheet)).
+
+**Unparenting** (Edit or Object): You can unparent a bone from others with
+`Alt + P` (see [Cheatsheet](#blender-cheatsheet)).
+
+**Bone Axes** (Pose): Display the axes of each individual bone by clicking on
+the "Armature data tab" on the bottom left corner of the screen, and check the
+"axes" box under the "Viewport Display" section.
+
+For a more in-depth explanation of amratures and bones, [this YouTube
+video](https://www.youtube.com/watch?v=cZ3o5tjO51s) can be a great resource.
 
 ## Keyframes <a id="headerlink" name="blender-keyframes" href="#blender-keyframes" title="Permalink to this headline"></a>
 
 Keyframes are what mark specific positions and orientations for your
 animations. Essentially, you're telling `Blender` the specific location and
-orientation of your scene at specific points in time. `Blender` them takes care
+orientation of your scene at specific points in time. `Blender` then takes care
 of interpolating between the keyframes to generate a smooth animation.
 
 
@@ -211,6 +252,66 @@ https://www.youtube.com/watch?v=j08-Hzf33yQ
 ## Object Constraints <a id="headerlink" name="blender-obj-constraints" href="#blender-obj-constraints" title="Permalink to this headline"></a>
 
 <!-- TODO: study how to parent with limits -->
+
+# Drawing Concepts <a id="headerlink" name="blender-drawing" href="#blender-drawing" title="Permalink to this headline"></a>
+------------------
+
+<!-- TODO: Should there be a general coloring section? -->
+
+## Color Paletts <a id="headerlink" name="blender-color-palett" href="#blender-color-palett" title="Permalink to this headline"></a>
+
+You have the ability to input a color palett that you can use as a theme for
+your scene. The following are the steps to import a color palett and set it as
+your there. You can use [this YouTube
+video](https://www.youtube.com/watch?v=8NEmx0cHwoI) as reference.
+
+1. Get a color palett (the video has an example on how to get one if you don't
+   already have one).
+1. Go to the "*Shading*" workspace.
+1. Drag and drop the color palett file into the bottom scene.
+1. Connect the "Color" output of the color palett box with the "Base Color"
+   input of the Principled BSDF box (example shown in screenshow below).
+  * Choose the "Closest" option under your palett box, instead of the default
+    "Linear".
+
+<img src="/assets/img/blender-post/color-palett-import.png" width="80%" class="center" alt="Color palett import.">
+
+At this point you'll have loaded the color palett and you can see that it's
+applied to your scene, seemingly randomly - depending on the structure of the
+palett you've loaded. The following are the steps for setting the palett such
+that you have more control over selecting colors for specific parts of your
+scene:
+
+1. Go to the "*UV Editing*" workspace.
+1. Enter Edit Mode and press `A` on the right screen to select all.
+1. Click on the left screen, press `A` to select all, press `S` for scale,
+   press `0`, and press `Enter`.
+  * This will create a dot that you can then move around to select a specific
+    color (the before and after is shown in the screenshot below).
+1. On the left screen, press `G` to grab the dot and place it on the desired
+   color.
+
+<img src="/assets/img/blender-post/color-palett-after.png" width="50%" class="center" alt="Single color selection view.">
+
+Now you can go back to the "*Layout*" workspace and continue your
+animation/drawing work. To change colors, go back to the "*UV Editing*"
+workspace, press `A` and then `G` on the left screen to move the dot around the
+palett and select the desired color.
+
+As a final note, to visualize the colors you've set for the objects in your
+scene you can either [render the scene](#blender-render-img) or:
+: At the top-right of the screen, under the "*Viewport Shading*" menu, select
+"Texture" (menu is shown in the screenshot below).
+
+<img src="/assets/img/blender-post/select-texture.png" width="35%" class="center" alt="Select Texture.">
+
+## Render Image <a id="headerlink" name="blender-render-img" href="#blender-render-img" title="Permalink to this headline"></a>
+
+Coming soon ...
+
+## Character Meshing <a id="headerlink" name="blender-character-mesh" href="#blender-character-mesh" title="Permalink to this headline"></a>
+
+Coming soon ...
 
 # Animation Sequences <a id="headerlink" name="blender-animation-seq" href="#blender-animation-seq" title="Permalink to this headline"></a>
 ------------------
@@ -254,7 +355,7 @@ armature for the object that will be picked up.
 
 1.
 
-## Switch between different camera POVs <a id="headerlink" name="blender-multple-cameras" href="#blender-multple-cameras" title="Permalink to this headline"></a>
+## Switch between camera POVs <a id="headerlink" name="blender-multple-cameras" href="#blender-multple-cameras" title="Permalink to this headline"></a>
 
 Instead of keyframing the camera at different locations to get different points
 of view throughout the animation, you can setup multiple cameras and switch
@@ -262,6 +363,18 @@ between them. [This video](https://www.youtube.com/watch?v=znsb96lcwaY) is a
 great tutorial. As a reference, the following are the main steps summarized:
 
 1.
+
+<!-- # Missing Topics <a id="headerlink" name="blender-missing" href="#blender-missing" title="Permalink to this headline"></a> -->
+<!-- ------------------ -->
+
+<!-- `Blender` is an extremely powerful tool, and I barely covered the basics in -->
+<!-- this post. Hopefully this post has served as a great intro reference for -->
+<!-- beginners out there. Some other concepts not covered in this post are: -->
+<!-- * Character meshing -->
+
+<!-- Perhaps one day I'll expand the post to account for more topics and -->
+<!-- tutorials. In the meantime, the chat below is always available for questions -->
+<!-- and discussions. Happy animating! -->
 
 # References <a id="headerlink" name="blender-references" href="#blender-references" title="Permalink to this headline"></a>
 ------------------
@@ -368,6 +481,9 @@ target="_blank">How to delete all unused material from a Blender file</a></li>
 
 <li><a href="https://www.youtube.com/watch?v=oZAddnGxjNU" target="_blank">Change
 object origin</a></li>
+
+<li><a href="https://www.youtube.com/watch?v=8NEmx0cHwoI" target="_blank">How
+To Texture UV Colors In Blender</a></li>
 
 </ul>
 </div>
