@@ -300,14 +300,26 @@ palett and select the desired color.
 
 As a final note, to visualize the colors you've set for the objects in your
 scene you can either [render the scene](#blender-render-img) or:
-: At the top-right of the screen, under the "*Viewport Shading*" menu, select
-"Texture" (menu is shown in the screenshot below).
+: Under the Layout workspace, at the top-right of the screen, under the
+"*Viewport Shading*" menu, select "Texture" (menu is shown in the screenshot
+below).
 
 <img src="/assets/img/blender-post/select-texture.png" width="35%" class="center" alt="Select Texture.">
 
 ## Render Image <a id="headerlink" name="blender-render-img" href="#blender-render-img" title="Permalink to this headline"></a>
 
 Coming soon ...
+
+## Combining Scenes <a id="headerlink" name="blender-combine-scenes" href="#blender-combine-scenes" title="Permalink to this headline"></a>
+
+Imagine you have two scenes in two different *.blend* files, and you want to
+combine them into a single scene. For example, you may have a road on one scene
+and a car in a different scene. `Blender` allows you to import the car into the
+road scene with ease. Follow the instructions explained in [this YouTube
+video](https://www.youtube.com/watch?v=s24kSjRAUNo) to do so.
+
+Keep in mind that the steps explained in the video apply for importing objects,
+meshes, materials, etc.
 
 ## Character Meshing <a id="headerlink" name="blender-character-mesh" href="#blender-character-mesh" title="Permalink to this headline"></a>
 
@@ -393,6 +405,9 @@ target="_blank">Blender Tutorials</a></li>
 <li><a
 href="https://www.youtube.com/playlist?list=PLjEaoINr3zgEPv5y--4MKpciLaoQYZB1Z"
 target="_blank">Blender 4.0 Beginner Donut Tutorial</a></li>
+
+<li><a href="https://www.youtube.com/watch?v=s24kSjRAUNo" target="_blank">Move
+Items From One Blender File To Another</a></li>
 
 <!-- <li><a -->
 <!-- href="https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6" -->
