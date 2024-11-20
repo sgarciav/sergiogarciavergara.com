@@ -96,7 +96,7 @@ $ ./blender
 * `Middle-button`: Press and hold to rotate scene.
 * `Shift + Middle-button`: Press and hold to move/pan scene.
 
-# Where to Begin? <a id="headerlink" name="blender-workspaces" href="#blender-begin" title="Permalink to this headline"></a>
+# Where to Begin? <a id="headerlink" name="blender-begin" href="#blender-begin" title="Permalink to this headline"></a>
 ------------------
 
 I recommend that complete beginners start by watching the [Interface Overview
