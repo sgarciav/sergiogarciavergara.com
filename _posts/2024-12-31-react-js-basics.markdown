@@ -115,6 +115,27 @@ function RedAlert() {
 }
 ```
 
+Note that the object passed to the "onClick" prop can't be a function of an
+input variable. Invoking, for example, `handleClick(var)`, would make it such
+that the function is called immediately as the page is loaded, instead of
+waiting for the button to be clicked. As such, you need to pass a **reference
+to the function** so that it only executes when the button is clicked. For
+example:
+
+``` jsx
+function RedAlert() {
+  const handleClick = (msg) => {
+    alert(msg)
+  }
+
+  return (
+    <button onClick={() => handleClick(msg)}>
+      Click Me
+    </button>
+  )
+}
+```
+
 ## Event Handling <a id="headerlink" name="reactjs-event-handling" href="#reactjs-event-handling" title="Permalink to this headline"></a>
 
 Event handling is how you process the interactions with your interface (e.g.,
@@ -126,6 +147,42 @@ functions like *onClick*, *onChange*, and *onSubmit*.
 <!-- Mounting -->
 <!-- Updating -->
 <!-- Unmounting -->
+
+## Dependency Arrays <a id="headerlink" name="reactjs-depend-arr" href="#reactjs-depend-arr" title="Permalink to this headline"></a>
+
+Dependency array serve an essential purpose in React hooks. They ensure that
+defined functions are only re-created when its dependencies change. Consider
+the following function definition:
+
+``` jsx
+const functionDef = useCallback((req) => {
+  serviceProps.callService(req);
+}, [serviceProps.callService]);
+```
+
+The `[serviceProps.callService]` at the end of the *useCallback* definition is
+the dependency array. If the value of `serviceProps.callService` changes (e.g.,
+the parent reassigns it), the dependency array ensures that the *functionDef*
+function is updated to use the new `serviceProps.callService`. Without the
+dependency array, the *functionDef* function would continue using an outdated
+reference to `serviceProps.callService`, potentially causing bugs or unexpected
+behavior.
+
+If the dependency array is empty `[]`, the *functionDef* function is only
+created once and never updated, regardless of changes in
+`serviceProps.callService`.
+
+**When to Include Something in the Dependency Array**
+
+You should include a value in the dependency array if:
+
+* It comes from outside the function (like props, state, or other variables in
+  the enclosing scope).
+* The behavior of the function depends on it, and it might change over time.
+
+Using our example: `serviceProps.callService` is included because it might
+change (e.g., if the parent component reassigns a new function).
+
 
 <!-- # ROS Integration <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a> -->
 <!-- ------------------ -->
