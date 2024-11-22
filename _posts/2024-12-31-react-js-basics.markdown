@@ -12,18 +12,15 @@ fig-caption: www.laxaar.com # (optional)
 ------------------
 
 At the time of writing this post, I know nothing about JavaScript. I am writing
-this post while I learn about [`React JS`](https://react.dev/) to build useful
-and intuitive user interfaces. This post **is not** to be considered as a full
-tutorial. It covers the bare minimum to get a beginner started.
-
-`React` is a JavaScript library.
-
-<!-- ## Why React JS? <a id="headerlink" name="reactjs-why" href="#reactjs-why" title="Permalink to this headline"></a> -->
+this post while I learn about [`React JS`](https://react.dev/) (a JavaScript
+library) to build useful and intuitive user interfaces. This post **is not** to
+be considered as a full tutorial. It covers the bare minimum to get a beginner
+started.
 
 ## Where to Begin? <a id="headerlink" name="reactjs-begin" href="#reactjs-begin" title="Permalink to this headline"></a>
 
 [This YouTube video](https://www.youtube.com/watch?v=s2skans2dP4) is a great
-way to get introduced to React JS. You can then follow [React's main
+way to get introduced to `React JS`. You can then follow [React's main
 webpage](https://react.dev/learn) for a quickstart.
 
 # Basic Concepts <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a>
@@ -58,7 +55,7 @@ jsx tool](https://transform.tools/html-to-jsx) to help you make the conversion.
 
 React apps are made out of *components*, the building blocks of an
 application. A component is a piece of the user interface that has its own
-logic and appearance. React components are JavaScript functions that return
+logic and appearance. `React` components are JavaScript functions that return
 markup ([JSX](#reactjs-jsx)).
 
 *React framgment* is an empty component that allows you to return more than one
@@ -148,9 +145,62 @@ functions like *onClick*, *onChange*, and *onSubmit*.
 <!-- Updating -->
 <!-- Unmounting -->
 
+## Manage Data <a id="headerlink" name="reactjs-manage-data" href="#reactjs-manage-data" title="Permalink to this headline"></a>
+
+We will leverage the `useState()` function. It's a snapshot of data at any
+given time. We can't directly use JS variables becaue they don't cause our app
+to re-render.
+
+In the following example, we initialize the state variable *likes* with *0*. In
+the same line, we also define the function (*setLikes*) to update the state
+variable.
+
+``` jsx
+const [ likes, setLikes ] = useState(0);
+```
+
+**Controlled Components**
+
+Controlled components use state values to have more predictabel behavior. The
+example below displays an input box for the user to type some words. The input
+words are put into the state variable *value*, and is controlled by function
+*setValue*. As the user types, *setValue* is called, the state variable *value*
+is updated, and the input display reads from the state variable.
+
+``` jsx
+function ControlledInput() {
+  const [ value, setValue ] = useState('')
+
+  return (
+    <input
+      value={value}
+      onChange={(e) => setValue(e.target.value)}
+    />
+  )
+}
+```
+
+<!-- ## Hooks <a id="headerlink" name="reactjs-hooks" href="#reactjs-hooks" title="Permalink to this headline"></a> -->
+
+## Effects <a id="headerlink" name="reactjs-effects" href="#reactjs-effects" title="Permalink to this headline"></a>
+
+Effects are code that reaches outside of our `React` app. Usually, effects can
+be done inside [event handlers](#reactjs-event-handling). If you can't run the
+effects from an event handler, then leverage the `useEffect()` hook.
+
+A common example is to fetch data when a component first loads:
+
+``` jsx
+useEffect(() => {
+  fectData().then(data => {
+    // use data here
+  })
+}, [])
+```
+
 ## Dependency Arrays <a id="headerlink" name="reactjs-depend-arr" href="#reactjs-depend-arr" title="Permalink to this headline"></a>
 
-Dependency array serve an essential purpose in React hooks. They ensure that
+Dependency array serve an essential purpose in `React` hooks. They ensure that
 defined functions are only re-created when its dependencies change. Consider
 the following function definition:
 
@@ -187,7 +237,21 @@ change (e.g., if the parent component reassigns a new function).
 <!-- # ROS Integration <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a> -->
 <!-- ------------------ -->
 
-# References <a id="headerlink" name="blender-references" href="#blender-references" title="Permalink to this headline"></a>
+# Material UI <a id="headerlink" name="reactjs-mui" href="#reactjs-mui" title="Permalink to this headline"></a>
+------------------
+
+Now that we have some knowledge about the basic concepts, how to we create and
+style our app? [`Material UI`](https://mui.com/material-ui/) is the `React`
+library that encompasses all the material design concepts you'll need.
+
+## MUI Components <a id="headerlink" name="reactjs-mui-components" href="#reactjs-mui-components" title="Permalink to this headline"></a>
+
+Digging deep into all the available MUI components is out of the scope of this
+post. You can refer to `MUI`'s main page and explore each of them. [This
+link](https://mui.com/material-ui/all-components/) will take you to the list
+and usage explanation of all MUI components.
+
+# References <a id="headerlink" name="reactjs-references" href="#reactjs-references" title="Permalink to this headline"></a>
 ------------------
 
 ## General
@@ -206,6 +270,17 @@ React Concept Explained in 12 Minutes</a></li>
 
 <li><a href="https://transform.tools/html-to-jsx" target="_blank">Convert html
 to JSX</a></li>
+
+</ul> <!-- End General list -->
+</div> <!-- End class -->
+
+## Material UI
+
+<div class="ref-links">
+<ul>
+
+<li><a href="https://www.youtube.com/watch?v=FB-sKY63AWo" target="_blank">Learn
+MUI (Material UI) in under 10 min!</a></li>
 
 </ul> <!-- End General list -->
 </div> <!-- End class -->
