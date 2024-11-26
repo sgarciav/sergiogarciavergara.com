@@ -23,6 +23,9 @@ started.
 way to get introduced to `React JS`. You can then follow [React's main
 webpage](https://react.dev/learn) for a quickstart.
 
+<!-- TODO: reorganize this section as needed in order to include: installation,
+setting up a new project, etc -->
+
 # Basic Concepts <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a>
 ------------------
 
@@ -186,13 +189,15 @@ function ControlledInput() {
 
 Effects are code that reaches outside of our `React` app. Usually, effects can
 be done inside [event handlers](#reactjs-event-handling). If you can't run the
-effects from an event handler, then leverage the `useEffect()` hook.
+effects from an event handler, then leverage the `useEffect()` hook. You can
+learn more about `useEffect()` with examples from [this YouTube
+video](https://www.youtube.com/watch?v=-4XpG5_Lj_o).
 
 A common example is to fetch data when a component first loads:
 
 ``` jsx
 useEffect(() => {
-  fectData().then(data => {
+  fecthData().then(data => {
     // use data here
   })
 }, [])
@@ -281,6 +286,9 @@ to JSX</a></li>
 
 <li><a href="https://www.youtube.com/watch?v=FB-sKY63AWo" target="_blank">Learn
 MUI (Material UI) in under 10 min!</a></li>
+
+<li><a href="https://mui.com/material-ui/all-components/"
+target="_blank">Material UI components</a></li>
 
 </ul> <!-- End General list -->
 </div> <!-- End class -->
