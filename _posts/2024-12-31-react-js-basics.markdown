@@ -17,20 +17,49 @@ library) to build useful and intuitive user interfaces. This post **is not** to
 be considered as a full tutorial. It covers the bare minimum to get a beginner
 started.
 
-## Where to Begin? <a id="headerlink" name="reactjs-begin" href="#reactjs-begin" title="Permalink to this headline"></a>
+# Where to Begin? <a id="headerlink" name="reactjs-begin" href="#reactjs-begin" title="Permalink to this headline"></a>
+------------------
 
-[This YouTube video](https://www.youtube.com/watch?v=s2skans2dP4) is a great
-way to get introduced to `React JS`. You can then follow [React's main
-webpage](https://react.dev/learn) for a quickstart.
+This section describes how to setup your `React` project from scratch. Refer to
+the [Basic Concepts](#reactjs-basics) section to learn about `React`.
 
-<!-- TODO: reorganize this section as needed in order to include: installation,
-setting up a new project, etc -->
+First, [install
+NodeJs](https://github.com/nodesource/distributions?tab=readme-ov-file#installation-instructions). The
+main steps are:
+
+``` bash
+curl -fsSL https://deb.nodesource.com/setup_23.x -o nodesource_setup.sh
+sudo -E bash nodesource_setup.sh
+sudo apt-get update && apt-get install -y nodejs
+node -v
+```
+
+Then, follow [these
+instructions](https://react.dev/learn/start-a-new-react-project) for starting a
+new `React` project.
+
+`React` has several frameworks and libraries that can help you quickly set up
+an application tailored to your specific needs. For example `Next.js` is a
+full-stack framework that is powerful for dynamic/static content like blogs,
+e-commerce platforms, and dashboards. `Expo`, on the other hand, is a framework
+best suited for mobile apps.
+
+Refer to the link above for more details on all the available frameworks.
+
+## Expo <a id="headerlink" name="reactjs-expo" href="#reactjs-expo" title="Permalink to this headline"></a>
+
+For the purpose of this post, I've decided to use `Expo` for our example
+project. This section will summarize [these
+instructions](https://docs.expo.dev/tutorial/introduction/) for setting up our
+first mobile app.
 
 # Basic Concepts <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a>
 ------------------
 
 This section introduces the definitions and general purpose of a few basic
-concepts. Other sections in this post may cover more details if needed.
+concepts. Other sections in this post may cover more details if needed. [This
+video](https://www.youtube.com/watch?v=s2skans2dP4) is a great introduction to
+the basic concepts covered in this section, and more.
 
 ## JSX <a id="headerlink" name="reactjs-jsx" href="#reactjs-jsx" title="Permalink to this headline"></a>
 
@@ -256,6 +285,18 @@ post. You can refer to `MUI`'s main page and explore each of them. [This
 link](https://mui.com/material-ui/all-components/) will take you to the list
 and usage explanation of all MUI components.
 
+# Start from Existing Project <a id="headerlink" name="reactjs-existing-proj" href="#reactjs-existing-proj" title="Permalink to this headline"></a>
+------------------
+
+**Scenario**: Imagine you've build your've static webpage using something like
+[Jekyll](https://jekyllrb.com/), and you're hosting it for the world to
+access. Now that you're familiar with `React`, you desire to apply what you've
+learned. The good news is that you **do not** need to start from scratch.
+
+Let's go through [these
+instructions](https://react.dev/learn/add-react-to-an-existing-project) and
+learn how to add `React` to an existing project.
+
 # References <a id="headerlink" name="reactjs-references" href="#reactjs-references" title="Permalink to this headline"></a>
 ------------------
 
@@ -275,6 +316,9 @@ React Concept Explained in 12 Minutes</a></li>
 
 <li><a href="https://transform.tools/html-to-jsx" target="_blank">Convert html
 to JSX</a></li>
+
+<li><a href="https://react.dev/learn/add-react-to-an-existing-project"
+target="_blank">Add React to an Existing Project</a></li>
 
 </ul> <!-- End General list -->
 </div> <!-- End class -->
