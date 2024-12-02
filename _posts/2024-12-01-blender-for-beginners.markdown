@@ -226,7 +226,7 @@ existing one. You can press `E` to extrude (see
 the "Armature data tab" on the bottom left corner of the screen, and check the
 "axes" box under the "Viewport Display" section.
 
-For a more in-depth explanation of amratures and bones, [this YouTube
+For a more in-depth explanation of armatures and bones, [this
 video](https://www.youtube.com/watch?v=cZ3o5tjO51s) can be a great resource.
 
 ## Keyframes <a id="headerlink" name="blender-keyframes" href="#blender-keyframes" title="Permalink to this headline"></a>
@@ -315,11 +315,14 @@ Coming soon ...
 Imagine you have two scenes in two different *.blend* files, and you want to
 combine them into a single scene. For example, you may have a road on one scene
 and a car in a different scene. `Blender` allows you to import the car into the
-road scene with ease. Follow the instructions explained in [this YouTube
-video](https://www.youtube.com/watch?v=s24kSjRAUNo) to do so.
+road scene with ease.
 
-Keep in mind that the steps explained in the video apply for importing objects,
-meshes, materials, etc.
+You can import any part of your scene (e.g., armatures, materials, collections,
+etc). From the destination *.blend* file click on **File > Append**. Select the
+source *.blend* file and then the item to import... and done.
+
+Use [this video](https://www.youtube.com/watch?v=s24kSjRAUNo) as reference for
+more details.
 
 ## Character Meshing <a id="headerlink" name="blender-character-mesh" href="#blender-character-mesh" title="Permalink to this headline"></a>
 
@@ -347,7 +350,7 @@ section.
 <!-- 2. Click `Ctrl + A`. -->
 <!-- 3. Select "All Transforms". -->
 
-## Pick and Drop <a id="headerlink" name="blender-pick-drop" href="#blender-pick-drop" title="Permalink to this headline"></a>
+## Pick and Place <a id="headerlink" name="blender-pick-place" href="#blender-pick-place" title="Permalink to this headline"></a>
 
 <!-- TODO: add a GIF of some pick up animation you do -->
 
