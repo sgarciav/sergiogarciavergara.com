@@ -116,7 +116,7 @@ a display showcasing what each click can do for that current view.
 
 ## Modes of Operation <a id="headerlink" name="blender-modes" href="#blender-modes" title="Permalink to this headline"></a>
 
-It's important to understand the different between the three main modes of
+It's important to understand the difference between the three main modes of
 operation: `Object Mode`, `Edit Mode`, and `Pose Mode`. You'll be accomplishing
 different tasks in each mode. Trying to implement a task in the wrong mode can
 easily mess up your scene so be patient and practice. Refer to the provided
@@ -130,7 +130,7 @@ objects and armatures).
 **Edit Mode**:
 
 This mode belongs to a specific object. This means that, you first need to
-select the object you want to edit, and then enter in Edit Mode. You'll only be
+select the object you want to edit, and then enter Edit Mode. You'll only be
 able to edit the selected object. To edit a different object, you'll need to go
 back to Object Mode, select the new object, and then re-enter Edit Mode. In
 this mode you can actually modify the geometry of the select object. For
