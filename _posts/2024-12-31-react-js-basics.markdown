@@ -39,19 +39,14 @@ instructions](https://react.dev/learn/start-a-new-react-project) for starting a
 new `React` project.
 
 `React` has several frameworks and libraries that can help you quickly set up
-an application tailored to your specific needs. For example `Next.js` is a
+an application tailored to your specific needs. For example **Next.js** is a
 full-stack framework that is powerful for dynamic/static content like blogs,
-e-commerce platforms, and dashboards. `Expo`, on the other hand, is a framework
-best suited for mobile apps.
+e-commerce platforms, and dashboards. **Expo**, on the other hand, is a
+framework best suited for mobile apps.
 
-Refer to the link above for more details on all the available frameworks.
-
-## Expo <a id="headerlink" name="reactjs-expo" href="#reactjs-expo" title="Permalink to this headline"></a>
-
-For the purpose of this post, I've decided to use `Expo` for our example
-project. This section will summarize [these
-instructions](https://docs.expo.dev/tutorial/introduction/) for setting up our
-first mobile app.
+Refer to the link above for more details on all the available frameworks. Also,
+refer to the [Mobile App Using Expo](reactjs-mobile-app) Section for summarized
+instructions on how to develop your first mobile app.
 
 # Basic Concepts <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a>
 ------------------
@@ -278,12 +273,84 @@ Now that we have some knowledge about the basic concepts, how to we create and
 style our app? [`Material UI`](https://mui.com/material-ui/) is the `React`
 library that encompasses all the material design concepts you'll need.
 
-## MUI Components <a id="headerlink" name="reactjs-mui-components" href="#reactjs-mui-components" title="Permalink to this headline"></a>
+Execute the following inside your project's directory to install the MUI
+library:
 
-Digging deep into all the available MUI components is out of the scope of this
-post. You can refer to `MUI`'s main page and explore each of them. [This
+    npm install @mui/material @mui/styles
+
+Digging deep into all the available **MUI components** is out of the scope of
+this post. You can refer to `MUI`'s main page and explore each of them. [This
 link](https://mui.com/material-ui/all-components/) will take you to the list
-and usage explanation of all MUI components.
+and usage explanation of all MUI components:
+
+<img src="/assets/img/reactjs-post/mui-components.png" class="center" style="max-height: 750px; max-width: 750px;" alt="Screenshot of some available MUI components.">
+
+# Mobile App Using Expo  <a id="headerlink" name="reactjs-mobile-app" href="#reactjs-mobile-app" title="Permalink to this headline"></a>
+------------------
+
+For the purpose of this post, I've decided to explore the `Expo` library. This
+section will summarize [these
+instructions](https://docs.expo.dev/tutorial/introduction/) for setting up our
+first mobile app.
+
+## Initial Setup <a id="headerlink" name="reactjs-app-setup" href="#reactjs-app-setup" title="Permalink to this headline"></a>
+
+Execute the following to create the project using the default template:
+
+    npx create-expo-app@latest PROJECT_NAME
+
+At this point, you should be able to rely on the template and start developing
+your app. However, we'll continue following the instructions from the link
+above. Let's execute the following to remove the boilerplate code:
+
+    cd PROJECT_NAME
+    npm run reset-project
+
+Execute the following command to start the development server from the
+terminal, which will give you access to useful development tools:
+
+    cd PROJECT_NAME
+    npx expo start
+
+For the web browser version, type `w`. For the Android version, download the
+[Expo Go](https://expo.dev/go) app and scan the QR code on the screen. This
+post will focus on the Android version. You can follow instructions in the
+original link for iOS development.
+
+## Development <a id="headerlink" name="reactjs-app-dev" href="#reactjs-app-dev" title="Permalink to this headline"></a>
+
+The `app/index.tsx` file is the entry point of our app and is executed when the
+development server starts. This is a [JSX](#reactjs-jsx) file.
+
+For styling our app, we'll rely on the **Material UI** library. Refer to the
+[Material UI](#reactjs-mui) Section to learn how to install and use the
+library.
+
+## Troubleshooting <a id="headerlink" name="reactjs-app-troubleshooting" href="#reactjs-app-troubleshooting" title="Permalink to this headline"></a>
+
+### Cannot find module 'metro/src/lib/TerminalReport'
+
+Sometimes, corrupted caches or incomplete installations cause these
+issues. Clear them by execcuting:
+
+    cd PROJECT_NAME
+    rm -rf node_modules package-lock.json
+
+Clear the npm cache:
+
+    npm cache clean --force
+
+Reinstall dependencies:
+
+    npm install
+
+Start the server again:
+
+    npx expo start
+
+<!-- ## Project <a id="headerlink" name="reactjs-jsx" href="#reactjs-jsx" title="Permalink to this headline"></a> -->
+
+<!-- TODO: complete this section -->
 
 # Start from Existing Project <a id="headerlink" name="reactjs-existing-proj" href="#reactjs-existing-proj" title="Permalink to this headline"></a>
 ------------------
@@ -296,6 +363,8 @@ learned. The good news is that you **do not** need to start from scratch.
 Let's go through [these
 instructions](https://react.dev/learn/add-react-to-an-existing-project) and
 learn how to add `React` to an existing project.
+
+<!-- TODO: complete this section as you updated your website to match -->
 
 # References <a id="headerlink" name="reactjs-references" href="#reactjs-references" title="Permalink to this headline"></a>
 ------------------
