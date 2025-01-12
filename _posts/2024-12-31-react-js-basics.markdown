@@ -44,9 +44,11 @@ full-stack framework that is powerful for dynamic/static content like blogs,
 e-commerce platforms, and dashboards. **Expo**, on the other hand, is a
 framework best suited for mobile apps.
 
-Refer to the link above for more details on all the available frameworks. Also,
-refer to the [Mobile App Using Expo](reactjs-mobile-app) Section for summarized
-instructions on how to develop your first mobile app.
+Refer to the link above for more details on all the available frameworks. This
+post explores the **Expo** framework to develop a mobile app in the [Mobile App
+Using Expo](#reactjs-mobile-app) Section.
+
+<!-- TODO: What framework do we use for "starting from existing project"? -->
 
 # Basic Concepts <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a>
 ------------------
@@ -262,7 +264,7 @@ You should include a value in the dependency array if:
 Using our example: `serviceProps.callService` is included because it might
 change (e.g., if the parent component reassigns a new function).
 
-
+<!-- TODO -->
 <!-- # ROS Integration <a id="headerlink" name="reactjs-basics" href="#reactjs-basics" title="Permalink to this headline"></a> -->
 <!-- ------------------ -->
 
@@ -317,18 +319,28 @@ For the web browser version, type `w`. For the Android version, download the
 post will focus on the Android version. You can follow instructions in the
 original link for iOS development.
 
+## Styling <a id="headerlink" name="reactjs-app-style" href="#reactjs-app-style" title="Permalink to this headline"></a>
+
+For styling our app, I want to rely on the **Material UI** library. Material UI
+is primarily designed for web projects, but there are libraries like
+[Material-UI for React
+Native](https://github.com/xotahal/react-native-material-ui) that provides
+Material Design components for React Native.
+
+
+<!-- Refer to the [Material UI](#reactjs-mui) Section to learn how to install and -->
+<!-- use the library. -->
+
+
+
 ## Development <a id="headerlink" name="reactjs-app-dev" href="#reactjs-app-dev" title="Permalink to this headline"></a>
 
 The `app/index.tsx` file is the entry point of our app and is executed when the
 development server starts. This is a [JSX](#reactjs-jsx) file.
 
-For styling our app, we'll rely on the **Material UI** library. Refer to the
-[Material UI](#reactjs-mui) Section to learn how to install and use the
-library.
-
 ## Troubleshooting <a id="headerlink" name="reactjs-app-troubleshooting" href="#reactjs-app-troubleshooting" title="Permalink to this headline"></a>
 
-### Cannot find module 'metro/src/lib/TerminalReport'
+### Cannot find module
 
 Sometimes, corrupted caches or incomplete installations cause these
 issues. Clear them by execcuting:
