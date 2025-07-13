@@ -17,6 +17,6 @@ description: Some content related to running.
   <button type="submit">Calculate</button>
 </form>
 
-<h3 id="running_table"></h3>
+<div id="result-box" class="result-box">Result will appear here</div>
 
 <script src="{{site.baseurl}}/assets/js/running-calc.js"></script>
