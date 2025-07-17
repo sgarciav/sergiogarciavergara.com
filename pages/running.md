@@ -5,50 +5,79 @@ toc: false
 description: Some content related to running.
 ---
 
-
 <div class="container py-5">
-  <h2 class="text-center mb-4">Simple Calculator</h2>
+  <h2 class="text-center mb-4">Segment Pace Breakdown</h2>
 
-  <form id="calc-form" class="row g-3 justify-content-center">
-    <div class="col-md-3">
-      <label for="input1" class="form-label">Number 1</label>
-      <input type="number" class="form-control" id="input1" required>
+  <form id="pace-form" class="row g-3 justify-content-center">
+    <div class="col-md-4">
+      <label for="distance" class="form-label">Segment Distance [m]</label>
+      <input type="number" class="form-control" id="distance" placeholder="e.g., 800" required>
     </div>
-    <div class="col-md-3">
-      <label for="input2" class="form-label">Number 2</label>
-      <input type="number" class="form-control" id="input2" required>
+    <div class="col-md-4">
+      <label for="runtime" class="form-label">Run Time [MM:SS]</label>
+      <input type="text" class="form-control" id="runtime" placeholder="e.g., 03:20" required pattern="^\d{2}:\d{2}$">
     </div>
     <div class="col-md-2 align-self-end">
-      <button type="submit" class="btn btn-primary w-100">Calculate</button>
+      <button type="submit" class="btn btn-primary w-150">Calculate</button>
     </div>
   </form>
 
-  <!-- Result container -->
-  <div id="result-box" class="alert alert-info mt-4 text-center d-none" role="alert">
-    Result will appear here.
+  <!-- Results Table -->
+  <div id="results-container" class="mt-5 d-none">
+    <h4 class="text-center mb-3">Time Breakdown per 200m</h4>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped text-center">
+        <thead class="table-light">
+          <tr>
+            <th>Distance (m)</th>
+            <th>Elapsed Time</th>
+          </tr>
+        </thead>
+        <tbody id="results-table">
+          <!-- JS injects rows here -->
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
-<!-- Bootstrap JS (optional for some components, not needed here) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<!-- Inline JS logic -->
 <script>
-  document.getElementById('calc-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // prevent form submission
+  function formatTime(seconds) {
+    const mins = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const secs = Math.round(seconds % 60).toString().padStart(2, '0');
+    return `${mins}:${secs}`;
+  }
 
-    const num1 = parseFloat(document.getElementById('input1').value);
-    const num2 = parseFloat(document.getElementById('input2').value);
+  document.getElementById('pace-form').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    if (isNaN(num1) || isNaN(num2)) {
-      alert("Please enter valid numbers.");
+    const distance = parseInt(document.getElementById('distance').value);
+    const runtime = document.getElementById('runtime').value;
+
+    if (!/^\d{2}:\d{2}$/.test(runtime)) {
+      alert('Please enter run time in MM:SS format.');
       return;
     }
 
-    const sum = num1 + num2;
+    const [mins, secs] = runtime.split(":").map(Number);
+    const totalTimeSec = mins * 60 + secs;
 
-    const resultBox = document.getElementById('result-box');
-    resultBox.classList.remove('d-none');
-    resultBox.innerText = `The sum of ${num1} and ${num2} is ${sum}.`;
+    const resultsTable = document.getElementById('results-table');
+    resultsTable.innerHTML = '';
+
+    // Calculate pace per meter
+    const pacePerMeter = totalTimeSec / distance;
+
+    // Create rows for 200, 400, 800, 1000m
+    const checkpoints = [200, 400, 800, 1000];
+    checkpoints.forEach(m => {
+      if (m <= distance) {
+        const timeAtCheckpoint = formatTime(pacePerMeter * m);
+        const row = `<tr><td>${m}</td><td>${timeAtCheckpoint}</td></tr>`;
+        resultsTable.insertAdjacentHTML('beforeend', row);
+      }
+    });
+
+    document.getElementById('results-container').classList.remove('d-none');
   });
 </script>
