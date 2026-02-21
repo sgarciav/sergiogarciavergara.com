@@ -1421,6 +1421,17 @@ a.newer-posts:hover {
     font-size: 21px; /* This is the size of the text in the posts. */
 }
 
+/* Add spacing between sections */
+.wrap-content h1,
+.wrap-content h2,
+.wrap-content h3,
+.wrap-content h4,
+.wrap-content h5,
+.wrap-content h6 {
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+}
+
 .header-page {
     text-align: center;
     margin: 10px 0;

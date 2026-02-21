@@ -23,8 +23,6 @@ you're here to learn about integrating `aider` into your development workflow.
 From their website: *[aider](https://aider.chat/#) lets you pair program with
 LLMs to start a new project or build on your existing codebase*.
 
-<br/>
-
 # Setup <a id="headerlink" name="aider-setup" href="#aider-setup" title="Permalink to this headline"></a>
 ------------------
 
@@ -34,8 +32,6 @@ Before anything else, you need to install `airder` by executing the following:
 python -m pip install aider-install
 aider-install
 ```
-
-<br/>
 
 ## Aider Standalone <a id="headerlink" name="aider-standalone" href="#aider-standalone" title="Permalink to this headline"></a>
 
