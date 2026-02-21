@@ -2,7 +2,7 @@
 layout: post
 title: "aidermacs: AI in emacs"
 toc: true
-date: 2026-01-22
+date: 2026-02-18
 description: How to setup and use aider integrated into your emacs config.
 img: aider-post/aider.png # (optional)
 fig-caption: aider.chat/ # (optional)
@@ -23,6 +23,8 @@ you're here to learn about integrating `aider` into your development workflow.
 From their website: *[aider](https://aider.chat/#) lets you pair program with
 LLMs to start a new project or build on your existing codebase*.
 
+<br/>
+
 # Setup <a id="headerlink" name="aider-setup" href="#aider-setup" title="Permalink to this headline"></a>
 ------------------
 
@@ -32,6 +34,8 @@ Before anything else, you need to install `airder` by executing the following:
 python -m pip install aider-install
 aider-install
 ```
+
+<br/>
 
 ## Aider Standalone <a id="headerlink" name="aider-standalone" href="#aider-standalone" title="Permalink to this headline"></a>
 
