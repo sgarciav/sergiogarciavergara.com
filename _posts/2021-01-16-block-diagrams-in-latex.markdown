@@ -11,13 +11,14 @@ img: tikz-post/control-system-diagram.png # (optional)
 ------------------
 
 This post assumes that you are already familiar with
-[LaTeX](https://www.latex-project.org/). This means that you have a working
-knowledge of writing tex documents and compiling them into PDFs. If you don't
-have a working environment for compiling tex documents, you can use
-[Overleaf](https://www.overleaf.com/) in your browser to practice.
+[LaTeX](https://www.latex-project.org/). You know how to wite `tex` documents
+and how to compile them into PDFs.
+
+If you don't have a working environment for compiling tex documents, you can
+use [Overleaf](https://www.overleaf.com/) in your browser to practice.
 
 The intention of this post is to provide a high-level introduction of the
-**`TikZ package`** and explain the basics to get you started with simple
+**TikZ package** and explain the basics to get you started with simple
 drawings. It is not meant to be a comprehensive guide for its full use. For
 more details on how to use the TikZ package, you can refer to the
 [Reference](#tikz-references) section. As you go through this tutorial, keep in
@@ -35,12 +36,12 @@ use.
 Someone put together
 a
 [list of available TikZ libraries](https://tex.stackexchange.com/questions/42611/list-of-available-tikz-libraries-with-a-short-introduction#42664) with
-some general descriptions. Some examples include: drawing block diagrams and
-flowcharts,
-[a paper folding library](https://tex.stackexchange.com/questions/42611/list-of-available-tikz-libraries-with-a-short-introduction/42673#42673),
-and
-[structural analysis](https://latex.net/tikz-library-for-structural-analysis/). This
-post will provide a bit of insight towards drawing block diagrams and
+some general descriptions. Some examples include:
+* drawing block diagrams and flowcharts,
+* [a paper folding library](https://tex.stackexchange.com/questions/42611/list-of-available-tikz-libraries-with-a-short-introduction/42673#42673), and
+* [structural analysis](https://latex.net/tikz-library-for-structural-analysis/).
+
+This post will provide a bit of insight towards drawing block diagrams and
 flowcharts.
 
 ## Download this file <a id="headerlink" name="tikz-download" href="#tikz-download" title="Permalink to this headline"></a>
@@ -100,7 +101,7 @@ blocks such that you can just reference them by type in your overall
 drawing. These will be the building blocks for your diagrams.
 
 For example, the following defines a rectangular block that can later be
-referenced in the code by "block". Specifically, it defines the shape, its
+referenced in the code by `block`. Specifically, it defines the shape, its
 dimensions, the position of the text, and the color and fill of the box:
 
 ``` latex
@@ -122,7 +123,7 @@ provided [tikzplayground.tex](#tikz-download) file.
 
 ## Simple Feedback Diagram
 
-Refer to **Section 1.1** in the provided [tikzplayground.tex](#tikz-download)
+Refer to **Section 1** in the provided [tikzplayground.tex](#tikz-download)
 file. The following block diagram describes the transfer function of a
 noise-free physical linear system:
 
@@ -131,10 +132,70 @@ noise-free physical linear system:
 The code to draw diagrams is composed of two main parts: 1) draw the nodes and
 their positions, and 2) draw the arrows/lines to connect the nodes.
 
+Let's look at an example. Let's add the sumation circle to the right if the
+`R(s)` input (where `sumation` is a style that is defined at the top of the tex
+file):
+
+``` latex
+  \node (input) [circle] {R(s)};
+  \node (sum) [sumation, right of=input, xshift=-0.4cm] {};
+```
+
+* `input` and `sum` are the internal names of each node. It's how the diagram
+references each node.
+* `circle` and `sumation` are the node types.
+* `right of=` and `xshift=` is how we specify exactly where we want each
+  node. Each node is positioned relative to another except the first one.
+* Text inside the bracket at the end (`{}`) is the text that will be added next
+  to the corresponding node.
+
+Now let's connect the `sum` and `input` with an arrow:
+
+``` latex
+\draw [arrow] (input) -- node[anchor=north] {} (sum);
+```
+
+This line draws an arrow from the `input` node to the `sum` node. The two
+dashes `--` specify that we're drawing a straight arrow (more complicated
+examples in the next section). If we wanted to add text to the arrow, we could
+have included text inside the brackets in `[anchor=north] {}`. The cardinal
+direction defined by "anchor" determines where the text will be drawn.
+
 ## More complicated connections
+
+The TikZ package automatically decides where to draw the base and tip of the
+arrow. The default is when the nodes are next to each other (e.g., side to side
+or one is above or below the other).
+
+We do have more control over the placement of lines and arrows.
+
+<!-- TODO: add example of -| lines and compass orientation -->
+
+Having this control on where exactly to place arrows and lines comes in handy
+when we're structuring more complicated drawing. See the [General
+Drawings](#tikz-drawings) section for specific examples.
 
 # Flowcharts <a id="headerlink" name="tikz-flowcharts" href="#tikz-flowcharts" title="Permalink to this headline"></a>
 ------------------
+
+Drawing flowcharts is very much the same as block diagrams. The same nodes and arrows concepts apply.
+
+Refer to **Section 2** in the provided [tikzplayground.tex](#tikz-download)
+file. You'll see the code for the flowchart below:
+
+TODO: Add a screenshot of the flowchart
+
+<!-- <img src="/assets/img/tikz-post/spd-flowchart.png" alt="Block diagram example."> -->
+
+# General Drawings <a id="headerlink" name="tikz-drawings" href="#tikz-drawings" title="Permalink to this headline"></a>
+------------------
+
+Refer to **Section 3** in the provided [tikzplayground.tex](#tikz-download)
+file. You'll see the code for the drawings below:
+
+TODO: Add a screenshot of the drawings
+
+<!-- <img src="/assets/img/tikz-post/spd-flowchart.png" alt="Block diagram example."> -->
 
 # References <a id="headerlink" name="tikz-references" href="#tikz-references" title="Permalink to this headline"></a>
 ------------------

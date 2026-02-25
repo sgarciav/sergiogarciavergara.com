@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage{geometry}
+\usepackage[margin=1in]{geometry}
 \geometry{
   a4paper,         % or letterpaper
   textwidth=16cm,  % llncs has 12.2cm
@@ -85,10 +85,8 @@
 \section{Block Diagrams}
 % ---------------------------
 
-\subsection{Simple Feedback Diagram}
-
-Consider the transfer function for a noise-free physical linear system
-(\ref{eq:linear_system_trans_fun}):
+Let's look at a simple Feedback Diagram. Consider the transfer function for a
+noise-free physical linear system (\ref{eq:linear_system_trans_fun}):
 
 \begin{equation}\label{eq:linear_system_trans_fun}
 Y(s) = \frac{C(s)}{R(s)} = \frac{KG(s)}{1 + KG(s)H(s)}
@@ -128,8 +126,6 @@ respectively. It's corresponding block diagram is represented by Figure
 \end{figure}
 
 
-\subsection{Complicated Block Diagram}
-
 \newpage
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -137,30 +133,51 @@ respectively. It's corresponding block diagram is represented by Figure
 \section{Flowchart}
 % ---------------------------
 
-Include examples of flowcharts.
+The sterile processing departments in hospitals are responsible for processing
+the surgical instruments and making sure that they're ready before every
+surgery. Sometimes, instruments are missing at the time of preparing a surgical
+tray. The following flowchart describes how technicians handle these
+situations:
 
 \begin{figure}[h]
 \begin{center}
-\begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
+\begin{tikzpicture}[auto, node distance=2cm, >=latex']
 
-  \node (main_box) [rectangle, dashed, minimum width=6cm, minimum height=6.4cm,
-    text width=2.7cm, draw=black, fill=white, fill opacity=0.1,
-    xshift=1.8cm, yshift=-2cm] {};
+  % We start by placing the blocks
+  \node (start) [startstop] {Missing supply identified.};
+  \node (searchor) [process, below of=start] {Search in the storage units at the OR.};
+  \node (foundor) [decision, below of=searchor, yshift=-0.5cm] {Item found?};
+  \node (callsps) [process, below of=foundor, yshift=-0.5cm] {Call SPS to get item delivered.};
+  \node (searchsps) [process, below of=callsps] {Search in the storage units in the SPD.};
+  \node (foundsps) [decision, below of=searchsps, yshift=-0.5cm] {Item found?};
+  \node (substitution) [process, below of=foundsps, yshift=-0.5cm] {Use a substitution.};
+
+  \node (continue) [startstop, below of=substitution] {Continue surgery.};
+
+  % draw connections between nodes
+  \draw [arrow] (start) -- (searchor);
+  \draw [arrow] (searchor) -- (foundor);
+  \draw [arrow] (foundor) -- node[anchor=east] {no} (callsps);
+  \draw [arrow] (foundor.0) -| node[anchor=south] {yes} ++(2.3cm,0) |- (continue.355);
+  \draw [arrow] (callsps) -- (searchsps);
+  \draw [arrow] (searchsps) -- (foundsps);
+  \draw [arrow] (foundsps) -- node[anchor=east] {no} (substitution);
+  \draw [arrow] (foundsps.0) -| node[anchor=south] {yes} ++(2cm,0) |- (continue.5);
+  \draw [arrow] (substitution) -- (continue);
 
 \end{tikzpicture}
 \end{center}
- \caption{Flowchart example.}
-\label{fig:flowchart}
+\caption{Workflow for what happens when someone notices that there is a missing
+  instrument or disposable at the OR.}
+\label{fig:missing_instrument_workflow}
 \end{figure}
 
 \newpage
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-\section{Plots}
+\section{General Drawings}
 % ---------------------------
-
-Include examples of plots.
 
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
