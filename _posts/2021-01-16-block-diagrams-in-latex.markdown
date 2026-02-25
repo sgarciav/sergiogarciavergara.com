@@ -183,9 +183,7 @@ Drawing flowcharts is very much the same as block diagrams. The same nodes and a
 Refer to **Section 2** in the provided [tikzplayground.tex](#tikz-download)
 file. You'll see the code for the flowchart below:
 
-TODO: Add a screenshot of the flowchart
-
-<!-- <img src="/assets/img/tikz-post/spd-flowchart.png" alt="Block diagram example."> -->
+<img src="/assets/img/tikz-post/spd-flowchart.png" alt="Block diagram example." class="center-img">
 
 # General Drawings <a id="headerlink" name="tikz-drawings" href="#tikz-drawings" title="Permalink to this headline"></a>
 ------------------
