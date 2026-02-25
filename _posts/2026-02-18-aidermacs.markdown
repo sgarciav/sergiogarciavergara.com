@@ -20,13 +20,15 @@ plan on swithching.
 This post assumes that you already have a preferred Emacs configuration and
 you're here to learn about integrating `aider` into your development workflow.
 
-From their website: *[aider](https://aider.chat/#) lets you pair program with
-LLMs to start a new project or build on your existing codebase*.
+From their website:
+
+> *[aider](https://aider.chat/#) lets you pair program with LLMs to start a new
+project or build on your existing codebase*.
 
 # Setup <a id="headerlink" name="aider-setup" href="#aider-setup" title="Permalink to this headline"></a>
 ------------------
 
-Before anything else, you need to install `airder` by executing the following:
+First, install `airder` by executing:
 
 ``` bash
 python -m pip install aider-install
@@ -54,14 +56,11 @@ aider --model o3-mini --api-key openai=<key>
 
 ## Install Emacs Packages <a id="headerlink" name="aider-install" href="#aider-install" title="Permalink to this headline"></a>
 
-Make sure that you install `aider` locally like in the step above:
+Make sure that you install `aider` locally like in [the step
+above](#aider-setup):
 
-``` bash
-python -m pip install aider-install
-aider-install
-```
-
-Verify that your Emacs version is 30 or greater. To update your
+Verify that your Emacs version is 30 or greater. Execute the following to
+upgrade your emacs installation:
 
 ``` bash
 sudo add-apt-repository ppa:ubuntuhandbook1/emacs
@@ -94,8 +93,9 @@ Add the following to your `init.el` file:
   )
 ```
 
-Once you restart Emacs you should now be able to access the `aider` agent
-with the key binding `C-c a`.
+Once you restart Emacs you should now be able to access the `aider` agent with
+the key binding `C-c a`. See the [Usage](#aider-usage) section for more details
+on how to interact with `aidermacs`.
 
 # Models <a id="headerlink" name="aider-models" href="#aider-models" title="Permalink to this headline"></a>
 ------------------
@@ -104,7 +104,7 @@ One of the beautiful things of `aider` is that you can choose whatever AI Model
 you want (Gemini, DeepSeek, OpenAI, etc). There are multiple of free models you
 can use as well. This is a list of available models to choose from:
 
-https://aider.chat/docs/llms.html
+[https://aider.chat/docs/llms.html](https://aider.chat/docs/llms.html)
 
 For example, to use the `openrouter/google/gemini-2.0-flash-exp:free` model,
 update your `init.el` file such that the `aidermacs-default-model` field points
@@ -147,23 +147,23 @@ export OLLAMA_API_BASE=http://127.0.0.1:11434
 aider --model ollama/deepseek-coder-v2
 ```
 
-**NOTE**: When running models locally, consider that they'll run slower
-depending on your machine's GPU.
+**Note**:
+
+> When running models locally, consider that they'll run slower depending on
+your machine's GPU.
 
 # Usage <a id="headerlink" name="aider-usage" href="#aider-usage" title="Permalink to this headline"></a>
 ------------------
 
-Above, we defined the binding `C-c a` to access the
-`aidermacs-transient-menu`. You'll
+In our `init.el` we've defined the binding `C-c a` to access the
+`aidermacs-transient-menu` (Figure 1). This menu summarizes the tools available
+to you and the corresponding keys to execute/access each one.
 
-The modes are:
-* `ask`:
-* `code`:
-* `architect`:
+I won't summarize each tool (mainly becuase I'm still learning myself), but the
+best way to learn is to dive in and play!
 
 ## Scripting Aider <a id="headerlink" name="aider-scripting" href="#aider-scripting" title="Permalink to this headline"></a>
 
 It is possible to write Python scripts to interact with `aider`. I have not yet
-personally played with this functionality, but you can read more here:
-
-https://aider.chat/docs/scripting.html
+personally played with this functionality, but you can read more
+[here](https://aider.chat/docs/scripting.html).
