@@ -157,6 +157,8 @@ In our `init.el` we've defined the binding `C-c a` to access the
 `aidermacs-transient-menu` (Figure 1). This menu summarizes the tools available
 to you and the corresponding keys to execute/access each one.
 
+<img src="/assets/img/aider-post/aidermacs transient menu.png" alt="aidermacs transient menu">
+
 I won't summarize each tool (mainly becuase I'm still learning myself), but the
 best way to learn is to dive in and play!
 
