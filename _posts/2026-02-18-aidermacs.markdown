@@ -11,14 +11,12 @@ fig-caption: aider.chat/ # (optional)
 # About <a id="headerlink" name="aider-about" href="#aider-about" title="Permalink to this headline"></a>
 ------------------
 
-[Emacs vs Vim: The Endless War Between Two Iconic
-Editors](https://www.historytools.org/docs/emacs-vs-vim-whats-the-difference). This
-post is not about this "controversial" debate. I've chosen
-[emacs](https://www.gnu.org/software/emacs/) for my development and I don't
-plan on swithching.
+<!-- [Emacs vs Vim: The Endless War Between Two Iconic -->
+<!-- Editors](https://www.historytools.org/docs/emacs-vs-vim-whats-the-difference). -->
 
-This post assumes that you already have a preferred Emacs configuration and
-you're here to learn about integrating `aider` into your development workflow.
+This post assumes that you already have a preferred
+[Emacs](https://www.gnu.org/software/emacs/) configuration and you're here to
+learn about integrating `aider` into your development workflow.
 
 From their website:
 
@@ -28,7 +26,7 @@ project or build on your existing codebase*.
 # Setup <a id="headerlink" name="aider-setup" href="#aider-setup" title="Permalink to this headline"></a>
 ------------------
 
-First, install `airder` by executing:
+First, install `aider` by executing:
 
 ``` bash
 python -m pip install aider-install
