@@ -156,7 +156,7 @@ Now let's connect the `sum` and `input` with an arrow:
 ```
 
 This line draws an arrow from the `input` node to the `sum` node. The two
-dashes `--` specify that we're drawing a straight arrow (more complicated
+dashes (`--`) specify that we're drawing a straight arrow (more complicated
 examples in the next section). If we wanted to add text to the arrow, we could
 have included text inside the brackets in `[anchor=north] {}`. The cardinal
 direction defined by "anchor" determines where the text will be drawn.
@@ -178,12 +178,13 @@ Drawings](#tikz-drawings) section for specific examples.
 # Flowcharts <a id="headerlink" name="tikz-flowcharts" href="#tikz-flowcharts" title="Permalink to this headline"></a>
 ------------------
 
-Drawing flowcharts is very much the same as block diagrams. The same nodes and arrows concepts apply.
+Drawing flowcharts is very much the same as block diagrams. The same nodes and
+arrows concepts apply.
 
 Refer to **Section 2** in the provided [tikzplayground.tex](#tikz-download)
 file. You'll see the code for the flowchart below:
 
-<img src="/assets/img/tikz-post/spd-flowchart.png" alt="Block diagram example." class="center-img">
+<img src="/assets/img/tikz-post/spd-flowchart.png" alt="Flowchart example." class="center-img">
 
 # General Drawings <a id="headerlink" name="tikz-drawings" href="#tikz-drawings" title="Permalink to this headline"></a>
 ------------------
@@ -193,7 +194,7 @@ file. You'll see the code for the drawings below:
 
 TODO: Add a screenshot of the drawings
 
-<!-- <img src="/assets/img/tikz-post/spd-flowchart.png" alt="Block diagram example."> -->
+<!-- <img src="/assets/img/tikz-post/drawings.png" alt="Drawings example."> -->
 
 # References <a id="headerlink" name="tikz-references" href="#tikz-references" title="Permalink to this headline"></a>
 ------------------
