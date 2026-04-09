@@ -7,6 +7,34 @@ description: List of patents.
 
 <!-- NOTE: Use html notation for the references. -->
 
+## Robotic System for Automated Sorting and Packing of Surgical Instruments <a id="headerlink" name="robotic-automated-sorting" href="#robotic-automated-sorting" title="Permalink to this headline"></a>
+
+
+
+<div class="reference">
+
+C. Farill, K. DeMarco, and <strong>S. Garcia</strong>, "Robotic System for
+Automated Sorting and Packing of Surgical Instruments", USPTO application
+number 63/795290, April 26, 2025 (link pending).
+
+</div>
+
+## Robotic end effector with Secondary Gripper Mechanism <a id="headerlink" name="end-effector-gripper" href="#end-effector-gripper" title="Permalink to this headline"></a>
+
+Developed a secondary gripper mechanism, to be attached to any off-the-shelf
+parallel jaw gripper, allowing for the grasping of scissor-like objects by the
+finger loops without hindering the pinching capability.
+
+<div class="reference">
+
+C. Farill, K. DeMarco, and <strong>S. Garcia</strong>, "Robotic end
+effector with Secondary Gripper Mechanism", USPTO application number 63/592191,
+October 22, 2023 and PCT/US2024/052217, October 21, 2024 (link pending).
+
+</div>
+
+<br/>
+
 ## Switch-Actuated Joystick for Power Wheelchairs <a id="headerlink" name="joystick-wheelchair" href="#joystick-wheelchair" title="Permalink to this headline"></a>
 
 Developed a switch-actuated adapter for joystick controlled wheelchairs such
@@ -19,21 +47,5 @@ R.E. Torres-Muñiz, <strong>S.E. García-Vergara</strong>, B.A. Llorens-Bonilla,
 D. Sánchez-Cordero, and M. Lizama, "Switch-Actuated Joystick for Power
 Wheelchairs", U.S. Patent 8 622 166 B1, January 7, 2014 (<a
 href="https://www.google.com/patents/US8622166" target="_blank">link</a>).
-
-</div>
-
-<br/>
-
-## Robotic end effector with Secondary Gripper Mechanism <a id="headerlink" name="end-effector-gripper" href="#end-effector-gripper" title="Permalink to this headline"></a>
-
-Developed a secondary gripper mechanism, to be attached to any off-the-shelf
-parallel jaw gripper, allowing for the grasping of scissor-like objects by the
-finger loops without hindering the pinching capability.
-
-<div class="reference">
-
-C. Farill, K. DeMarco, and <strong>S.E. García-Vergara</strong>, "Robotic end
-effector with Secondary Gripper Mechanism", USPTO application number
-63/592,191, October 22, 2023 (link pending).
 
 </div>
