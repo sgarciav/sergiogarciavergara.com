@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Open Claw"
+toc: true
+date: 2026-04-16
+<!-- description: How to setup and use openclaw integrated into your emacs config. -->
+img: openclaw-post/lobster.png # (optional)
+<!-- fig-caption: clipartcraft.com # (optional) -->
+---
+
+# About <a id="headerlink" name="openclaw-about" href="#openclaw-about" title="Permalink to this headline"></a>
+------------------
+
+
+From their website:
+
+> *[openclaw](https://openclaw.chat/#) *.
+
+# Setup <a id="headerlink" name="openclaw-setup" href="#openclaw-setup" title="Permalink to this headline"></a>
+------------------
+
+
+# Usage <a id="headerlink" name="openclaw-usage" href="#openclaw-usage" title="Permalink to this headline"></a>
+------------------
