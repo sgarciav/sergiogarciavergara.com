@@ -208,12 +208,18 @@ file. You'll see the code for the flowchart below:
 # General Drawings <a id="headerlink" name="tikz-drawings" href="#tikz-drawings" title="Permalink to this headline"></a>
 ------------------
 
+This is where TikZ gets interesting. Checkout these funky figures we can
+draw. We can add textures (like water), and we can precicely place labels to
+specific points in the drawings.
+
 Refer to **Section 3** in the provided [tikzplayground.tex](#tikz-download)
-file. You'll see the code for the drawings below:
+file.
 
-<!-- TODO: Add a screenshot of the drawings -->
+<img src="/assets/img/tikz-post/funky-drawings.png" alt="Drawings example.">
 
-<!-- <img src="/assets/img/tikz-post/drawings.png" alt="Drawings example."> -->
+One important takeaway from this section is that we can specify *exactly* where
+we want each line, point, label, etc. TikZ offers a mathematical way of drawing
+exactly what we want.
 
 # References <a id="headerlink" name="tikz-references" href="#tikz-references" title="Permalink to this headline"></a>
 ------------------
