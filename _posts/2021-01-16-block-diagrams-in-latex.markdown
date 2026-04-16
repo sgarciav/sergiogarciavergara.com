@@ -90,8 +90,8 @@ following to your tex file:
 \end{figure}
 ```
 
-The following sections describe the code you need to add within the `... code
-...` section to draw block diagrams and flowcharts.
+The following sections describe the code you need to add by replacing the
+`... code ...` section to draw block diagrams and flowcharts.
 
 ## Define Styles <a id="headerlink" name="tikz-define-styles" href="#tikz-define-styles" title="Permalink to this headline"></a>
 
@@ -167,9 +167,28 @@ The TikZ package automatically decides where to draw the base and tip of the
 arrow. The default is when the nodes are next to each other (e.g., side to side
 or one is above or below the other).
 
-We do have more control over the placement of lines and arrows.
+The beautiful thing about TikZ is that we have more control over the lines. For
+example, the following line (used to draw the block diagram above) uses the
+convention `-|` to determine the order and direction of the arrows between the
+`hs` and `sum` nodes:
 
-<!-- TODO: add example of -| lines and compass orientation -->
+    \draw [arrow] (hs.180) -| node[anchor=north] {} (sum.270);
+
+The convention `-|` specifically says *"first draw a horizonatal line and then
+a vertical one."*
+
+Morever, we can specify the start and end points of the connecting
+arrow. Imagine that each node is encompassed **inside a unitary circle** (shown
+below), which follows the angle convention of 0 &deg; facing to the right, 90
+&deg; facing upwards, 1800 &deg; facing to the left, etc.
+
+<img src="/assets/img/tikz-post/unit-circle.png" width="50%" alt="Unitary circle with main angles" class="center-img">
+
+We can use this angle representation to specify specific locations around the
+circle. For the block diagram above, we want the arrow to start at the left of
+the `H(s)` block and end at the bottom of the sum block. As such, as the line
+above specifies, we start the line at `(hs.180)`, which is 180 &deg; of the
+`H(s)` block and `(sum.270)`, which is 270 &deg; of the sum block.
 
 Having this control on where exactly to place arrows and lines comes in handy
 when we're structuring more complicated drawing. See the [General
@@ -192,7 +211,7 @@ file. You'll see the code for the flowchart below:
 Refer to **Section 3** in the provided [tikzplayground.tex](#tikz-download)
 file. You'll see the code for the drawings below:
 
-TODO: Add a screenshot of the drawings
+<!-- TODO: Add a screenshot of the drawings -->
 
 <!-- <img src="/assets/img/tikz-post/drawings.png" alt="Drawings example."> -->
 
