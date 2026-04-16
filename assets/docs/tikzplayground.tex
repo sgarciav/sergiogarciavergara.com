@@ -1,39 +1,40 @@
-\documentclass[11pt]{article}
-
+\documentclass{article}
 \usepackage{geometry}
 \geometry{
-  a4paper,         % or letterpaper
-  textwidth=16cm,  % llncs has 12.2cm
-  textheight=24cm, % llncs has 19.3cm
-  heightrounded,   % integer number of lines
-  hratio=1:1,      % horizontally centered
-  vratio=2:3,      % not vertically centered
+  a4paper,
+  margin=0.25in
 }
 
 \renewcommand\labelitemi{*}
 
 % Packages
 % ------------------
-\usepackage{tkz-euclide}
+% \usepackage{tkz-euclide}
 \usepackage{tikz} % for drawing diagrams
 \usepackage{bm} % bold mode
 %% \usepackage{color}
 \usepackage{hyperref}
 
-
 % setup style of tikzlibrary elements
 % ------------------------------------
+\usetikzlibrary{patterns}
+\usetikzlibrary{patterns.meta}
 \usetikzlibrary{arrows}
 \usetikzlibrary{quotes,angles}
 \usetikzlibrary{positioning}
 \usetikzlibrary{plotmarks}
+\usetikzlibrary{math}
 \usetikzlibrary{shapes.geometric, arrows}
-\tikzstyle{sumation} = [circle, minimum width=0.2cm, minimum height=0.5cm, text centered, text width=0.4cm, draw=black, fill=white]
+
+% setup style of tikzlibrary elements
+% ------------------------------------
 \tikzstyle{block} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=black, fill=white]
 \tikzstyle{redblock} = [rectangle, thick, minimum width=2.5cm, minimum height=1cm, text centered, text width=2.7cm, draw=red, fill=white]
 \tikzstyle{wideblock} = [rectangle, minimum width=2.5cm, minimum height=1cm, text centered, text width=5cm, draw=black, fill=white]
 \tikzstyle{tallblock} = [rectangle, minimum width=1.9cm, minimum height=2cm, text centered, text width=1.9cm, draw=black, fill=white]
 \tikzstyle{inputblock} = [rectangle, minimum width=1.7cm, minimum height=5cm, text centered, text width=1.7cm, draw=black, fill=white]
+\tikzstyle{sumation} = [circle, minimum width=0.2cm, minimum height=0.5cm, text centered, text width=0.4cm, draw=black, fill=white]
+
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=white]
 \tikzstyle{process} = [rectangle, minimum width=4cm, minimum height=1cm, text centered, text width=4cm, draw=black, fill=white]
@@ -67,6 +68,7 @@
 % Abstract
 % ---------------------
 \begin{abstract}
+
   This sample tex file is intended to be used together with the tutorials on the
   TikZ package described in Sergio's website
   (\href{https://www.sergiogarciavergara.com/block-diagrams-in-latex/}{https://www.sergiogarciavergara.com/block-diagrams-in-latex/}). The
@@ -81,10 +83,8 @@
 \section{Block Diagrams}
 % ---------------------------
 
-\subsection{Simple Feedback Diagram}
-
-Consider the transfer function for a noise-free physical linear system
-(\ref{eq:linear_system_trans_fun}):
+Let's look at a simple Feedback Diagram. Consider the transfer function for a
+noise-free physical linear system (\ref{eq:linear_system_trans_fun}):
 
 \begin{equation}\label{eq:linear_system_trans_fun}
 Y(s) = \frac{C(s)}{R(s)} = \frac{KG(s)}{1 + KG(s)H(s)}
@@ -93,7 +93,7 @@ Y(s) = \frac{C(s)}{R(s)} = \frac{KG(s)}{1 + KG(s)H(s)}
 \noindent
 where $C(s)$ and $R(s)$ are the output and input of the system,
 respectively. It's corresponding block diagram is represented by Figure
-\ref{fig:liner_system_diagram}.
+\ref{fig:linear_system_diagram}.
 
 \begin{figure}[h]
 \begin{center}
@@ -120,44 +120,194 @@ respectively. It's corresponding block diagram is represented by Figure
 \end{tikzpicture}
 \end{center}
  \caption{Block diagram of a noise-free linear system.}
-\label{fig:liner_system_diagram}
+\label{fig:linear_system_diagram}
 \end{figure}
 
 
-\subsection{Complicated Block Diagram}
-
 \newpage
+
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 \section{Flowchart}
 % ---------------------------
 
-Include examples of flowcharts.
+The sterile processing departments in hospitals are responsible for processing
+the surgical instruments and making sure that they're ready before every
+surgery. Sometimes, instruments are missing at the time of preparing a surgical
+tray. The following flowchart describes how technicians handle these
+situations:
 
 \begin{figure}[h]
 \begin{center}
-\begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
+\begin{tikzpicture}[auto, node distance=2cm, >=latex']
 
-  \node (main_box) [rectangle, dashed, minimum width=6cm, minimum height=6.4cm,
-    text width=2.7cm, draw=black, fill=white, fill opacity=0.1,
-    xshift=1.8cm, yshift=-2cm] {};
+  % We start by placing the blocks
+  \node (start) [startstop] {Missing supply identified.};
+  \node (searchor) [process, below of=start] {Search in the storage units at the OR.};
+  \node (foundor) [decision, below of=searchor, yshift=-0.5cm] {Item found?};
+  \node (callsps) [process, below of=foundor, yshift=-0.5cm] {Call SPS to get item delivered.};
+  \node (searchsps) [process, below of=callsps] {Search in the storage units in the SPD.};
+  \node (foundsps) [decision, below of=searchsps, yshift=-0.5cm] {Item found?};
+  \node (substitution) [process, below of=foundsps, yshift=-0.5cm] {Use a substitution.};
+
+  \node (continue) [startstop, below of=substitution] {Continue surgery.};
+
+  % draw connections between nodes
+  \draw [arrow] (start) -- (searchor);
+  \draw [arrow] (searchor) -- (foundor);
+  \draw [arrow] (foundor) -- node[anchor=east] {no} (callsps);
+  \draw [arrow] (foundor.0) -| node[anchor=south] {yes} ++(2.3cm,0) |- (continue.355);
+  \draw [arrow] (callsps) -- (searchsps);
+  \draw [arrow] (searchsps) -- (foundsps);
+  \draw [arrow] (foundsps) -- node[anchor=east] {no} (substitution);
+  \draw [arrow] (foundsps.0) -| node[anchor=south] {yes} ++(2cm,0) |- (continue.5);
+  \draw [arrow] (substitution) -- (continue);
 
 \end{tikzpicture}
 \end{center}
- \caption{Flowchart example.}
-\label{fig:flowchart}
+\caption{Workflow for what happens when someone notices that there is a missing
+  instrument or disposable at the OR.}
+\label{fig:missing_instrument_workflow}
 \end{figure}
 
 \newpage
 
 %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-\section{Plots}
+\section{General Drawings}
 % ---------------------------
 
-Include examples of plots.
+The TikZ library gives us the freedom to draw with code
 
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
+
+  % % comment out
+  % \draw[step=1cm,gray,very thin] (0,0) grid (20,\ymax);
+
+  \tikzmath{\ymax = 7; \bh = 1; \width = 2;}
+
+  % Fig 1
+  \begin{scope}
+    \draw[very thick] (0,0) rectangle +(\width,\bh);
+    \draw[pattern={north east lines}] (0,0) rectangle +(\width,\bh);
+
+    \draw[very thick] (0,\ymax) -- (0,\bh) -- (\width,\bh) -- (\width,\ymax);
+    \clip (0,\ymax) -- (0,\bh) -- (\width,\bh) -- (\width,\ymax);
+
+    \foreach \y in {0, 0.3, ..., 6} {
+      \draw[thick]
+      plot[domain=0:\width, smooth, samples=50]
+      (\x, {\bh + sin(3*\x r + \y*5 r)*0.1 + \y});
+    }
+  \end{scope}
+
+  % Fig 2
+  \begin{scope}[xshift=2.7cm]
+    \draw[very thick] (\width,0) rectangle +(\width,\bh);
+    \draw[pattern={north east lines}] (\width,0) rectangle +(\width,\bh);
+
+    \draw[very thick] (0,\ymax) -- (\width,\bh*2) -- (\width,\bh) -- (\width*2,\bh) -- (\width*2,\bh*2) -- (\width,\ymax);
+    \clip (0,\ymax) -- (\width,\bh*2) -- (\width,\bh) -- (\width*2,\bh) -- (\width*2,\bh*2) -- (\width,\ymax);
+
+    \foreach \y in {0, 0.28, ..., \ymax} {
+      \draw[thick]
+      plot[domain=0:\width*2, smooth, samples=50]
+      (\x, {1+sin(3*(\x) r + \y*5 r)*0.1 + \y});
+    }
+  \end{scope}
+
+  % Fig 3
+  \begin{scope}[xshift=7cm]
+    \tikzmath{\c = 0.7; \cy1 = (\ymax + \bh*2) / 2 - \c;}
+
+    \draw[very thick] (\width,0) rectangle +(\width,\bh);
+    \draw[pattern={north east lines}] (\width,0) rectangle +(\width,\bh);
+
+    \draw[very thick] (0,\ymax) .. controls (0.1,\cy1) .. (\width,\bh*2) -- (\width,\bh) -- (\width*2,\bh) -- (\width*2,\bh*2) .. controls (\width*3,\cy1) .. (\width*3,\ymax);
+    \clip (0,\ymax) .. controls (0.1,\cy1) .. (\width,\bh*2) -- (\width,\bh) -- (\width*2,\bh) -- (\width*2,\bh*2) .. controls (\width*3,\cy1) .. (\width*3,\ymax);
+
+    \foreach \y in {0, 0.28, ..., \ymax} {
+      \draw[thick]
+      plot[domain=0:\width*3, smooth, samples=50]
+      (\x, {1+sin(3*(\x) r + \y*5 r)*0.1 + \y});
+    }
+  \end{scope}
+
+  % Fig 4
+  \begin{scope}[xshift=13.5cm]
+    \tikzmath{\m = 1.6; \d = 0.15;}
+
+    \draw[very thick] (0,0) rectangle +(\width,\bh);
+    \draw[pattern={north east lines}] (0,0) rectangle +(\width,\bh);
+
+    \draw[very thick] (\width/2-\d,\ymax) -- (0,\bh*\m) -- (0,\bh) -- (\width,\bh) -- (\width,\bh*\m) -- (\width/2+\d,\ymax);
+
+    \clip (\width/2-\d,\ymax) -- (0,\bh*\m) -- (0,\bh) -- (\width,\bh) -- (\width,\bh*\m) -- (\width/2+\d,\ymax);
+
+    \foreach \y in {0, 0.3, ..., \ymax} {
+      \draw[thick]
+      plot[domain=0:\width, smooth, samples=50]
+      (\x, {1+sin(3*(\x) r + \y*5 r)*0.1 + \y});
+    }
+  \end{scope}
+
+  % Fig 5
+  \begin{scope}[xshift=16.5cm]
+    \tikzmath{\d = 0.2; \yd = 1.8;}
+
+    \draw[very thick] (0,0) rectangle +(\width,\bh);
+    \draw[pattern={north east lines}] (0,0) rectangle +(\width,\bh);
+
+    \draw[very thick] (\width/2-\d,\ymax) -- (\width/2-\d,\bh*\yd) arc (90 : 180 : 0.8cm) -- (\width,\bh) arc (0 : 90 : 0.8cm) -- (\width/2+\d,\ymax);
+    \clip (\width/2-\d,\ymax) -- (\width/2-\d,\bh*\yd) arc (90 : 180 : 0.8cm) -- (\width,\bh) arc (0 : 90 : 0.8cm) -- (\width/2+\d,\ymax);
+
+    \foreach \y in {0, 0.3, ..., \ymax} {
+      \draw[thick]
+      plot[domain=0:\width, smooth, samples=50]
+      (\x, {1+sin(3*(\x) r + \y*5 r)*0.1 + \y});
+    }
+  \end{scope}
+
+\end{tikzpicture}
+\end{center}
+ % \caption{Example of adding texture}
+\label{Example of adding texture}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}[auto, node distance=2.7cm, >=latex']
+
+  \tikzmath{\ymax = 11.6; \b = 0.6; \xmax = 3.6; \th = 5.5;}
+  \tikzmath{\lt = \xmax;}
+  \tikzmath{\rt = \xmax;}
+  \tikzmath{\r1 = \b; \r2 = 1.3; \r3 = 0.3;}
+
+  % % comment out
+  % \draw[step=1cm,gray,very thin] (0,0) grid (\xmax*2,\ymax);
+
+  \draw[very thick] (0,\ymax) -- (0,\b) arc (180 : 270 : \r1) node[left, xshift=-1.5em]{\large C} -- (\rt,\b-\r1) arc (270 : 360 : \r1);
+  \draw[very thick] (\rt+\r1,\b) -- node[above, yshift=0.9em]{\large D} (\rt+\r1,\r1+\b) arc (270 : 360 : \r2) -- (\rt+\r1+\r2,\r1+\b+\r2+\th) node[right]{\large F} -- (\lt-\r2,\r1+\b+\r2+\th) node[left]{\large E} -- (\lt-\r2,\r1+\r2+\b) arc(180 : 270 : \r2) node[above, yshift=0.08em]{\large I} -- (\lt,\b+\r3) arc(360 : 270 : \r3);
+  \draw[very thick] (\lt-\r3,\b) -- (\b+\r3,\b) arc (270 : 180 : \r3) -- (\b,\ymax) -- (0,\ymax) -- (0,\b);
+  \tikzmath{\tw = \r1+2*\r2;}
+
+  % Two horizontal lines
+  \tikzmath{\p = 1.5;}
+  \draw[very thick] (\lt-\r2,\r1+\th/2+\p) node[left]{\large Q} -- (\lt+\b+\r2,\r1+\th/2+\p);
+  \draw[very thick] (\lt-\r2,\r1+\th/2+\b+\p) node[left]{\large G} -- (\lt+\b+\r2,\r1+\th/2+\p+\b) node[right]{\large H};
+
+  \draw[very thick] (0,\r1+\th/2+\p+\b) node[left]{\large L} -- (\b,\r1+\th/2+\p+\b);
+  \draw[very thick] (0,\r1+\th/2+\p+\b+\tw) node[left]{\large A} -- (\b,\r1+\th/2+\p+\b+\tw) node[right]{\large B};
+
+\end{tikzpicture}
+\end{center}
+ % \caption{Example of curves and label placing}
+\label{Example of curves and label placing}
+\end{figure}
 
 % @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 

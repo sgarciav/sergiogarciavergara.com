@@ -13,8 +13,7 @@ section describes the work I completed for each project and
 the [technical skills](#joint-tracking-skills) I acquired and improved on
 related to joint tracking and analysis.
 
-Feel free to contact me if I can provide value to your projects:
-[Consulting Services](https://www.sergiogarciavergara.com/pages/consulting/)
+Feel free to contact me if I can provide value to your projects.
 
 # Super Pop VR<sup>TM</sup> <a id="headerlink" name="joint-tracking-superpop" href="#joint-tracking-superpop" title="Permalink to this headline"></a>
 ------------------

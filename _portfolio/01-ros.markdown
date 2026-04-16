@@ -17,8 +17,7 @@ talk about my knowledge of ROS and ROS 2 applied to specific robotics projects
 in other posts. This post describes my work done for simplifyig software
 development for me and my teammates.
 
-Feel free to contact me if I can provide value to your projects:
-[Consulting Services](https://www.sergiogarciavergara.com/pages/consulting/)
+Feel free to contact me if I can provide value to your projects.
 
 # ROS in Docker <a id="headerlink" name="ros-docker" href="#ros-docker" title="Permalink to this headline"></a>
 ------------------
