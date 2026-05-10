@@ -840,6 +840,12 @@ img {
     display: inline-block;
 }
 
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img + em {
     text-align: center;
     display: block;
@@ -1442,6 +1448,22 @@ a.newer-posts:hover {
 .wrap-content {
     padding: 20px;
     font-size: 21px; /* This is the size of the text in the posts. */
+}
+
+.wrap-content p {
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+}
+
+/* Add spacing between sections */
+.wrap-content h1,
+.wrap-content h2,
+.wrap-content h3,
+.wrap-content h4,
+.wrap-content h5,
+.wrap-content h6 {
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
 }
 
 .header-page {

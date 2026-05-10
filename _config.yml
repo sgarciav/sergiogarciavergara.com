@@ -24,8 +24,8 @@ social-facebook:
 social-twitter:
 social-location: Atlanta, GA, USA
 
-# Disqus
-discus-identifier: sgarciav # add your discus identifier
+# # Disqus
+# discus-identifier: sgarciav # add your discus identifier
 
 # Tracker
 analytics: Google Analytics
